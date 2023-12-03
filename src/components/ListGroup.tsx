@@ -5,14 +5,14 @@ interface Props {
   heading: string;
 }
 
-function ListGroup(props: Props) {
+function ListGroup({ items, heading }: Props) {
   const [monsterIndex, setMonsterIndex] = useState(-1);
   return (
     <>
-      <h1 className='list-group-title'>List of {props.heading}</h1>
+      <h1 className='list-group-title'>List of {heading}</h1>
       <ul className='list-group'>
-        {props.items.length === 0 && <p>Nothing to see</p>}
-        {props.items.map((monster, index) => (
+        {items.length === 0 && <p>Nothing to see</p>}
+        {items.map((monster, index) => (
           <li
             key={index}
             className={
