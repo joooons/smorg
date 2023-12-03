@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
 interface Props {
-  items: strings[];
+  items: string[];
   heading: string;
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   const [monsterIndex, setMonsterIndex] = useState(-1);
   return (
     <>
@@ -20,7 +21,10 @@ function ListGroup({ items, heading }: Props) {
                 ? 'list-group-item active'
                 : 'list-group-item'
             }
-            onClick={() => setMonsterIndex(index)}
+            onClick={() => {
+              setMonsterIndex(index);
+              onSelectItem(monster);
+            }}
           >
             {monster}
           </li>
