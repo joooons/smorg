@@ -2,21 +2,20 @@ import { ReactNode } from 'react';
 import './Card.css';
 
 interface Props {
-  children: ReactNode;
+  children?: ReactNode;
   title: string;
   text: string;
-  output: string;
 }
 
-const Card = ({ children, title, text, output }: Props) => {
+const Card = ({ children, title, text }: Props) => {
   return (
     <>
-      <div className='card m-5 p-3'>
+      <div className='card m-3 p-1'>
         <div className='card-body'>
           <h5 className='card-title'>{title}</h5>
           <p className='card-text'>{text}</p>
+          <p className='card-text'></p>
           {children}
-          <p className='card-text'>{output}</p>
         </div>
       </div>
     </>
