@@ -4,7 +4,7 @@ import Container from './components/Container';
 import Input from './components/Input';
 
 function App() {
-  const [entry, setEntry] = useState('something');
+  const [entry, setEntry] = useState('');
   const handleChange = (event: Event) => {
     const target = event.target as HTMLInputElement;
     setEntry(target.value);
