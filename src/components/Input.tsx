@@ -1,4 +1,3 @@
-import Button from './Button';
 import './Input.css';
 
 interface Props {

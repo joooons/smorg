@@ -10,10 +10,9 @@ function App() {
     const target = event.target as HTMLInputElement;
     setEntry(target.value);
   };
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(['']);
   const addItem = (text: string) => {
-    const arr = items;
-    setItems([text, ...arr]);
+    setItems([...items, text]);
   };
 
   return (
@@ -28,8 +27,8 @@ function App() {
             BUTTON
           </Button>
         </Card>
-        {items.map((item) => {
-          return <Card title='' text={item}></Card>;
+        {items.map((item, index) => {
+          if (item) return <Card key={index} title='' text={item}></Card>;
         })}
       </Container>
     </>
