@@ -1,13 +1,10 @@
-import Alert from './components/Alert';
+import Card from './components/Card';
 
 function App() {
   return (
-    <div>
-      <Alert>
-        Hello there
-        <div>Another thing</div>
-      </Alert>
-    </div>
+    <>
+      <Card></Card>
+    </>
   );
 }
 
