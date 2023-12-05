@@ -1,17 +1,17 @@
 import './Input.css';
 
 interface Props {
-  username: string;
-  updateName: (event: Event) => void;
+  myEntry: string;
+  myMethod: (event: Event) => void;
 }
 
-const Input = ({ username, updateName }: Props) => {
+const Input = ({ myEntry, myMethod }: Props) => {
   return (
     <>
       <div className='input-group mb-3'>
         <input
           type='text'
-          value={username}
+          value={myEntry}
           className='form-control'
           placeholder='Write something'
           aria-label='Write something'
@@ -19,7 +19,7 @@ const Input = ({ username, updateName }: Props) => {
           onChange={(ev: React.ChangeEvent) => {
             const thing = ev as unknown;
             const event = thing as Event;
-            updateName(event);
+            myMethod(event);
           }}
         />
       </div>
