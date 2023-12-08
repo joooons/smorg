@@ -7,12 +7,20 @@ import Centered from '../components/Centered';
 
 import spaceLogo from '../../public/space.png';
 import aboutLogo from '../../public/about.png';
+import crashGoLogo from '../../public/crashGo.png';
+import loveLogo from '../../public/love.png';
+import mazeLogo from '../../public/maze.png';
+import monsterLogo from '../../public/monster.png';
+import treeLogo from '../../public/tree.png';
+import smorgLogo from '../../public/smorg-b.png';
 
 const Home = () => {
   return (
     <>
       <Container>
-        <Text tag='h1'>HOME PAGE</Text>
+        <Centered>
+          <Text tag='h1'>HOME PAGE</Text>
+        </Centered>
         <Grid>
           <Centered>
             <Link to='/space'>
@@ -25,18 +33,33 @@ const Home = () => {
             </Link>
           </Centered>
           <Centered>
-            <Link to='/about' target='_blank' rel='noopener noreferrer'>
-              <Logo image={aboutLogo}></Logo>
+            <Link to='/about'>
+              <Logo image={crashGoLogo}></Logo>
             </Link>
           </Centered>
           <Centered>
-            <Link to='/about' target='_blank' rel='noopener noreferrer'>
-              <Logo image={aboutLogo}></Logo>
+            <Link to='/about'>
+              <Logo image={loveLogo}></Logo>
             </Link>
           </Centered>
           <Centered>
-            <Link to='/about' target='_blank' rel='noopener noreferrer'>
-              <Logo image={aboutLogo}></Logo>
+            <Link to='/about'>
+              <Logo image={mazeLogo}></Logo>
+            </Link>
+          </Centered>
+          <Centered>
+            <Link to='/about'>
+              <Logo image={monsterLogo}></Logo>
+            </Link>
+          </Centered>
+          <Centered>
+            <Link to='/about'>
+              <Logo image={smorgLogo}></Logo>
+            </Link>
+          </Centered>
+          <Centered>
+            <Link to='/about'>
+              <Logo image={treeLogo}></Logo>
             </Link>
           </Centered>
         </Grid>
