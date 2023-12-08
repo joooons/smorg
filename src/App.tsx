@@ -3,6 +3,7 @@ import Card from './components/Card';
 import Container from './components/Container';
 import Input from './components/Input';
 import Button from './components/Button';
+import Text from './components/Text';
 
 function App() {
   const [entry, setEntry] = useState('');
@@ -27,6 +28,7 @@ function App() {
             BUTTON
           </Button>
         </Card>
+        <Text>This is just a simple text</Text>
         {items.map((item, index) => {
           if (item) return <Card key={index} title='' text={item}></Card>;
         })}
