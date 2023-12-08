@@ -13,8 +13,10 @@ const Button = ({ children, value, action, followUp }: Props) => {
         className='btn btn-primary'
         type='submit'
         onClick={() => {
-          if (value) action(value);
-          followUp('');
+          if (value) {
+            if (action) action(value);
+          }
+          if (followUp) followUp('');
         }}
       >
         {children}
