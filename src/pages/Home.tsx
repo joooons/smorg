@@ -13,7 +13,7 @@ const Home = () => {
         <Text tag='h1'>HOME PAGE</Text>
         <ul style={{ listStyleType: 'none' }}>
           <li>
-            <Link to='/space' target='_blank' rel='noopener noreferrer'>
+            <Link to='/space'>
               <Logo image={spaceLogo}></Logo>
             </Link>
           </li>
