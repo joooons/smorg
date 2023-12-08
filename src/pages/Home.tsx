@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import Text from '../components/Text';
-import Button from '../components/Button';
+
+import spaceLogo from '../../public/space.png';
+import aboutLogo from '../../public/about.png';
 
 const Home = () => {
   return (
@@ -11,12 +13,36 @@ const Home = () => {
         <ul style={{ listStyleType: 'none' }}>
           <li>
             <Link to='/space' target='_blank' rel='noopener noreferrer'>
-              <Button>SPACE</Button>
+              <div
+                style={{
+                  height: '200px',
+                  width: '200px',
+                  borderRadius: '20px',
+                  borderStyle: 'solid',
+                  borderColor: 'gray',
+                  borderWidth: '3px',
+                  backgroundImage: `url(${spaceLogo})`,
+                  backgroundPosition: 'center, center',
+                  backgroundSize: 'contain',
+                }}
+              ></div>
             </Link>
           </li>
           <li>
             <Link to='/about' target='_blank' rel='noopener noreferrer'>
-              <Button>ABOUT</Button>
+              <div
+                style={{
+                  height: '200px',
+                  width: '200px',
+                  borderRadius: '20px',
+                  borderStyle: 'solid',
+                  borderColor: 'gray',
+                  borderWidth: '3px',
+                  backgroundImage: `url(${aboutLogo})`,
+                  backgroundPosition: 'center, center',
+                  backgroundSize: 'contain',
+                }}
+              ></div>
             </Link>
           </li>
         </ul>
