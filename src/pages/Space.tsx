@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '../components/Card';
 import Container from '../components/Container';
@@ -20,6 +21,9 @@ function Space() {
   return (
     <>
       <Container>
+        <Text>
+          <Link to='/home'>Go back</Link>
+        </Text>
         <Card
           title='Write something then click on button.'
           text='This will add a new card.'
