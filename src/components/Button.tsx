@@ -1,9 +1,9 @@
 // import React from 'react'
 interface Props {
   children: string;
-  value: string;
-  action: (text: string) => void;
-  followUp: (text: string) => void;
+  value?: string;
+  action?: (text: string) => void;
+  followUp?: (text: string) => void;
 }
 
 const Button = ({ children, value, action, followUp }: Props) => {
