@@ -5,14 +5,14 @@ import Logo from '../components/Logo';
 import Flex from '../components/Flex';
 import Centered from '../components/Centered';
 
-import spaceLogo from '../../public/space.png';
-import aboutLogo from '../../public/about.png';
-import crashGoLogo from '../../public/crashGo.png';
-import loveLogo from '../../public/love.png';
-import mazeLogo from '../../public/maze.png';
-import monsterLogo from '../../public/monster.png';
-import treeLogo from '../../public/tree.png';
-import smorgLogo from '../../public/smorg-b.png';
+import spaceLogo from '../../src/assets/space.png';
+import aboutLogo from '../../src/assets/about.png';
+import crashGoLogo from '../../src/assets/crashGo.png';
+import loveLogo from '../../src/assets/love.png';
+import mazeLogo from '../../src/assets/maze.png';
+import monsterLogo from '../../src/assets/monster.png';
+import treeLogo from '../../src/assets/tree.png';
+import smorgLogo from '../../src/assets/smorg-b.png';
 
 const Home = () => {
   return (
