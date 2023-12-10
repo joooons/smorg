@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import Text from '../components/Text';
 import Logo from '../components/Logo';
-import Grid from '../components/Grid';
+import Flex from '../components/Flex';
 import Centered from '../components/Centered';
 
 import spaceLogo from '../../public/space.png';
@@ -21,7 +21,7 @@ const Home = () => {
         <Centered>
           <Text tag='h1'>HOME PAGE</Text>
         </Centered>
-        <Grid>
+        <Flex>
           <Centered>
             <Link to='/space'>
               <Logo image={spaceLogo}></Logo>
@@ -62,7 +62,7 @@ const Home = () => {
               <Logo image={treeLogo}></Logo>
             </Link>
           </Centered>
-        </Grid>
+        </Flex>
       </Container>
     </>
   );
