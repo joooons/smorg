@@ -18,51 +18,69 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Centered>
-          <Text tag='h1'>HOME PAGE</Text>
-        </Centered>
-        <Flex>
-          <Centered>
-            <Link to='/space'>
-              <Logo image={spaceLogo}></Logo>
-            </Link>
-          </Centered>
-          <Centered>
-            <Link to='/about' target='_blank' rel='noopener noreferrer'>
-              <Logo image={aboutLogo}></Logo>
-            </Link>
-          </Centered>
-          <Centered>
-            <Link to='/about'>
-              <Logo image={crashGoLogo}></Logo>
-            </Link>
-          </Centered>
-          <Centered>
-            <Link to='/about'>
-              <Logo image={loveLogo}></Logo>
-            </Link>
-          </Centered>
-          <Centered>
-            <Link to='/about'>
-              <Logo image={mazeLogo}></Logo>
-            </Link>
-          </Centered>
-          <Centered>
-            <Link to='/about'>
-              <Logo image={monsterLogo}></Logo>
-            </Link>
-          </Centered>
-          <Centered>
-            <Link to='/about'>
-              <Logo image={smorgLogo}></Logo>
-            </Link>
-          </Centered>
-          <Centered>
-            <Link to='/about'>
-              <Logo image={treeLogo}></Logo>
-            </Link>
-          </Centered>
-        </Flex>
+        <div className='row'>
+          <div className='col-sm-12 mt-3'>
+            <Centered>
+              <Text tag='h1'>HOME PAGE</Text>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/space'>
+                <Logo image={spaceLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/about' target='_blank' rel='noopener noreferrer'>
+                <Logo image={aboutLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/about'>
+                <Logo image={crashGoLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/about'>
+                <Logo image={loveLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/about'>
+                <Logo image={mazeLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/about'>
+                <Logo image={monsterLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/about'>
+                <Logo image={smorgLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
+              <Link to='/about'>
+                <Logo image={treeLogo}></Logo>
+              </Link>
+            </Centered>
+          </div>
+        </div>
       </Container>
     </>
   );
