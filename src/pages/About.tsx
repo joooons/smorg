@@ -6,12 +6,10 @@ const About = () => {
   return (
     <>
       <Container>
-        <Text tag='h1'>
+        <Text color='navy' size='50' font='winter' tag='h1'>
           This page is ABOUT to be filled out, but not quite yet.
         </Text>
-        <Text>
-          <Link to='/home'>Go HOME dude.</Link>
-        </Text>
+        <Link to='/home'>Go HOME dude.</Link>
       </Container>
     </>
   );

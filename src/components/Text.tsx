@@ -3,7 +3,8 @@ import './Text.css';
 
 interface Props {
   children: ReactNode;
-  color?: 'black';
+  size?: string;
+  color?: string;
   font?: 'lovely' | 'winter';
   tag?: 'div' | 'h1' | 'p';
 }
@@ -11,19 +12,33 @@ interface Props {
 const Text = ({
   children,
   color = 'black',
-  font = 'lovely',
+  font,
+  size = '25',
   tag = 'div',
 }: Props) => {
   return (
     <>
       {tag === 'div' && (
-        <div className='text' style={{ color: color }}>
+        <div
+          className={'text ' + font}
+          style={{ color: color, fontSize: size + 'px' }}
+        >
           {children}
         </div>
       )}
-      {tag === 'h1' && <h1 className={'text ' + font}>{children}</h1>}
+      {tag === 'h1' && (
+        <h1
+          className={'text ' + font}
+          style={{ color: color, fontSize: size + 'px' }}
+        >
+          {children}
+        </h1>
+      )}
       {tag === 'p' && (
-        <p className='text' style={{ color: color }}>
+        <p
+          className={'text ' + font}
+          style={{ color: color, fontSize: size + 'px' }}
+        >
           {children}
         </p>
       )}

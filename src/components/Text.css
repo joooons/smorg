@@ -8,10 +8,6 @@
     src: local('MyFont'), url(../assets/fonts/CrackerWinter.otf) format('opentype');
 }
 
-.text {
-    font-size: 100px;
-}
-
 .text.lovely {
     font-family: Lovely;
 }

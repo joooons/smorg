@@ -26,7 +26,7 @@ const Home = () => {
           </div>
           <div className='col-sm-12 mt-3'>
             <Centered>
-              <Text font='winter' tag='h1'>
+              <Text size='100' font='winter' tag='h1'>
                 SMORG
               </Text>
             </Centered>
