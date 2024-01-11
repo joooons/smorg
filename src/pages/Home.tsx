@@ -31,7 +31,7 @@ const Home = () => {
               </Text>
             </Centered>
           </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/space'>
                 <LogoBox>
@@ -40,7 +40,7 @@ const Home = () => {
               </Link>
             </Centered>
           </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/about' target='_blank' rel='noopener noreferrer'>
                 <LogoBox>
@@ -49,7 +49,7 @@ const Home = () => {
               </Link>
             </Centered>
           </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/about'>
                 <LogoBox>
@@ -58,7 +58,7 @@ const Home = () => {
               </Link>
             </Centered>
           </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/about'>
                 <LogoBox>
@@ -67,7 +67,7 @@ const Home = () => {
               </Link>
             </Centered>
           </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/about'>
                 <LogoBox>
@@ -76,7 +76,7 @@ const Home = () => {
               </Link>
             </Centered>
           </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/about'>
                 <LogoBox>
@@ -85,7 +85,7 @@ const Home = () => {
               </Link>
             </Centered>
           </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/about'>
                 <LogoBox>
