@@ -2,16 +2,17 @@ import './Logo.css';
 
 interface Props {
   image: string;
+  size: string;
 }
 
-const Logo = ({ image }: Props) => {
+const Logo = ({ image, size = '200' }: Props) => {
   return (
     <>
       <div
         className='logo'
         style={{
-          height: '200px',
-          width: '200px',
+          height: `${size}px`,
+          width: `${size}px`,
           backgroundImage: `url(${image})`,
           backgroundPosition: 'center, center',
           backgroundSize: 'contain',
