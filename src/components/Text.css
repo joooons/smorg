@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Lovely';
+    src: local('MyFont'), url(../assets/fonts/SimonLovely.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Winter';
+    src: local('MyFont'), url(../assets/fonts/CrackerWinter.otf) format('opentype');
+}
+
+.text {
+    font-size: 100px;
+}
+
+.text.lovely {
+    font-family: Lovely;
+}
+
+.text.winter {
+    font-family: Winter;
+}

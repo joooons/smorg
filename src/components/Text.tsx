@@ -3,11 +3,17 @@ import './Text.css';
 
 interface Props {
   children: ReactNode;
-  color?: string;
+  color?: 'black';
+  font?: 'lovely' | 'winter';
   tag?: 'div' | 'h1' | 'p';
 }
 
-const Text = ({ children, color = 'black', tag = 'div' }: Props) => {
+const Text = ({
+  children,
+  color = 'black',
+  font = 'lovely',
+  tag = 'div',
+}: Props) => {
   return (
     <>
       {tag === 'div' && (
@@ -15,11 +21,7 @@ const Text = ({ children, color = 'black', tag = 'div' }: Props) => {
           {children}
         </div>
       )}
-      {tag === 'h1' && (
-        <h1 className='text' style={{ color: color }}>
-          {children}
-        </h1>
-      )}
+      {tag === 'h1' && <h1 className={'text ' + font}>{children}</h1>}
       {tag === 'p' && (
         <p className='text' style={{ color: color }}>
           {children}

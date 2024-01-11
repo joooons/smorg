@@ -21,7 +21,14 @@ const Home = () => {
         <div className='row'>
           <div className='col-sm-12 mt-3'>
             <Centered>
-              <Text tag='h1'>HOME PAGE</Text>
+              <Logo image={smorgLogo}></Logo>
+            </Centered>
+          </div>
+          <div className='col-sm-12 mt-3'>
+            <Centered>
+              <Text font='winter' tag='h1'>
+                SMORG
+              </Text>
             </Centered>
           </div>
           <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
@@ -74,15 +81,6 @@ const Home = () => {
               <Link to='/about'>
                 <LogoBox>
                   <Logo image={monsterLogo}></Logo>
-                </LogoBox>
-              </Link>
-            </Centered>
-          </div>
-          <div className='col-sm-6 col-lg-4 col-xl-3 col-xxl-2 mt-3'>
-            <Centered>
-              <Link to='/about'>
-                <LogoBox>
-                  <Logo image={smorgLogo}></Logo>
                 </LogoBox>
               </Link>
             </Centered>
