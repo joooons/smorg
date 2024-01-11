@@ -8,13 +8,10 @@ const Logo = ({ image }: Props) => {
   return (
     <>
       <div
+        className='logo'
         style={{
           height: '200px',
           width: '200px',
-          borderRadius: '20px',
-          borderStyle: 'solid',
-          borderColor: 'gray',
-          borderWidth: '3px',
           backgroundImage: `url(${image})`,
           backgroundPosition: 'center, center',
           backgroundSize: 'contain',

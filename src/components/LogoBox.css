@@ -1,0 +1,27 @@
+.logobox {
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.logobox:hover {
+    box-shadow: 5px 5px 10px violet;
+}
+
+.logobox-lid {
+    position: relative;
+}
+
+.logobox-cover {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    opacity: 50%;
+    transition: 0.2s;
+}
+
+.logobox-cover:hover {
+    opacity: 0%;
+}
