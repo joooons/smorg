@@ -15,8 +15,8 @@
 
 .logobox-cover {
     position: absolute;
-    height: 300px;
-    width: 300px;
+    height: 220px;
+    width: 220px;
     background-color: white;
     opacity: 50%;
     transition: 0.2s;

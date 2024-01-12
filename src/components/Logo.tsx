@@ -2,7 +2,7 @@ import './Logo.css';
 
 interface Props {
   image: string;
-  size: string;
+  size?: string;
 }
 
 const Logo = ({ image, size = '200' }: Props) => {
