@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import Text from '../components/Text';
+import TextArea from '../components/TextArea';
 import NavBar from '../components/NavBar';
 
 const Tree = () => {
@@ -12,6 +13,7 @@ const Tree = () => {
           TREE
         </Text>
         <Link to='/home'>Go HOME dude.</Link>
+        <TextArea></TextArea>
       </Container>
     </>
   );
