@@ -42,7 +42,7 @@ const Home = () => {
           </div>
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/about' target='_blank' rel='noopener noreferrer'>
+              <Link to='/about'>
                 <LogoBox>
                   <Logo image={aboutLogo}></Logo>
                 </LogoBox>
