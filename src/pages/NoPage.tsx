@@ -6,7 +6,14 @@ const NoPage = () => {
   return (
     <>
       <Container>
-        <Text tag='h1'>Uh, are you lost?</Text>
+        <Text tag='h1'>Nothing but us chickens.</Text>
+        <img
+          src='/src/assets/chickens.png'
+          width='200'
+          height='200'
+          className='d-inline-block align-top'
+          alt=''
+        />
         <Text>
           <Link to='/home'>Go HOME dude.</Link>
         </Text>

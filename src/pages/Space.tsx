@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import Card from '../components/Card';
 import NavBar from '../components/NavBar';
@@ -23,9 +22,6 @@ function Space() {
     <>
       <NavBar></NavBar>
       <Container>
-        <Text>
-          <Link to='/home'>Go back</Link>
-        </Text>
         <Card
           title='Write something then click on button.'
           text='This will add a new card.'

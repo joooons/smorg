@@ -5,7 +5,14 @@ const NavBar = () => {
     <>
       <nav className='navbar navbar-expand-lg navbar-light bg-warning px-5 py-3'>
         <a className='navbar-brand' href='/'>
-          SMORG
+          <img
+            src='/src/assets/smorg-b.png'
+            width='30'
+            height='30'
+            className='d-inline-block align-top'
+            alt=''
+          />
+          &nbsp;SMORG
         </a>
         <button
           className='navbar-toggler'
