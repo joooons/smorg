@@ -42,6 +42,15 @@ const Home = () => {
           </div>
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
+              <Link to='/tree'>
+                <LogoBox>
+                  <Logo image={treeLogo}></Logo>
+                </LogoBox>
+              </Link>
+            </Centered>
+          </div>
+          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+            <Centered>
               <Link to='/about'>
                 <LogoBox>
                   <Logo image={aboutLogo}></Logo>
@@ -51,7 +60,7 @@ const Home = () => {
           </div>
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/about'>
+              <Link to='/crash'>
                 <LogoBox>
                   <Logo image={crashGoLogo}></Logo>
                 </LogoBox>
@@ -60,7 +69,7 @@ const Home = () => {
           </div>
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/about'>
+              <Link to='/love'>
                 <LogoBox>
                   <Logo image={loveLogo}></Logo>
                 </LogoBox>
@@ -69,7 +78,7 @@ const Home = () => {
           </div>
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/about'>
+              <Link to='/maze'>
                 <LogoBox>
                   <Logo image={mazeLogo}></Logo>
                 </LogoBox>
@@ -78,18 +87,9 @@ const Home = () => {
           </div>
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/about'>
+              <Link to='/monster'>
                 <LogoBox>
                   <Logo image={monsterLogo}></Logo>
-                </LogoBox>
-              </Link>
-            </Centered>
-          </div>
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
-            <Centered>
-              <Link to='/tree'>
-                <LogoBox>
-                  <Logo image={treeLogo}></Logo>
                 </LogoBox>
               </Link>
             </Centered>
