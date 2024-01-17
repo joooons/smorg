@@ -5,6 +5,25 @@ import NavBar from '../components/NavBar';
 import Centered from '../components/Centered';
 import Button from '../components/Button';
 
+import { TreeNode } from '../components/familytree/TreeNodeInterface';
+
+// interface TreeNode {
+//   id: number;
+//   name: string;
+//   spouse?: string;
+//   children?: TreeNode[];
+// }
+
+const treedata: TreeNode = {
+  id: 1,
+  name: 'Ehmahn',
+  spouse: 'Ehwoomahn',
+  children: [
+    { id: 2, name: 'Ehbweh', children: [] },
+    { id: 3, name: 'Ehgerah', children: [] },
+  ],
+};
+
 const Tree = () => {
   return (
     <>
