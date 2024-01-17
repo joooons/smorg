@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Card from '../components/Card';
+import NavBar from '../components/NavBar';
 import Container from '../components/Container';
 import Input from '../components/Input';
 import Button from '../components/Button';
@@ -20,6 +21,7 @@ function Space() {
 
   return (
     <>
+      <NavBar></NavBar>
       <Container>
         <Text>
           <Link to='/home'>Go back</Link>
