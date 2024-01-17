@@ -1,4 +1,5 @@
 import './NavBar.css';
+import smorgLogo from '../../src/assets/smorg-b.png';
 
 const NavBar = () => {
   return (
@@ -6,7 +7,7 @@ const NavBar = () => {
       <nav className='navbar navbar-expand-lg navbar-light bg-warning px-5 py-3'>
         <a className='navbar-brand' href='/'>
           <img
-            src='/src/assets/smorg-b.png'
+            src={smorgLogo}
             width='30'
             height='30'
             className='d-inline-block align-top'

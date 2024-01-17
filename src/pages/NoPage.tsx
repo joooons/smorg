@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import Text from '../components/Text';
+import ChickensImage from '../../src/assets/chickens.png';
 
 const NoPage = () => {
   return (
@@ -8,7 +9,7 @@ const NoPage = () => {
       <Container>
         <Text tag='h1'>Nothing but us chickens.</Text>
         <img
-          src='/src/assets/chickens.png'
+          src={ChickensImage}
           width='200'
           height='200'
           className='d-inline-block align-top'
