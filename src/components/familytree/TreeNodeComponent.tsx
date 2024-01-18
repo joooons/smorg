@@ -17,8 +17,8 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
         backgroundColor: `${color}`,
         textAlign: 'center',
         verticalAlign: 'top',
-        padding: '10px',
-        borderRadius: '10px',
+        padding: '3px',
+        borderRadius: '5px',
         margin: '2px',
         display: 'inline-block',
       }}
