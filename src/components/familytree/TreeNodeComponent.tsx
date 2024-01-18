@@ -1,9 +1,6 @@
 // import React from 'react';
 
 import { TreeNode } from './TreeNodeInterface';
-import { SteppedLineTo } from 'react-lineto';
-
-import './TreeNodeComponent.css';
 
 interface Props {
   node: TreeNode;
@@ -21,6 +18,8 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
       style={{
         textAlign: 'center',
         verticalAlign: 'top',
+        padding: '3px',
+        borderRadius: '5px',
         margin: '2px',
         display: 'inline-block',
       }}
@@ -51,21 +50,6 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
           <div>
             {node.children.map((child) => (
               <TreeNodeComponent key={child.id} node={child} color={color2} />
-            ))}
-          </div>
-        )}
-        {node.children && (
-          <div>
-            {node.children.map((child) => (
-              <SteppedLineTo
-                key={child.id}
-                from={node.id.toString()}
-                to={child.id.toString()}
-                borderColor='black'
-                borderWidth={2}
-                fromAnchor='bottom center'
-                toAnchor='top center'
-              />
             ))}
           </div>
         )}
