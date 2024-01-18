@@ -75,11 +75,12 @@ const Tree = () => {
         </Centered>
         <TextArea></TextArea>
         <Button>GENERATE</Button>
-        <br></br>
-        <TreeNodeComponent
-          key={treedata.id}
-          node={treedata}
-        ></TreeNodeComponent>
+        <Centered>
+          <TreeNodeComponent
+            key={treedata.id}
+            node={treedata}
+          ></TreeNodeComponent>
+        </Centered>
       </Container>
     </>
   );

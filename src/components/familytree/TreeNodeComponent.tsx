@@ -2,6 +2,8 @@
 
 import { TreeNode } from './TreeNodeInterface';
 
+import './TreeNodeComponent.css';
+
 interface Props {
   node: TreeNode;
   color?: string;
@@ -18,7 +20,7 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
         textAlign: 'center',
         verticalAlign: 'top',
         padding: '3px',
-        borderRadius: '5px',
+        borderRadius: '10px',
         margin: '2px',
         display: 'inline-block',
       }}
