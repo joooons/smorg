@@ -38,13 +38,23 @@ const treedata: TreeNode = {
       children: [
         { id: 8, name: 'Kelly', children: [] },
         { id: 9, name: 'Lenny', children: [] },
-        { id: 10, name: 'Molly', children: [] },
+        {
+          id: 10,
+          name: 'Molly',
+          children: [
+            { id: 8, name: 'Nina', children: [] },
+            { id: 9, name: 'Olive', children: [] },
+            { id: 10, name: 'Parcy', children: [] },
+          ],
+        },
       ],
     },
   ],
 };
 
 const Tree = () => {
+  // const [textareaText, setTextareaText] = useState('');
+
   return (
     <>
       <NavBar></NavBar>
