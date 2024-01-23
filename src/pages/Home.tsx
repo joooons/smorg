@@ -21,7 +21,7 @@ const Home = () => {
         <div className='row'>
           <div className='col-sm-12 mt-3'>
             <Centered>
-              <Logo size='120' image={smorgLogo}></Logo>
+              <Logo size='110' image={smorgLogo}></Logo>
             </Centered>
           </div>
           <div className='col-sm-12 mt-3'>
