@@ -6,11 +6,11 @@ import LogoBox from '../components/LogoBox';
 import Centered from '../components/Centered';
 
 import spaceLogo from '../../src/assets/space.png';
-import aboutLogo from '../../src/assets/about.png';
-import crashGoLogo from '../../src/assets/crashGo.png';
-import loveLogo from '../../src/assets/love.png';
-import mazeLogo from '../../src/assets/maze.png';
-import monsterLogo from '../../src/assets/monster.png';
+// import aboutLogo from '../../src/assets/about.png';
+// import crashGoLogo from '../../src/assets/crashGo.png';
+// import loveLogo from '../../src/assets/love.png';
+// import mazeLogo from '../../src/assets/maze.png';
+// import monsterLogo from '../../src/assets/monster.png';
 import treeLogo from '../../src/assets/tree.png';
 import smorgLogo from '../../src/assets/smorg-b.png';
 
@@ -31,6 +31,7 @@ const Home = () => {
               </Text>
             </Centered>
           </div>
+
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/space'>
@@ -40,56 +41,12 @@ const Home = () => {
               </Link>
             </Centered>
           </div>
+
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/tree'>
                 <LogoBox>
                   <Logo image={treeLogo}></Logo>
-                </LogoBox>
-              </Link>
-            </Centered>
-          </div>
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
-            <Centered>
-              <Link to='/about'>
-                <LogoBox>
-                  <Logo image={aboutLogo}></Logo>
-                </LogoBox>
-              </Link>
-            </Centered>
-          </div>
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
-            <Centered>
-              <Link to='/crash'>
-                <LogoBox>
-                  <Logo image={crashGoLogo}></Logo>
-                </LogoBox>
-              </Link>
-            </Centered>
-          </div>
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
-            <Centered>
-              <Link to='/love'>
-                <LogoBox>
-                  <Logo image={loveLogo}></Logo>
-                </LogoBox>
-              </Link>
-            </Centered>
-          </div>
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
-            <Centered>
-              <Link to='/maze'>
-                <LogoBox>
-                  <Logo image={mazeLogo}></Logo>
-                </LogoBox>
-              </Link>
-            </Centered>
-          </div>
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
-            <Centered>
-              <Link to='/monster'>
-                <LogoBox>
-                  <Logo image={monsterLogo}></Logo>
                 </LogoBox>
               </Link>
             </Centered>
