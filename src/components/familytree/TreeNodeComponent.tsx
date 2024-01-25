@@ -1,8 +1,11 @@
 // import React from 'react';
+import Xarrow from 'react-xarrows';
 
 import { TreeNode } from './TreeNodeInterface';
+import './TreeNodeComponent.css';
 
 interface Props {
+  treeId?: string;
   node: TreeNode;
   color?: string;
 }
@@ -11,7 +14,7 @@ const colors = ['lightgreen', 'lightgreen'];
 // const colors = ['rgb(230, 255, 235)', 'rgb(240, 255, 210)'];
 // const colors = ['rgb(240, 250, 240)', 'rgb(250, 250, 230)'];
 
-const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
+const TreeNodeComponent = ({ treeId, node, color = colors[0] }: Props) => {
   const color2 = color == colors[0] ? colors[1] : colors[0];
   return (
     <div
@@ -32,6 +35,7 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
         }}
       >
         <div
+          id={node.id.toString()}
           className={node.id.toString()}
           style={{
             backgroundColor: `${color}`,
@@ -45,11 +49,26 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
       </div>
 
       <div className='blank-space'></div>
+
       <div>
         {node.children && (
           <div>
             {node.children.map((child) => (
-              <TreeNodeComponent key={child.id} node={child} color={color2} />
+              <>
+                <TreeNodeComponent
+                  // treeId={'tree-' + child.id.toString()}
+                  key={child.id}
+                  node={child}
+                  color={color2}
+                />
+                <Xarrow
+                  start={node.id.toString()}
+                  end={child.id.toString()}
+                  strokeWidth={1}
+                  lineColor={'red'}
+                  path='grid'
+                />
+              </>
             ))}
           </div>
         )}

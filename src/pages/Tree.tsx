@@ -8,6 +8,8 @@ import TreeNodeComponent from '../components/familytree/TreeNodeComponent';
 
 import { TreeNode } from '../components/familytree/TreeNodeInterface';
 
+import Xarrow from 'react-xarrows';
+
 // interface TreeNode {
 //   id: number;
 //   name: string;
@@ -73,10 +75,22 @@ const Tree = () => {
             TREE
           </Text>
         </Centered>
+        <div id='thing1' style={{ backgroundColor: 'pink', width: '100px' }}>
+          ONE
+        </div>
+        <div>???</div>
+        <div>???</div>
+        <div>???</div>
+        <div>???</div>
+        <div id='thing2' style={{ backgroundColor: 'pink', width: '300px' }}>
+          TWO
+        </div>
+        <Xarrow start='thing1' end='thing2' headSize={0} path='grid' />
         <TextArea></TextArea>
         <Button>GENERATE</Button>
         <Centered>
           <TreeNodeComponent
+            // treeId='tree-1'
             key={treedata.id}
             node={treedata}
           ></TreeNodeComponent>
