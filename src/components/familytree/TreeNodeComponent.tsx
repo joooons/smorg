@@ -4,16 +4,15 @@ import { TreeNode } from './TreeNodeInterface';
 import './TreeNodeComponent.css';
 
 interface Props {
-  treeId?: string;
   node: TreeNode;
   color?: string;
 }
 
-const colors = ['lightgreen', 'lightgreen'];
-// const colors = ['rgb(230, 255, 235)', 'rgb(240, 255, 210)'];
+// const colors = ['lightgreen', 'lightgreen'];
+const colors = ['rgb(230, 255, 235)', 'rgb(240, 255, 210)'];
 // const colors = ['rgb(240, 250, 240)', 'rgb(250, 250, 230)'];
 
-const TreeNodeComponent = ({ treeId, node, color = colors[0] }: Props) => {
+const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
   const color2 = color == colors[0] ? colors[1] : colors[0];
   return (
     <div
@@ -62,7 +61,7 @@ const TreeNodeComponent = ({ treeId, node, color = colors[0] }: Props) => {
                   endAnchor='top'
                   headSize={0}
                   strokeWidth={3}
-                  lineColor={'lightgreen'}
+                  lineColor={color}
                   path='grid'
                 />
               </>
