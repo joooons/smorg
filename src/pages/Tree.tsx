@@ -123,13 +123,32 @@ const Tree = () => {
       .replace(/\n/g, '---')
       .replace(/\t/g, '<TAB>---')
       .split('---');
-    console.log('----------------');
-    console.log(words);
-    // console.log(words[0]);
 
-    console.log(point);
-    setPoint(new TreePoint(0, words[0]));
-    console.log(point);
+    let word = words.shift();
+    let text = words.join('\n');
+
+    if (!word) {
+      return;
+    }
+
+    if (!node) {
+      console.log('----------------');
+      const node = new TreePoint(0, word);
+      if (text) {
+        node.children = [new TreePoint(99, 'blank')];
+        parseText(text, node.children[0]);
+      }
+
+      setPoint(node);
+      console.log(point);
+    } else {
+      node.id = 0;
+      node.name = word;
+      if (text) {
+        node.children = [new TreePoint(99, 'blank')];
+        parseText(text, node.children[0]);
+      }
+    }
   };
 
   return (
