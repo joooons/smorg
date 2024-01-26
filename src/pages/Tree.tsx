@@ -117,43 +117,51 @@ const Tree = () => {
   //   console.log(newStr);
   // };
 
-  function testFunc(words: string[], node: TreePoint): TreePoint {
-    console.log(words);
-    console.log(node);
+  function childTreePoint(words: string[], root: TreePoint): TreePoint {
+    // console.log(words);
+    // console.log(root);
+    count++;
+    let word = words.shift();
+    if (!word) {
+      return new TreePoint(99, 'never');
+    }
+    let node = new TreePoint(count, word);
+    if (words.length > 0) {
+      node.children = [childTreePoint(words, root)];
+    }
+    return node;
   }
 
+  let count = 0;
+
   const parseText = (value: string, node: TreePoint | null) => {
+    count = 0;
     let words = value
       .replace(/ +/g, ' ')
       .replace(/\n/g, '---')
       .replace(/\t/g, '<TAB>---')
       .split('---');
-
+    console.log(words);
     let word = words.shift();
-    let text = words.join('\n');
 
+    // let text = words.join('\n');
+
+    count++;
     if (!word) {
+      console.log('this will never happen');
+      console.log(node);
       return;
     }
 
-    if (!node) {
-      console.log('----------------');
-      const node = new TreePoint(0, word);
-      if (text) {
-        node.children = [new TreePoint(99, 'blank')];
-        parseText(text, node.children[0]);
-      }
+    // console.log('count is ', count, word);
+    console.log('--------------- start ----------------');
 
-      setPoint(node);
-      console.log(point);
-    } else {
-      node.id = 0;
-      node.name = word;
-      if (text) {
-        node.children = [new TreePoint(99, 'blank')];
-        parseText(text, node.children[0]);
-      }
+    const root = new TreePoint(count, word);
+    if (words.length > 0) {
+      root.children = [childTreePoint(words, root)];
     }
+    setPoint(root);
+    console.log(point);
   };
 
   return (
