@@ -17,6 +17,7 @@ import { TreeNode } from '../components/familytree/TreeNodeInterface';
 //   children?: TreeNode[];
 // }
 
+// This contains dummy tree data
 const treedata: TreeNode = {
   id: 1,
   name: 'Andrew',
@@ -63,10 +64,34 @@ const treedata: TreeNode = {
   ],
 };
 
-// const textTree: TreeNode;
+class TreePoint {
+  id: number;
+  name: string;
+  spouse?: string;
+  children?: TreePoint[] | null = null;
+
+  constructor(
+    id: number,
+    name: string,
+    spouse?: string,
+    children?: TreePoint[] | null
+  ) {
+    this.id = id;
+    this.name = name;
+    this.spouse = spouse;
+    this.children = children && null;
+  }
+
+  genericMethod(): void {
+    const spouse = this.spouse ? this.spouse : 'nobody';
+    console.log(`This is node #${this.id} and has ${this.name} and ${spouse}`);
+  }
+}
 
 const Tree = () => {
   const [textareaText, setTextareaText] = useState('');
+
+  const [point, setPoint] = useState<TreePoint | null>(null);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === 'Tab') {
@@ -83,13 +108,27 @@ const Tree = () => {
 
   const handleChange = (event: Event) => {
     const target = event.target as HTMLInputElement;
-    // console.log('textarea value = ', '\n', target.value);
     setTextareaText(target.value);
   };
 
-  const parseText = (value: string) => {
-    let newStr = value.replace(/\t/g, '--TAB--');
-    console.log(newStr);
+  // Keep this for now
+  // const parseText = (value: string) => {
+  //   let newStr = value.replace(/\t/g, '--TAB--');
+  //   console.log(newStr);
+  // };
+
+  const parseText = (value: string, node: TreePoint | null) => {
+    let words = value
+      .replace(/ +/g, ' ')
+      .replace(/[\n\t]+/g, '---')
+      .split('---');
+    console.log('----------------');
+    console.log(words);
+    console.log(words[0]);
+
+    console.log(point);
+    setPoint(new TreePoint(0, words[0]));
+    console.log(point);
   };
 
   return (
@@ -108,9 +147,10 @@ const Tree = () => {
           changeMethod={handleChange}
         ></TextArea>
 
-        <Button value={textareaText} action={parseText}>
+        <Button value={textareaText} node={null} action={parseText}>
           GENERATE
         </Button>
+
         <Centered>
           <TreeNodeComponent
             key={treedata.id}
