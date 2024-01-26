@@ -97,8 +97,8 @@ const Tree = () => {
 
         <TextArea
           text={textareaText}
-          methodOne={handleKeyDown}
-          methodTwo={handleChange}
+          keydownMethod={handleKeyDown}
+          changeMethod={handleChange}
         ></TextArea>
 
         <Button>GENERATE</Button>
