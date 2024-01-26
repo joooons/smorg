@@ -117,6 +117,11 @@ const Tree = () => {
   //   console.log(newStr);
   // };
 
+  function testFunc(words: string[], node: TreePoint): TreePoint {
+    console.log(words);
+    console.log(node);
+  }
+
   const parseText = (value: string, node: TreePoint | null) => {
     let words = value
       .replace(/ +/g, ' ')
