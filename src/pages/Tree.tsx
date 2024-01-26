@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 
 import Container from '../components/Container';
 import Text from '../components/Text';
@@ -64,7 +64,26 @@ const treedata: TreeNode = {
 };
 
 const Tree = () => {
-  // const [textareaText, setTextareaText] = useState('');
+  const [textareaText, setTextareaText] = useState('');
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      const start = event.currentTarget.selectionStart;
+      const end = event.currentTarget.selectionEnd;
+      const firstHalf = textareaText.substring(0, start);
+      const lastHalf = textareaText.substring(end);
+      const newText = firstHalf + '\t' + lastHalf;
+      event.currentTarget.value = newText;
+      setTextareaText(newText);
+    }
+  };
+
+  const handleChange = (event: Event) => {
+    const target = event.target as HTMLInputElement;
+    console.log('textarea value = ', '\n', target.value);
+    setTextareaText(target.value);
+  };
 
   return (
     <>
@@ -75,7 +94,13 @@ const Tree = () => {
             TREE
           </Text>
         </Centered>
-        <TextArea></TextArea>
+
+        <TextArea
+          text={textareaText}
+          methodOne={handleKeyDown}
+          methodTwo={handleChange}
+        ></TextArea>
+
         <Button>GENERATE</Button>
         <Centered>
           <TreeNodeComponent

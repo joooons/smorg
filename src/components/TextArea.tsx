@@ -1,32 +1,40 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import './TextArea.css';
 
-const TextArea = () => {
-  const [text, setText] = useState('');
+interface Props {
+  text: string;
+  methodOne: (event: React.KeyboardEvent<HTMLTextAreaElement>) => void;
+  methodTwo: (event: Event) => void;
+}
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      const start = event.currentTarget.selectionStart;
-      const end = event.currentTarget.selectionEnd;
-      const firstHalf = text.substring(0, start);
-      const lastHalf = text.substring(end);
-      const newText = firstHalf + '\t' + lastHalf;
-      event.currentTarget.value = newText;
-      setText(newText);
-    }
-  };
-  const handleChange = (event: Event) => {
-    const target = event.target as HTMLInputElement;
-    console.log('textarea value = ', '\n', target.value);
-    setText(target.value);
-  };
+const TextArea = ({ text, methodOne, methodTwo }: Props) => {
+  // const [text, setText] = useState('');
+
+  // const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+  //   if (event.key === 'Tab') {
+  //     event.preventDefault();
+  //     const start = event.currentTarget.selectionStart;
+  //     const end = event.currentTarget.selectionEnd;
+  //     const firstHalf = text.substring(0, start);
+  //     const lastHalf = text.substring(end);
+  //     const newText = firstHalf + '\t' + lastHalf;
+  //     event.currentTarget.value = newText;
+  //     setText(newText);
+  //   }
+  // };
+
+  // const handleChange = (event: Event) => {
+  //   const target = event.target as HTMLInputElement;
+  //   console.log('textarea value = ', '\n', target.value);
+  //   setText(target.value);
+  // };
+
   return (
     <>
       <textarea
-        onKeyDown={handleKeyDown}
+        onKeyDown={methodOne}
         onChange={(event: React.ChangeEvent) => {
-          handleChange(event as unknown as Event);
+          methodTwo(event as unknown as Event);
         }}
       >
         {text}
