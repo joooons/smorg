@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// COMPONENTS
 import Container from '../components/Container';
 import Text from '../components/Text';
 import TextArea from '../components/TextArea';
@@ -8,7 +9,9 @@ import Centered from '../components/Centered';
 import Button from '../components/Button';
 import TreeNodeComponent from '../components/familytree/TreeNodeComponent';
 
+// CLASS and INTERFACE
 import { TreeNode } from '../components/familytree/TreeNodeInterface';
+import { TreePoint } from '../components/familytree/TreePointClass';
 
 // interface TreeNode {
 //   id: number;
@@ -17,7 +20,7 @@ import { TreeNode } from '../components/familytree/TreeNodeInterface';
 //   children?: TreeNode[];
 // }
 
-// This contains dummy tree data
+// This contains dummy tree data. Remove this when no longer needed
 const treedata: TreeNode = {
   id: 1,
   name: 'Andrew',
@@ -64,30 +67,6 @@ const treedata: TreeNode = {
   ],
 };
 
-class TreePoint {
-  id: number;
-  name: string;
-  spouse?: string;
-  children?: TreePoint[] | null = null;
-
-  constructor(
-    id: number,
-    name: string,
-    spouse?: string,
-    children?: TreePoint[] | null
-  ) {
-    this.id = id;
-    this.name = name;
-    this.spouse = spouse;
-    this.children = children && null;
-  }
-
-  genericMethod(): void {
-    const spouse = this.spouse ? this.spouse : 'nobody';
-    console.log(`This is node #${this.id} and has ${this.name} and ${spouse}`);
-  }
-}
-
 const Tree = () => {
   const [textareaText, setTextareaText] = useState('');
 
@@ -111,15 +90,7 @@ const Tree = () => {
     setTextareaText(target.value);
   };
 
-  // Keep this for now
-  // const parseText = (value: string) => {
-  //   let newStr = value.replace(/\t/g, '--TAB--');
-  //   console.log(newStr);
-  // };
-
   function childTreePoint(words: string[], root: TreePoint): TreePoint {
-    // console.log(words);
-    // console.log(root);
     count++;
     let word = words.shift();
     if (!word) {
@@ -134,7 +105,7 @@ const Tree = () => {
 
   let count = 0;
 
-  const parseText = (value: string, node: TreePoint | null) => {
+  const fillTree = (value: string) => {
     count = 0;
     let words = value
       .replace(/ +/g, ' ')
@@ -144,12 +115,9 @@ const Tree = () => {
     console.log(words);
     let word = words.shift();
 
-    // let text = words.join('\n');
-
     count++;
     if (!word) {
       console.log('this will never happen');
-      console.log(node);
       return;
     }
 
@@ -160,6 +128,7 @@ const Tree = () => {
     if (words.length > 0) {
       root.children = [childTreePoint(words, root)];
     }
+
     setPoint(root);
     console.log(point);
   };
@@ -180,7 +149,7 @@ const Tree = () => {
           changeMethod={handleChange}
         ></TextArea>
 
-        <Button value={textareaText} node={null} action={parseText}>
+        <Button value={textareaText} action={fillTree}>
           GENERATE
         </Button>
 
