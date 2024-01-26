@@ -63,6 +63,8 @@ const treedata: TreeNode = {
   ],
 };
 
+// const textTree: TreeNode;
+
 const Tree = () => {
   const [textareaText, setTextareaText] = useState('');
 
@@ -81,8 +83,13 @@ const Tree = () => {
 
   const handleChange = (event: Event) => {
     const target = event.target as HTMLInputElement;
-    console.log('textarea value = ', '\n', target.value);
+    // console.log('textarea value = ', '\n', target.value);
     setTextareaText(target.value);
+  };
+
+  const parseText = (value: string) => {
+    let newStr = value.replace(/\t/g, '--TAB--');
+    console.log(newStr);
   };
 
   return (
@@ -101,7 +108,9 @@ const Tree = () => {
           changeMethod={handleChange}
         ></TextArea>
 
-        <Button>GENERATE</Button>
+        <Button value={textareaText} action={parseText}>
+          GENERATE
+        </Button>
         <Centered>
           <TreeNodeComponent
             key={treedata.id}
