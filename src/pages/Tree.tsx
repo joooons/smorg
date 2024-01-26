@@ -120,11 +120,12 @@ const Tree = () => {
   const parseText = (value: string, node: TreePoint | null) => {
     let words = value
       .replace(/ +/g, ' ')
-      .replace(/[\n\t]+/g, '---')
+      .replace(/\n/g, '---')
+      .replace(/\t/g, '<TAB>---')
       .split('---');
     console.log('----------------');
     console.log(words);
-    console.log(words[0]);
+    // console.log(words[0]);
 
     console.log(point);
     setPoint(new TreePoint(0, words[0]));
