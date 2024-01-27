@@ -93,7 +93,7 @@ const Tree = () => {
       return new TreePoint(99, 'end'); // This will never happen
     }
 
-    let node = new TreePoint(count, word);
+    let node = new TreePoint(count, word.substring(1));
     node.children = [];
 
     if (words.length > 0) {
@@ -133,7 +133,7 @@ const Tree = () => {
 
     count++;
     if (word) {
-      const root = new TreePoint(count, word);
+      const root = new TreePoint(count, word.substring(1));
 
       let tier = Number(word[0]) + 1;
       root.children = [];
