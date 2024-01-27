@@ -10,13 +10,12 @@ const TextArea = ({ text, keydownMethod, changeMethod }: Props) => {
   return (
     <>
       <textarea
+        value={text}
         onKeyDown={keydownMethod}
         onChange={(event: React.ChangeEvent) => {
           changeMethod(event as unknown as Event);
         }}
-      >
-        {text}
-      </textarea>
+      ></textarea>
     </>
   );
 };
