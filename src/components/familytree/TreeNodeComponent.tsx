@@ -1,10 +1,10 @@
 import Xarrow from 'react-xarrows';
 
-import { TreeNode } from './TreeNodeInterface';
+import { TreePoint } from './TreePointClass';
 import './TreeNodeComponent.css';
 
 interface Props {
-  node: TreeNode;
+  node: TreePoint;
   color?: string;
 }
 
