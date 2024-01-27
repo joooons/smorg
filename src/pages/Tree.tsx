@@ -10,7 +10,7 @@ import Button from '../components/Button';
 import TreeNodeComponent from '../components/familytree/TreeNodeComponent';
 
 // CLASS and INTERFACE
-import { TreePoint } from '../components/familytree/TreePointClass';
+import { TreeNode } from '../components/familytree/TreeNodeClass';
 
 const Tree = () => {
   const initialText =
@@ -18,8 +18,8 @@ const Tree = () => {
     'his wife\n\t\tNephew\n\t\tNiece\n\tMe\n\tYounger Sister';
   const [textareaText, setTextareaText] = useState(initialText);
 
-  const [point, setPoint] = useState<TreePoint>(
-    new TreePoint(0, 'Click GENERATE', undefined, [])
+  const [point, setPoint] = useState<TreeNode>(
+    new TreeNode(0, 'Click GENERATE', undefined, [])
   );
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -40,21 +40,21 @@ const Tree = () => {
     setTextareaText(target.value);
   };
 
-  function childTreePoint(words: string[], root: TreePoint): TreePoint {
+  function childTreeNode(words: string[], root: TreeNode): TreeNode {
     count++;
     let word = words.shift();
 
     if (!word) {
-      return new TreePoint(99, 'end'); // This will never happen
+      return new TreeNode(99, 'end'); // This will never happen
     }
 
-    let node = new TreePoint(count, word.substring(1));
+    let node = new TreeNode(count, word.substring(1));
     node.children = [];
 
     if (words.length > 0) {
       let tier = Number(word[0]) + 1;
       while (words.length > 0 && Number(words[0][0]) === tier) {
-        node.children.push(childTreePoint(words, root));
+        node.children.push(childTreeNode(words, root));
       }
     }
     return node;
@@ -88,12 +88,12 @@ const Tree = () => {
 
     count++;
     if (word) {
-      const root = new TreePoint(count, word.substring(1));
+      const root = new TreeNode(count, word.substring(1));
 
       let tier = Number(word[0]) + 1;
       root.children = [];
       while (words.length > 0 && Number(words[0][0]) === tier) {
-        root.children.push(childTreePoint(words, root));
+        root.children.push(childTreeNode(words, root));
       }
 
       setPoint(root);

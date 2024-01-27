@@ -1,14 +1,14 @@
-export class TreePoint {
+export class TreeNode {
   id: number;
   name: string;
   spouse?: string;
-  children?: TreePoint[] | null = null;
+  children?: TreeNode[] | null = null;
 
   constructor(
     id: number,
     name: string,
     spouse?: string,
-    children?: TreePoint[] | null
+    children?: TreeNode[] | null
   ) {
     this.id = id;
     this.name = name;
