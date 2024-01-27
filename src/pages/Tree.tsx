@@ -123,19 +123,16 @@ const Tree = () => {
     let word = words.shift();
 
     count++; // count == 1
-    if (!word) {
-      console.log('this will never happen');
-      return;
+    if (word) {
+      const root = new TreePoint(count, word);
+
+      if (words.length > 0) {
+        root.children = [childTreePoint(words, root)];
+      }
+
+      setPoint(root);
+      console.log(point);
     }
-
-    const root = new TreePoint(count, word);
-
-    if (words.length > 0) {
-      root.children = [childTreePoint(words, root)];
-    }
-
-    setPoint(root);
-    console.log(point);
   };
 
   return (
