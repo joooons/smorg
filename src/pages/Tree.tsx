@@ -63,7 +63,9 @@ import { TreePoint } from '../components/familytree/TreePointClass';
 const Tree = () => {
   const [textareaText, setTextareaText] = useState('');
 
-  const [point, setPoint] = useState<TreePoint>(new TreePoint(99, 'dummy'));
+  const [point, setPoint] = useState<TreePoint>(
+    new TreePoint(99, 'dummy', undefined, [])
+  );
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === 'Tab') {
@@ -86,18 +88,25 @@ const Tree = () => {
   function childTreePoint(words: string[], root: TreePoint): TreePoint {
     count++;
     let word = words.shift();
+
     if (!word) {
-      return new TreePoint(99, 'never');
+      return new TreePoint(99, 'end'); // This will never happen
     }
+
     let node = new TreePoint(count, word);
+    node.children = [];
+
     if (words.length > 0) {
-      node.children = [childTreePoint(words, root)];
+      let tier = Number(word[0]) + 1;
+      while (words.length > 0 && Number(words[0][0]) === tier) {
+        node.children.push(childTreePoint(words, root));
+      }
     }
     return node;
   }
 
   function arrayOfNames(value: string): string[] {
-    let words = value
+    let words = ('0' + value)
       .replace(/ +/g, ' ')
       .replace(/\n/g, '<<>>')
       .replace(/\t/g, '#')
@@ -119,15 +128,17 @@ const Tree = () => {
     console.log('--------------- start ----------------');
     console.log(value);
     const words = arrayOfNames(value);
-    console.log(words);
     let word = words.shift();
+    console.log(word, words);
 
-    count++; // count == 1
+    count++;
     if (word) {
       const root = new TreePoint(count, word);
 
-      if (words.length > 0) {
-        root.children = [childTreePoint(words, root)];
+      let tier = Number(word[0]) + 1;
+      root.children = [];
+      while (words.length > 0 && Number(words[0][0]) === tier) {
+        root.children.push(childTreePoint(words, root));
       }
 
       setPoint(root);
