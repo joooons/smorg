@@ -13,10 +13,13 @@ import TreeNodeComponent from '../components/familytree/TreeNodeComponent';
 import { TreePoint } from '../components/familytree/TreePointClass';
 
 const Tree = () => {
-  const [textareaText, setTextareaText] = useState('');
+  const initialText =
+    'Mom and Dad\n\tOlder Brother and ' +
+    'his wife\n\t\tNephew\n\t\tNiece\n\tMe\n\tYounger Sister';
+  const [textareaText, setTextareaText] = useState(initialText);
 
   const [point, setPoint] = useState<TreePoint>(
-    new TreePoint(99, 'dummy', undefined, [])
+    new TreePoint(0, 'Click GENERATE', undefined, [])
   );
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
