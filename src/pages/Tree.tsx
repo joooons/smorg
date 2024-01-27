@@ -96,28 +96,40 @@ const Tree = () => {
     return node;
   }
 
+  function arrayOfNames(value: string): string[] {
+    let words = value
+      .replace(/ +/g, ' ')
+      .replace(/\n/g, '<<>>')
+      .replace(/\t/g, '#')
+      .split('<<>>');
+
+    for (let i = 0; i < words.length; i++) {
+      const level = words[i].match(/#/g);
+      if (level) {
+        words[i] = words[i].replace(/#+/, level.length.toString());
+      }
+    }
+    return words;
+  }
+
   let count = 0;
 
   const fillTree = (value: string) => {
-    count = 0;
-    let words = value
-      .replace(/ +/g, ' ')
-      .replace(/\n/g, '---')
-      .replace(/\t/g, '<TAB>---')
-      .split('---');
+    count = 0; // reset the count
+    console.log('--------------- start ----------------');
+    console.log(value);
+    const words = arrayOfNames(value);
     console.log(words);
     let word = words.shift();
 
-    count++;
+    count++; // count == 1
     if (!word) {
       console.log('this will never happen');
       return;
     }
 
-    // console.log('count is ', count, word);
-    console.log('--------------- start ----------------');
-
     const root = new TreePoint(count, word);
+
     if (words.length > 0) {
       root.children = [childTreePoint(words, root)];
     }
