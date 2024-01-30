@@ -119,7 +119,7 @@ const Tree = () => {
           GENERATE
         </Button>
         <Centered>
-          <TreeNodeComponent key={point.id} node={point}></TreeNodeComponent>
+          <TreeNodeComponent node={point}></TreeNodeComponent>
         </Centered>
       </Container>
     </>

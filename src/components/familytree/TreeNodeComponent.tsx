@@ -1,4 +1,5 @@
 import Xarrow from 'react-xarrows';
+import React from 'react';
 
 import { TreeNode } from './TreeNodeClass';
 import './TreeNodeComponent.css';
@@ -14,6 +15,7 @@ const colors = ['rgb(230, 255, 235)', 'rgb(240, 255, 210)'];
 
 const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
   const color2 = color == colors[0] ? colors[1] : colors[0];
+
   return (
     <div
       style={{
@@ -52,8 +54,8 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
         {node.children && (
           <div>
             {node.children.map((child) => (
-              <>
-                <TreeNodeComponent key={child.id} node={child} color={color2} />
+              <React.Fragment key={child.id}>
+                <TreeNodeComponent node={child} color={color2} />
                 <Xarrow
                   start={node.id.toString()}
                   end={child.id.toString()}
@@ -64,7 +66,7 @@ const TreeNodeComponent = ({ node, color = colors[0] }: Props) => {
                   lineColor={color}
                   path='grid'
                 />
-              </>
+              </React.Fragment>
             ))}
           </div>
         )}
