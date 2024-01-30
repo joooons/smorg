@@ -15,6 +15,7 @@ import mazeLogo from '../../src/assets/maze.png';
 import monsterLogo from '../../src/assets/monster.png';
 import treeLogo from '../../src/assets/tree.png';
 import smorgLogo from '../../src/assets/smorg-b.png';
+import blankLogo from '../../src/assets/blank.png';
 
 const Home = () => {
   return (
@@ -68,7 +69,7 @@ const Home = () => {
             <Centered>
               <Link to='/chickens' className='link'>
                 <LogoBox>
-                  <Logo image={crashGoLogo}></Logo>
+                  <Logo image={blankLogo}>COMING SOON</Logo>
                 </LogoBox>
               </Link>
             </Centered>
@@ -78,7 +79,7 @@ const Home = () => {
             <Centered>
               <Link to='/chickens' className='link'>
                 <LogoBox>
-                  <Logo image={loveLogo}></Logo>
+                  <Logo image={blankLogo}>COMING SOON</Logo>
                 </LogoBox>
               </Link>
             </Centered>
@@ -88,7 +89,7 @@ const Home = () => {
             <Centered>
               <Link to='/chickens' className='link'>
                 <LogoBox>
-                  <Logo image={mazeLogo}></Logo>
+                  <Logo image={blankLogo}>COMING SOON</Logo>
                 </LogoBox>
               </Link>
             </Centered>
@@ -98,7 +99,7 @@ const Home = () => {
             <Centered>
               <Link to='/chickens' className='link'>
                 <LogoBox>
-                  <Logo image={monsterLogo}></Logo>
+                  <Logo image={blankLogo}>COMING SOON</Logo>
                 </LogoBox>
               </Link>
             </Centered>

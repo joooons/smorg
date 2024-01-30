@@ -1,11 +1,12 @@
 import './Logo.css';
 
 interface Props {
+  children?: string;
   image: string;
   size?: string;
 }
 
-const Logo = ({ image, size = '200' }: Props) => {
+const Logo = ({ children, image, size = '200' }: Props) => {
   return (
     <>
       <div
@@ -17,12 +18,12 @@ const Logo = ({ image, size = '200' }: Props) => {
           backgroundPosition: 'center, center',
           backgroundSize: 'contain',
           textAlign: 'center',
-          fontSize: 30,
+          fontSize: 34,
           fontWeight: 'bold',
           color: 'black',
         }}
       >
-        TEST
+        {children}
       </div>
     </>
   );
