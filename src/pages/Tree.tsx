@@ -31,6 +31,8 @@ const Tree = () => {
       const lastHalf = textareaText.substring(end);
       const newText = firstHalf + '\t' + lastHalf;
       event.currentTarget.value = newText;
+      event.currentTarget.selectionStart = start + 1;
+      event.currentTarget.selectionEnd = start + 1;
       setTextareaText(newText);
     }
   };
