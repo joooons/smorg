@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+
 import Container from '../components/Container';
 import Text from '../components/Text';
 import Logo from '../components/Logo';
 import LogoBox from '../components/LogoBox';
 import Centered from '../components/Centered';
+import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/space.png';
 import aboutLogo from '../../src/assets/about.png';
@@ -34,7 +36,7 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/space'>
+              <Link to='/space' className='link'>
                 <LogoBox>
                   <Logo image={spaceLogo}></Logo>
                 </LogoBox>
@@ -44,7 +46,7 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/tree'>
+              <Link to='/tree' className='link'>
                 <LogoBox>
                   <Logo image={treeLogo}></Logo>
                 </LogoBox>
@@ -54,7 +56,7 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/about'>
+              <Link to='/about' className='link'>
                 <LogoBox>
                   <Logo image={aboutLogo}></Logo>
                 </LogoBox>
@@ -64,7 +66,7 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/chickens'>
+              <Link to='/chickens' className='link'>
                 <LogoBox>
                   <Logo image={crashGoLogo}></Logo>
                 </LogoBox>
@@ -74,7 +76,7 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/chickens'>
+              <Link to='/chickens' className='link'>
                 <LogoBox>
                   <Logo image={loveLogo}></Logo>
                 </LogoBox>
@@ -84,7 +86,7 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/chickens'>
+              <Link to='/chickens' className='link'>
                 <LogoBox>
                   <Logo image={mazeLogo}></Logo>
                 </LogoBox>
@@ -94,7 +96,7 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/chickens'>
+              <Link to='/chickens' className='link'>
                 <LogoBox>
                   <Logo image={monsterLogo}></Logo>
                 </LogoBox>
