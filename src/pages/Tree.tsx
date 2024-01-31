@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // COMPONENTS
 import Container from '../components/Container';
@@ -17,6 +17,9 @@ const Tree = () => {
     'Mom and Dad\n\tOlder Brother and ' +
     'his wife\n\t\tNephew\n\t\tNiece\n\tMe\n\tYounger Sister';
   const [textareaText, setTextareaText] = useState(initialText);
+  useEffect(() => {
+    fillTree(textareaText);
+  }, []);
 
   const [point, setPoint] = useState<TreeNode>(
     new TreeNode(0, 'Click GENERATE', undefined, [])
