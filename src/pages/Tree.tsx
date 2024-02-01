@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar';
 import Centered from '../components/Centered';
 import Button from '../components/Button';
 import TreeNodeComponent from '../components/familytree/TreeNodeComponent';
+import TreeLineComponent from '../components/familytree/TreeLineComponent';
 
 // CLASS and INTERFACE
 import { TreeNode } from '../components/familytree/TreeNodeClass';
@@ -124,12 +125,9 @@ const Tree = () => {
           GENERATE
         </Button>
         <Centered>
-          <TreeNodeComponent
-            node={point}
-            // color1='yellow'
-            // color2='black'
-          ></TreeNodeComponent>
+          <TreeNodeComponent node={point}></TreeNodeComponent>
         </Centered>
+        <TreeLineComponent node={point}></TreeLineComponent>
       </Container>
     </>
   );

@@ -1,4 +1,4 @@
-import Xarrow from 'react-xarrows';
+// import Xarrow from 'react-xarrows';
 import React from 'react';
 
 import { TreeNode } from './TreeNodeClass';
@@ -59,13 +59,13 @@ const TreeNodeComponent = ({
         {node.children && (
           <div>
             {node.children.map((child) => (
-              <React.Fragment key={child.id}>
+              <React.Fragment key={'node-' + child.id}>
                 <TreeNodeComponent
                   node={child}
                   color1={color1}
                   color2={color2}
                 />
-                <Xarrow
+                {/* <Xarrow
                   start={node.id.toString()}
                   end={child.id.toString()}
                   startAnchor='bottom'
@@ -74,7 +74,7 @@ const TreeNodeComponent = ({
                   strokeWidth={1}
                   lineColor={color2}
                   path='grid'
-                />
+                /> */}
               </React.Fragment>
             ))}
           </div>
