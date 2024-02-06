@@ -9,7 +9,7 @@ import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/space.png';
 import aboutLogo from '../../src/assets/about.png';
-import boringLogo from '../../src/assets/boring.png';
+import boringLogo from '../../src/assets/B.png';
 // import crashGoLogo from '../../src/assets/crashGo.png';
 // import loveLogo from '../../src/assets/love.png';
 // import mazeLogo from '../../src/assets/maze.png';
