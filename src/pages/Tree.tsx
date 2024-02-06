@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // COMPONENTS
 import Container from '../components/Container';
@@ -17,10 +17,13 @@ const Tree = () => {
   const initialText =
     'Mom and Dad\n\tOlder Brother and ' +
     'his wife\n\t\tNephew\n\t\tNiece\n\tMe\n\tYounger Sister';
+
   const [textareaText, setTextareaText] = useState(initialText);
   useEffect(() => {
     fillTree(textareaText);
   }, []);
+
+  const count = useRef(0);
 
   const [point, setPoint] = useState<TreeNode>(
     new TreeNode(0, 'Click GENERATE', undefined, [])
@@ -47,14 +50,14 @@ const Tree = () => {
   };
 
   function childTreeNode(words: string[], root: TreeNode): TreeNode {
-    count++;
+    count.current++;
     let word = words.shift();
 
     if (!word) {
       return new TreeNode(99, 'end'); // This will never happen
     }
 
-    let node = new TreeNode(count, word.substring(1));
+    let node = new TreeNode(count.current, word.substring(1));
     node.children = [];
 
     if (words.length > 0) {
@@ -82,19 +85,16 @@ const Tree = () => {
     return words;
   }
 
-  let count = 0;
-
   const fillTree = (value: string) => {
-    count = 0; // reset the count
+    count.current = 1; // reset the count
     console.log('--------------- start ----------------');
     console.log(value);
     const words = arrayOfNames(value);
     let word = words.shift();
     console.log(word, words);
 
-    count++;
     if (word) {
-      const root = new TreeNode(count, word.substring(1));
+      const root = new TreeNode(count.current, word.substring(1));
 
       let tier = Number(word[0]) + 1;
       root.children = [];
@@ -102,6 +102,7 @@ const Tree = () => {
         root.children.push(childTreeNode(words, root));
       }
 
+      setPoint(root);
       setPoint(root);
       console.log(point);
     }
