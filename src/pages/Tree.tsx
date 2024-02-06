@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // COMPONENTS
 import Container from '../components/Container';
@@ -125,9 +125,13 @@ const Tree = () => {
           GENERATE
         </Button>
         <Centered>
-          <TreeNodeComponent node={point}></TreeNodeComponent>
+          <React.Fragment key={'node-' + point.id}>
+            <TreeNodeComponent node={point}></TreeNodeComponent>
+          </React.Fragment>
         </Centered>
-        <TreeLineComponent node={point}></TreeLineComponent>
+        <React.Fragment key={'line-' + point.id}>
+          <TreeLineComponent node={point}></TreeLineComponent>
+        </React.Fragment>
       </Container>
     </>
   );
