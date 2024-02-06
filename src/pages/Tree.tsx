@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useXarrow } from 'react-xarrows';
 
 // COMPONENTS
 import Container from '../components/Container';
@@ -24,6 +25,8 @@ const Tree = () => {
   }, []);
 
   const count = useRef(0);
+
+  const updateXarrow = useXarrow();
 
   const [point, setPoint] = useState<TreeNode>(
     new TreeNode(0, 'Click GENERATE', undefined, [])
@@ -85,7 +88,7 @@ const Tree = () => {
     return words;
   }
 
-  const fillTree = (value: string) => {
+  async function fillTree(value: string) {
     count.current = 1; // reset the count
     console.log('--------------- start ----------------');
     console.log(value);
@@ -102,11 +105,12 @@ const Tree = () => {
         root.children.push(childTreeNode(words, root));
       }
 
-      setPoint(root);
-      setPoint(root);
+      await setPoint(root);
+      await updateXarrow();
+      await setPoint(root);
       console.log(point);
     }
-  };
+  }
 
   return (
     <>
