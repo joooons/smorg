@@ -9,6 +9,7 @@ import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/space.png';
 import aboutLogo from '../../src/assets/about.png';
+import boringLogo from '../../src/assets/boring.png';
 // import crashGoLogo from '../../src/assets/crashGo.png';
 // import loveLogo from '../../src/assets/love.png';
 // import mazeLogo from '../../src/assets/maze.png';
@@ -67,9 +68,9 @@ const Home = () => {
 
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
-              <Link to='/chickens' className='link'>
+              <Link to='/boring' className='link'>
                 <LogoBox>
-                  <Logo image={blankLogo}>COMING SOON</Logo>
+                  <Logo image={boringLogo}></Logo>
                 </LogoBox>
               </Link>
             </Centered>
