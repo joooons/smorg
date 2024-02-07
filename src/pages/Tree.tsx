@@ -144,7 +144,7 @@ const Tree = () => {
             </Centered>
           </div>
           <div className='col-sm-10'>
-            <Card title='tree' text='yes'>
+            <Card>
               <Xwrapper>
                 <Centered>
                   <React.Fragment key={'node-' + point.id}>
