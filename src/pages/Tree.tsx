@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useXarrow } from 'react-xarrows';
+import { useXarrow, Xwrapper } from 'react-xarrows';
 
 // COMPONENTS
 import Container from '../components/Container';
@@ -129,14 +129,16 @@ const Tree = () => {
         <Button value={textareaText} action={fillTree}>
           GENERATE
         </Button>
-        <Centered>
-          <React.Fragment key={'node-' + point.id}>
-            <TreeNodeComponent node={point}></TreeNodeComponent>
+        <Xwrapper>
+          <Centered>
+            <React.Fragment key={'node-' + point.id}>
+              <TreeNodeComponent node={point}></TreeNodeComponent>
+            </React.Fragment>
+          </Centered>
+          <React.Fragment key={'line-' + point.id}>
+            <TreeLineComponent node={point}></TreeLineComponent>
           </React.Fragment>
-        </Centered>
-        <React.Fragment key={'line-' + point.id}>
-          <TreeLineComponent node={point}></TreeLineComponent>
-        </React.Fragment>
+        </Xwrapper>
       </Container>
     </>
   );
