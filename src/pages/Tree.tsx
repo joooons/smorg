@@ -16,8 +16,16 @@ import { TreeNode } from '../components/familytree/TreeNodeClass';
 
 const Tree = () => {
   const initialText =
-    'Mom and Dad\n\tOlder Brother and ' +
-    'his wife\n\t\tNephew\n\t\tNiece\n\tMe\n\tYounger Sister';
+    'Abraham, Mona\n' +
+    '\tHerb\n' +
+    '\tHomer, Marge\n' +
+    '\t\tBart, Jenda\n' +
+    '\t\t\tSkippy (Picard)\n' +
+    '\t\t\tJiff\n' +
+    '\t\tLisa, Milhouse\n' +
+    '\t\t\tZia\n' +
+    '\t\tMaggie\n' +
+    '\t\t\tMaggie Jr';
 
   const [textareaText, setTextareaText] = useState(initialText);
   useEffect(() => {
