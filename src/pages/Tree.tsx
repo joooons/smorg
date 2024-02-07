@@ -84,7 +84,7 @@ const Tree = () => {
   function arrayOfNames(value: string): string[] {
     let words = ('0' + value)
       .replace(/ +/g, ' ')
-      .replace(/\n/g, '<<>>')
+      .replace(/[\s\t]*\n/g, '<<>>')
       .replace(/\t/g, '#')
       .split('<<>>');
 
