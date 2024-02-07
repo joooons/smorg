@@ -13,7 +13,7 @@ import TreeLineComponent from '../components/familytree/TreeLineComponent';
 
 // CLASS and INTERFACE
 import { TreeNode } from '../components/familytree/TreeNodeClass';
-import Card from '../components/Card';
+import FullHeight from '../components/familytree/FullHeight';
 
 const Tree = () => {
   const initialText =
@@ -126,12 +126,14 @@ const Tree = () => {
       <NavBar></NavBar>
       <Container>
         <div className='row'>
-          <div className='col-sm-2'>
-            <Centered>
-              <Text color='navy' size='50' font='winter' tag='h1'>
-                TREE
-              </Text>
-            </Centered>
+          <Centered>
+            <Text color='navy' size='50' font='winter' tag='h1'>
+              FAMILY TREE
+            </Text>
+          </Centered>
+        </div>
+        <div className='row'>
+          <div className='col-sm-3'>
             <TextArea
               text={textareaText}
               keydownMethod={handleKeyDown}
@@ -143,19 +145,19 @@ const Tree = () => {
               </Button>
             </Centered>
           </div>
-          <div className='col-sm-10'>
-            <Card>
-              <Xwrapper>
+          <div className='col-sm-9'>
+            <Xwrapper>
+              <FullHeight>
                 <Centered>
                   <React.Fragment key={'node-' + point.id}>
                     <TreeNodeComponent node={point}></TreeNodeComponent>
                   </React.Fragment>
                 </Centered>
-                <React.Fragment key={'line-' + point.id}>
-                  <TreeLineComponent node={point}></TreeLineComponent>
-                </React.Fragment>
-              </Xwrapper>
-            </Card>
+              </FullHeight>
+              <React.Fragment key={'line-' + point.id}>
+                <TreeLineComponent node={point}></TreeLineComponent>
+              </React.Fragment>
+            </Xwrapper>
           </div>
         </div>
       </Container>
