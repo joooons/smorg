@@ -54,6 +54,29 @@ const Tree = () => {
       event.currentTarget.selectionEnd = start + 1;
       setTextareaText(newText);
     }
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      const start = event.currentTarget.selectionStart;
+      const firstHalf = textareaText.substring(0, start);
+      const end = event.currentTarget.selectionEnd;
+      const lastHalf = textareaText.substring(end);
+      const lines = firstHalf.split('\n');
+      const lastLine = lines[lines.length - 1];
+      const tabs = lastLine.match(/\t/g);
+      let insert = '\n';
+      let count = 1;
+      if (tabs) {
+        tabs.forEach(() => {
+          insert = insert + '\t';
+          count++;
+        });
+      }
+      const newText = firstHalf + insert + lastHalf;
+      event.currentTarget.value = newText;
+      event.currentTarget.selectionStart = start + count;
+      event.currentTarget.selectionEnd = start + count;
+      setTextareaText(newText);
+    }
   };
 
   const handleChange = (event: Event) => {
