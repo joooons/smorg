@@ -30,7 +30,7 @@ const TreeLineComponent = ({ node, color2 = colors[1] }: Props) => {
                 headSize={0}
                 strokeWidth={1}
                 lineColor={color2}
-                path='smooth' // 'grid'
+                path='grid' // 'smooth'
               />
               <TreeLineComponent node={child}></TreeLineComponent>
             </React.Fragment>
