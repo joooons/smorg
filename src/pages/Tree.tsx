@@ -128,7 +128,7 @@ const Tree = () => {
         <div className='row'>
           <Centered>
             <Text color='navy' size='50' font='winter' tag='h1'>
-              FAMILY TREE
+              TREE
             </Text>
           </Centered>
         </div>

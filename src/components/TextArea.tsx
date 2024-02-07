@@ -10,6 +10,7 @@ const TextArea = ({ text, keydownMethod, changeMethod }: Props) => {
   return (
     <>
       <textarea
+        style={{ fontSize: '12px' }}
         value={text}
         onKeyDown={keydownMethod}
         onChange={(event: React.ChangeEvent) => {
