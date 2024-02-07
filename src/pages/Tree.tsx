@@ -13,6 +13,7 @@ import TreeLineComponent from '../components/familytree/TreeLineComponent';
 
 // CLASS and INTERFACE
 import { TreeNode } from '../components/familytree/TreeNodeClass';
+import Card from '../components/Card';
 
 const Tree = () => {
   const initialText =
@@ -124,29 +125,39 @@ const Tree = () => {
     <>
       <NavBar></NavBar>
       <Container>
-        <Centered>
-          <Text color='navy' size='50' font='winter' tag='h1'>
-            TREE
-          </Text>
-        </Centered>
-        <Xwrapper>
-          <Centered>
-            <React.Fragment key={'node-' + point.id}>
-              <TreeNodeComponent node={point}></TreeNodeComponent>
-            </React.Fragment>
-          </Centered>
-          <React.Fragment key={'line-' + point.id}>
-            <TreeLineComponent node={point}></TreeLineComponent>
-          </React.Fragment>
-        </Xwrapper>
-        <TextArea
-          text={textareaText}
-          keydownMethod={handleKeyDown}
-          changeMethod={handleChange}
-        ></TextArea>
-        <Button value={textareaText} action={fillTree}>
-          GENERATE
-        </Button>
+        <div className='row'>
+          <div className='col-sm-2'>
+            <Centered>
+              <Text color='navy' size='50' font='winter' tag='h1'>
+                TREE
+              </Text>
+            </Centered>
+            <TextArea
+              text={textareaText}
+              keydownMethod={handleKeyDown}
+              changeMethod={handleChange}
+            ></TextArea>
+            <Centered>
+              <Button value={textareaText} action={fillTree}>
+                GENERATE
+              </Button>
+            </Centered>
+          </div>
+          <div className='col-sm-10'>
+            <Card title='tree' text='yes'>
+              <Xwrapper>
+                <Centered>
+                  <React.Fragment key={'node-' + point.id}>
+                    <TreeNodeComponent node={point}></TreeNodeComponent>
+                  </React.Fragment>
+                </Centered>
+                <React.Fragment key={'line-' + point.id}>
+                  <TreeLineComponent node={point}></TreeLineComponent>
+                </React.Fragment>
+              </Xwrapper>
+            </Card>
+          </div>
+        </div>
       </Container>
     </>
   );
