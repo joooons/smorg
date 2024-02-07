@@ -92,7 +92,15 @@ const Tree = () => {
       return new TreeNode(99, 'end'); // This will never happen
     }
 
-    let node = new TreeNode(count.current, word.substring(1));
+    let names = word.split(/[\,][\s]*/);
+
+    let node = null;
+    if (names.length > 1) {
+      node = new TreeNode(count.current, names[0].substring(1), names[1]);
+    } else {
+      node = new TreeNode(count.current, word.substring(1));
+    }
+
     node.children = [];
 
     if (words.length > 0) {
@@ -129,24 +137,33 @@ const Tree = () => {
   async function fillTree(value: string) {
     count.current = 1; // reset the count
     console.log('--------------- start ----------------');
-    console.log(value);
+    // console.log(value);
     const words = arrayOfNames(value);
     let word = words.shift();
-    console.log(word, words);
+    // console.log(word, words);
 
     if (word) {
-      const root = new TreeNode(count.current, word.substring(1));
+      let names = word.split(/[\,][\s]*/);
 
-      let tier = Number(word[0]) + 1;
-      root.children = [];
-      while (words.length > 0 && Number(words[0][0]) === tier) {
-        root.children.push(childTreeNode(words, root));
+      let node = null;
+      if (names.length > 1) {
+        node = new TreeNode(count.current, names[0].substring(1), names[1]);
+      } else {
+        node = new TreeNode(count.current, word.substring(1));
       }
 
-      await setPoint(root);
+      // const root = new TreeNode(count.current, word.substring(1));
+
+      let tier = Number(word[0]) + 1;
+      node.children = [];
+      while (words.length > 0 && Number(words[0][0]) === tier) {
+        node.children.push(childTreeNode(words, node));
+      }
+
+      await setPoint(node);
       await updateXarrow();
-      await setPoint(root);
-      console.log(point);
+      await setPoint(node);
+      // console.log(point);
     }
   }
 

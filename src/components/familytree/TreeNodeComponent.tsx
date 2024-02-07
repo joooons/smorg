@@ -43,13 +43,13 @@ const TreeNodeComponent = ({
           className={node.id.toString()}
           style={{
             backgroundColor: `${color1}`,
-            padding: '0px 5px 0px 5px',
+            padding: '2px 6px 2px 6px',
             borderRadius: '5px',
             fontSize: '12px',
           }}
         >
           {node.name}
-          {node.spouse && ' & ' + node.spouse}
+          {node.spouse && ' ♥ ' + node.spouse}
         </div>
       </div>
 
