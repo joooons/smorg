@@ -121,14 +121,6 @@ const Tree = () => {
             TREE
           </Text>
         </Centered>
-        <TextArea
-          text={textareaText}
-          keydownMethod={handleKeyDown}
-          changeMethod={handleChange}
-        ></TextArea>
-        <Button value={textareaText} action={fillTree}>
-          GENERATE
-        </Button>
         <Xwrapper>
           <Centered>
             <React.Fragment key={'node-' + point.id}>
@@ -139,6 +131,14 @@ const Tree = () => {
             <TreeLineComponent node={point}></TreeLineComponent>
           </React.Fragment>
         </Xwrapper>
+        <TextArea
+          text={textareaText}
+          keydownMethod={handleKeyDown}
+          changeMethod={handleChange}
+        ></TextArea>
+        <Button value={textareaText} action={fillTree}>
+          GENERATE
+        </Button>
       </Container>
     </>
   );
