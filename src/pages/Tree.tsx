@@ -82,9 +82,15 @@ const Tree = () => {
   }
 
   function arrayOfNames(value: string): string[] {
-    let words = ('0' + value)
+    const text = value
+      .replace(/[\<\>\#\@\$\"\;\:\!\%\^\*\?\.]/g, '')
       .replace(/ +/g, ' ')
-      .replace(/[\s\t]*\n/g, '<<>>')
+      .replace(/[\s\t]*\n/g, '\n')
+      .replace(/[\s\t]*$/g, '');
+    setTextareaText(text);
+
+    const words = ('0' + text)
+      .replace(/\n/g, '<<>>')
       .replace(/\t/g, '#')
       .split('<<>>');
 
