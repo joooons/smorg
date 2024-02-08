@@ -24,10 +24,10 @@ const BrArticle = ({
     <>
       <div className='br-article'>
         <Image src={imageUrl} fluid></Image>
-        <div>{caption}</div>
-        <div>{children}</div>
-        <div>{description}</div>
-        <div>{writer}</div>
+        <div className='br-caption'>{caption}</div>
+        <div className='br-title'>{children}</div>
+        <div className='br-description'>{description}</div>
+        <div className='br-writer'>{writer}</div>
       </div>
     </>
   );

@@ -9,17 +9,17 @@ function Boring() {
           <div className='col-sm-4'>
             <BrArticle
               image='placeholder.jpg'
-              caption='blank image'
+              caption='open source illustration'
               description='She makes history for winning ALL awards at the Grannys'
               writer='sarah sarahson'
             >
-              Taylor Swift something
+              Taylor Swift bankrupts every other artist
             </BrArticle>
           </div>
           <div className='col-sm-4'>
             <BrArticle
               image='placeholder.jpg'
-              caption='blank image'
+              caption='open source illustration'
               description='Two found dead at underground pillow fight scene'
               writer='sarah sarahson'
             >
@@ -29,7 +29,7 @@ function Boring() {
           <div className='col-sm-4'>
             <BrArticle
               image='placeholder.jpg'
-              caption='blank image'
+              caption='open source illustration'
               description='Research suggests correlation between tooth decay and horror genre'
               writer='sarah sarahson'
             >
