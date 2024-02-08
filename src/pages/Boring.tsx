@@ -1,9 +1,11 @@
 import Container from '../components/Container';
 import BrArticle from '../components/boring/BrArticle';
+import BrNavBar from '../components/boring/BrNavBar';
 
 function Boring() {
   return (
     <>
+      <BrNavBar></BrNavBar>
       <Container>
         <div className='row'>
           <div className='col-sm-4'>
