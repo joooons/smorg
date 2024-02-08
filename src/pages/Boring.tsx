@@ -1,5 +1,5 @@
 import Container from '../components/Container';
-import Article from '../components/boring/Article';
+import BrArticle from '../components/boring/BrArticle';
 
 function Boring() {
   return (
@@ -7,13 +7,13 @@ function Boring() {
       <Container>
         <div className='row'>
           <div className='col-sm-4'>
-            <Article>Taylor Swift something</Article>
+            <BrArticle>Taylor Swift something</BrArticle>
           </div>
           <div className='col-sm-4'>
-            <Article>Someone died</Article>
+            <BrArticle>Someone died</BrArticle>
           </div>
           <div className='col-sm-4'>
-            <Article>Netflix causes cancer</Article>
+            <BrArticle>Netflix causes cancer</BrArticle>
           </div>
         </div>
       </Container>
