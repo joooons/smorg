@@ -1,5 +1,7 @@
 // import React from 'react';
 import { ReactNode } from 'react';
+import Image from 'react-bootstrap/Image';
+
 import './BrArticle.css';
 
 interface Props {
@@ -17,10 +19,11 @@ const BrArticle = ({
   description,
   writer,
 }: Props) => {
+  const imageUrl = '../../src/assets/' + image;
   return (
     <>
       <div className='br-article'>
-        <div>{image}</div>
+        <Image src={imageUrl} fluid></Image>
         <div>{caption}</div>
         <div>{children}</div>
         <div>{description}</div>

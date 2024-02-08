@@ -8,7 +8,7 @@ function Boring() {
         <div className='row'>
           <div className='col-sm-4'>
             <BrArticle
-              image='image.png'
+              image='placeholder.jpg'
               caption='blank image'
               description='She makes history for winning ALL awards at the Grannys'
               writer='sarah sarahson'
@@ -18,7 +18,7 @@ function Boring() {
           </div>
           <div className='col-sm-4'>
             <BrArticle
-              image='image.png'
+              image='placeholder.jpg'
               caption='blank image'
               description='Two found dead at underground pillow fight scene'
               writer='sarah sarahson'
@@ -28,7 +28,7 @@ function Boring() {
           </div>
           <div className='col-sm-4'>
             <BrArticle
-              image='image.png'
+              image='placeholder.jpg'
               caption='blank image'
               description='Research suggests correlation between tooth decay and horror genre'
               writer='sarah sarahson'
