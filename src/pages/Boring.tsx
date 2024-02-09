@@ -2,13 +2,18 @@ import Container from '../components/Container';
 import BrArticle from '../components/boring/BrArticle';
 import BrNavBar from '../components/boring/BrNavBar';
 
+import '../components/boring/Boring.css';
+
 function Boring() {
   return (
     <>
       <BrNavBar></BrNavBar>
       <Container>
         <div className='row'>
-          <div className='col-sm-3' style={{ borderRight: '1px solid gray' }}>
+          <section
+            className='col-sm-3'
+            // style={{ borderRight: '1px solid gray' }}
+          >
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -25,8 +30,11 @@ function Boring() {
             >
               Casual consumption of snack unbearable
             </BrArticle>
-          </div>
-          <div className='col-sm-6' style={{ borderRight: '1px solid gray' }}>
+          </section>
+          <section
+            className='col-sm-6'
+            // style={{ borderRight: '1px solid gray' }}
+          >
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -35,8 +43,8 @@ function Boring() {
             >
               Killing Me Softly
             </BrArticle>
-          </div>
-          <div className='col-sm-3'>
+          </section>
+          <section className='col-sm-3'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -53,7 +61,7 @@ function Boring() {
             >
               DeMarcus does it again
             </BrArticle>
-          </div>
+          </section>
         </div>
       </Container>
     </>
