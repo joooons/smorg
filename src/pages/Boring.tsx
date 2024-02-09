@@ -8,7 +8,7 @@ function Boring() {
       <BrNavBar></BrNavBar>
       <Container>
         <div className='row'>
-          <div className='col-sm-3'>
+          <div className='col-sm-3' style={{ borderRight: '1px solid gray' }}>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -26,7 +26,7 @@ function Boring() {
               Casual consumption of snack unbearable
             </BrArticle>
           </div>
-          <div className='col-sm-6'>
+          <div className='col-sm-6' style={{ borderRight: '1px solid gray' }}>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
