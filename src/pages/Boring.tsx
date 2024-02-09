@@ -8,17 +8,25 @@ function Boring() {
       <BrNavBar></BrNavBar>
       <Container>
         <div className='row'>
-          <div className='col-sm-4'>
+          <div className='col-sm-3'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
-              description='She makes history for winning ALL awards at the Grannys'
+              description='Swift makes history for winning all awards at the Grannys'
               writer='sarah sarahson'
             >
               Taylor Swift bankrupts every other artist
             </BrArticle>
+            <BrArticle
+              image='placeholder.jpg'
+              caption='open source illustration'
+              description='Gummy bears attempt escape when no one is looking, researchers say'
+              writer='sarah sarahson'
+            >
+              Casual consumption of snack unbearable
+            </BrArticle>
           </div>
-          <div className='col-sm-4'>
+          <div className='col-sm-6'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -28,7 +36,7 @@ function Boring() {
               Killing Me Softly
             </BrArticle>
           </div>
-          <div className='col-sm-4'>
+          <div className='col-sm-3'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -36,6 +44,14 @@ function Boring() {
               writer='sarah sarahson'
             >
               Netflix causes cavities
+            </BrArticle>
+            <BrArticle
+              image='placeholder.jpg'
+              caption='open source illustration'
+              description='Rugby player wins Most Median Player of the year for 3rd consecutive year'
+              writer='sarah sarahson'
+            >
+              DeMarcus does it again
             </BrArticle>
           </div>
         </div>

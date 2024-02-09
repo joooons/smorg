@@ -16,9 +16,10 @@ const BrNavBar = () => {
             <Nav.Link href='#'>Entertainment</Nav.Link>
             <Nav.Link href='#'>Sport</Nav.Link>
             <Nav.Link href='#'>Travel</Nav.Link>
+            <Nav.Link href='/home'>Smorg</Nav.Link>
           </Nav>
           <Navbar.Collapse className='justify-content-end mx-2'>
-            <Navbar.Text>SignIn</Navbar.Text>
+            <Nav.Link href='#'>SignIn</Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>
