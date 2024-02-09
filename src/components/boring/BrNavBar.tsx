@@ -1,48 +1,27 @@
-import { Container } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import './BrNavBar.css';
 
 const BrNavBar = () => {
   return (
     <>
-      <nav className='br-navbar navbar navbar-expand-lg navbar-light px-5 py-3'>
+      <Navbar className='br-navbar'>
         <Container>
-          <button
-            className='navbar-toggler'
-            type='button'
-            data-toggle='collapse'
-            data-target='#navbarSupportedContent'
-            aria-controls='navbarSupportedContent'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-          >
-            <span className='navbar-toggler-icon'></span>
-          </button>
-          <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
-                <a className='nav-link' href='/boring'>
-                  U.S.
-                </a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='/boring'>
-                  World
-                </a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='/boring'>
-                  Finance
-                </a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='/boring'>
-                  Entertainment
-                </a>
-              </li>
-            </ul>
-          </div>
+          <Nav navbarScroll>
+            <Navbar.Brand href='#home' className='mx-2'>
+              <b>BNN</b>
+            </Navbar.Brand>
+            <Nav.Link href='#'>Home</Nav.Link>
+            <Nav.Link href='#'>News</Nav.Link>
+            <Nav.Link href='#'>Business</Nav.Link>
+            <Nav.Link href='#'>Entertainment</Nav.Link>
+            <Nav.Link href='#'>Sport</Nav.Link>
+            <Nav.Link href='#'>Travel</Nav.Link>
+          </Nav>
+          <Navbar.Collapse className='justify-content-end mx-2'>
+            <Navbar.Text>SignIn</Navbar.Text>
+          </Navbar.Collapse>
         </Container>
-      </nav>
+      </Navbar>
     </>
   );
 };
