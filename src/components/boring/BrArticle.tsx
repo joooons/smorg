@@ -22,7 +22,7 @@ const BrArticle = ({
   const imageUrl = '../../src/assets/' + image;
   return (
     <>
-      <div className='br-article mb-3'>
+      <div className='br-article mb-3 pt-3'>
         <Image src={imageUrl} fluid></Image>
         <div className='br-caption'>{caption}</div>
         <div className='br-title'>{children}</div>

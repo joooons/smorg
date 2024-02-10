@@ -1,4 +1,4 @@
-import Container from '../components/Container';
+import { Container } from 'react-bootstrap';
 import BrArticle from '../components/boring/BrArticle';
 import BrNavBar from '../components/boring/BrNavBar';
 
@@ -10,10 +10,7 @@ function Boring() {
       <BrNavBar></BrNavBar>
       <Container>
         <div className='row'>
-          <section
-            className='col-sm-3'
-            // style={{ borderRight: '1px solid gray' }}
-          >
+          <section className='col-sm-3'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -31,10 +28,7 @@ function Boring() {
               Casual consumption of snack unbearable
             </BrArticle>
           </section>
-          <section
-            className='col-sm-6'
-            // style={{ borderRight: '1px solid gray' }}
-          >
+          <section className='col-sm-6'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
