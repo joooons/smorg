@@ -10,7 +10,7 @@ function Boring() {
       <BrNavBar></BrNavBar>
       <Container>
         <Row>
-          <Col sm='3'>
+          <Col sm='3' className='br-section'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -28,7 +28,7 @@ function Boring() {
               Casual consumption of snack unbearable
             </BrArticle>
           </Col>
-          <Col sm='6'>
+          <Col sm='6' className='br-section'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
@@ -38,7 +38,7 @@ function Boring() {
               Killing Me Softly
             </BrArticle>
           </Col>
-          <Col sm='3'>
+          <Col sm='3' className='br-section'>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
