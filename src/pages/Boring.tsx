@@ -5,7 +5,12 @@ import BrCategory from '../components/boring/BrCategory';
 
 import '../components/boring/Boring.css';
 
+import grammysImage from '../../src/assets/grammys.jpg';
+import gummybearsImage from '../../src/assets/gummybears.jpg';
 import placeholderImage from '../../src/assets/placeholder.jpg';
+import pillowfightImage from '../../src/assets/pillowfight.jpg';
+import rugbyImage from '../../src/assets/rugby.jpg';
+import toothdecayImage from '../../src/assets/toothdecay.jpg';
 
 function Boring() {
   return (
@@ -15,7 +20,7 @@ function Boring() {
         <Row>
           <Col sm='3' className='br-section'>
             <BrArticle
-              image={placeholderImage}
+              image={grammysImage}
               caption='open source illustration'
               description='Swift makes history for winning all awards at the Grannys'
               writer='sarah sarahson'
@@ -23,7 +28,7 @@ function Boring() {
               Taylor Swift bankrupts every other artist
             </BrArticle>
             <BrArticle
-              image={placeholderImage}
+              image={gummybearsImage}
               caption='open source illustration'
               description='Gummy bears attempt escape when no one is looking, researchers say'
               writer='sarah sarahson'
@@ -33,7 +38,7 @@ function Boring() {
           </Col>
           <Col sm='6' className='br-section'>
             <BrArticle
-              image={placeholderImage}
+              image={pillowfightImage}
               caption='open source illustration'
               description='Two found dead at underground pillow fight scene'
               writer='sarah sarahson'
@@ -43,7 +48,7 @@ function Boring() {
           </Col>
           <Col sm='3' className='br-section'>
             <BrArticle
-              image={placeholderImage}
+              image={toothdecayImage}
               caption='open source illustration'
               description='Research suggests correlation between tooth decay and horror genre'
               writer='sarah sarahson'
@@ -51,7 +56,7 @@ function Boring() {
               Netflix causes cavities
             </BrArticle>
             <BrArticle
-              image={placeholderImage}
+              image={rugbyImage}
               caption='open source illustration'
               description='Rugby player wins Most Median Player of the year for 3rd consecutive year'
               writer='sarah sarahson'
