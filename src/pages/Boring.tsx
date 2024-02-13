@@ -19,7 +19,7 @@ function Boring() {
               description='Swift makes history for winning all awards at the Grannys'
               writer='sarah sarahson'
             >
-              <Image src='../../src/assets/placeholder.jpg' fluid></Image>
+              <Image src='../../src/assets/maze.png' fluid></Image>
             </BrArticle>
             {/* <BrArticle
               image='placeholder.jpg'
