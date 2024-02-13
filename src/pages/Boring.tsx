@@ -3,6 +3,7 @@ import BrArticle from '../components/boring/BrArticle';
 import BrNavBar from '../components/boring/BrNavBar';
 
 import '../components/boring/Boring.css';
+import BrCategory from '../components/boring/BrCategory';
 
 function Boring() {
   return (
@@ -39,6 +40,46 @@ function Boring() {
             </BrArticle>
           </Col>
           <Col sm='3' className='br-section'>
+            <BrArticle
+              image='placeholder.jpg'
+              caption='open source illustration'
+              description='Research suggests correlation between tooth decay and horror genre'
+              writer='sarah sarahson'
+            >
+              Netflix causes cavities
+            </BrArticle>
+            <BrArticle
+              image='placeholder.jpg'
+              caption='open source illustration'
+              description='Rugby player wins Most Median Player of the year for 3rd consecutive year'
+              writer='sarah sarahson'
+            >
+              DeMarcus does it again
+            </BrArticle>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm='6'>
+            <BrCategory>Breaking News</BrCategory>
+            <BrArticle
+              image='placeholder.jpg'
+              caption='open source illustration'
+              description='Research suggests correlation between tooth decay and horror genre'
+              writer='sarah sarahson'
+            >
+              Netflix causes cavities
+            </BrArticle>
+            <BrArticle
+              image='placeholder.jpg'
+              caption='open source illustration'
+              description='Rugby player wins Most Median Player of the year for 3rd consecutive year'
+              writer='sarah sarahson'
+            >
+              DeMarcus does it again
+            </BrArticle>
+          </Col>
+          <Col sm='6'>
+            <BrCategory>Featured News</BrCategory>
             <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
