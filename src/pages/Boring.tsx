@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Image } from 'react-bootstrap';
 import BrArticle from '../components/boring/BrArticle';
 import BrNavBar from '../components/boring/BrNavBar';
 
@@ -13,34 +13,35 @@ function Boring() {
         <Row>
           <Col sm='3' className='br-section'>
             <BrArticle
-              image='placeholder.jpg'
+              title='Taylor Swift bankrupts every other artist'
+              // image='placeholder.jpg'
               caption='open source illustration'
               description='Swift makes history for winning all awards at the Grannys'
               writer='sarah sarahson'
             >
-              Taylor Swift bankrupts every other artist
+              <Image src='../../src/assets/placeholder.jpg' fluid></Image>
             </BrArticle>
-            <BrArticle
+            {/* <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
               description='Gummy bears attempt escape when no one is looking, researchers say'
               writer='sarah sarahson'
             >
               Casual consumption of snack unbearable
-            </BrArticle>
+            </BrArticle> */}
           </Col>
           <Col sm='6' className='br-section'>
-            <BrArticle
+            {/* <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
               description='Two found dead at underground pillow fight scene'
               writer='sarah sarahson'
             >
               Killing Me Softly
-            </BrArticle>
+            </BrArticle> */}
           </Col>
           <Col sm='3' className='br-section'>
-            <BrArticle
+            {/* <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
               description='Research suggests correlation between tooth decay and horror genre'
@@ -55,13 +56,13 @@ function Boring() {
               writer='sarah sarahson'
             >
               DeMarcus does it again
-            </BrArticle>
+            </BrArticle> */}
           </Col>
         </Row>
         <Row>
           <Col sm='6'>
             <BrCategory>Breaking News</BrCategory>
-            <BrArticle
+            {/* <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
               description='Research suggests correlation between tooth decay and horror genre'
@@ -76,11 +77,11 @@ function Boring() {
               writer='sarah sarahson'
             >
               DeMarcus does it again
-            </BrArticle>
+            </BrArticle> */}
           </Col>
           <Col sm='6'>
             <BrCategory>Featured News</BrCategory>
-            <BrArticle
+            {/* <BrArticle
               image='placeholder.jpg'
               caption='open source illustration'
               description='Research suggests correlation between tooth decay and horror genre'
@@ -95,7 +96,7 @@ function Boring() {
               writer='sarah sarahson'
             >
               DeMarcus does it again
-            </BrArticle>
+            </BrArticle> */}
           </Col>
         </Row>
       </Container>
