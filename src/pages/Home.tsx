@@ -20,6 +20,15 @@ import smorgLogo from '../../src/assets/smorg-b.png';
 import blankLogo from '../../src/assets/blank.png';
 
 const Home = () => {
+  const content = [
+    { link: '/space', img: spaceLogo },
+    { link: '/tree', img: treeLogo },
+    { link: '/about', img: aboutLogo },
+    { link: '/boring', img: boringLogo },
+    { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
+    { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
+    { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
+  ];
   return (
     <>
       <Container>
@@ -39,75 +48,21 @@ const Home = () => {
         </Row>
 
         <Row>
-          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
-            <Centered>
-              <Link to='/space' className='link'>
-                <HomeLogoBox>
-                  <HomeLogo image={spaceLogo}></HomeLogo>
-                </HomeLogoBox>
-              </Link>
-            </Centered>
-          </Col>
-
-          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
-            <Centered>
-              <Link to='/tree' className='link'>
-                <HomeLogoBox>
-                  <HomeLogo image={treeLogo}></HomeLogo>
-                </HomeLogoBox>
-              </Link>
-            </Centered>
-          </Col>
-
-          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
-            <Centered>
-              <Link to='/about' className='link'>
-                <HomeLogoBox>
-                  <HomeLogo image={aboutLogo}></HomeLogo>
-                </HomeLogoBox>
-              </Link>
-            </Centered>
-          </Col>
-
-          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
-            <Centered>
-              <Link to='/boring' className='link'>
-                <HomeLogoBox>
-                  <HomeLogo image={boringLogo}></HomeLogo>
-                </HomeLogoBox>
-              </Link>
-            </Centered>
-          </Col>
-
-          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
-            <Centered>
-              <Link to='/chickens' className='link'>
-                <HomeLogoBox>
-                  <HomeLogo image={blankLogo}>COMING SOON</HomeLogo>
-                </HomeLogoBox>
-              </Link>
-            </Centered>
-          </Col>
-
-          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
-            <Centered>
-              <Link to='/chickens' className='link'>
-                <HomeLogoBox>
-                  <HomeLogo image={blankLogo}>COMING SOON</HomeLogo>
-                </HomeLogoBox>
-              </Link>
-            </Centered>
-          </Col>
-
-          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
-            <Centered>
-              <Link to='/chickens' className='link'>
-                <HomeLogoBox>
-                  <HomeLogo image={blankLogo}>COMING SOON</HomeLogo>
-                </HomeLogoBox>
-              </Link>
-            </Centered>
-          </Col>
+          {content.map((page, index) => {
+            return (
+              <>
+                <Col key={index} sm={6} md={4} xl={3} xxl={2} className='my-3'>
+                  <Centered>
+                    <Link to={page['link']} className='link'>
+                      <HomeLogoBox>
+                        <HomeLogo image={page['img']}>{page['txt']}</HomeLogo>
+                      </HomeLogoBox>
+                    </Link>
+                  </Centered>
+                </Col>
+              </>
+            );
+          })}
         </Row>
       </Container>
     </>
