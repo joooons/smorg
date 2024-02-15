@@ -17,6 +17,16 @@ import pillowfightImage from '../../src/assets/images/pillowfight.jpg';
 import rugbyImage from '../../src/assets/images/rugby.jpg';
 import toothdecayImage from '../../src/assets/images/toothdecay.jpg';
 
+import {
+  FaSquareXTwitter,
+  FaSquareInstagram,
+  FaSquareReddit,
+  FaSquarePinterest,
+  FaSquareFacebook,
+  FaSquareYoutube,
+  FaSquareTumblr,
+} from 'react-icons/fa6';
+
 function Boring() {
   const contentfulAccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
   const contentfulSpace = import.meta.env.VITE_CONTENTFUL_SPACE;
@@ -184,33 +194,43 @@ function Boring() {
               <div className='br-footer-item-heading'>Follow</div>
               <div>
                 <Link to='/boring' className='link'>
-                  X
+                  <FaSquareXTwitter />
                 </Link>
               </div>
               <div>
                 <Link to='/boring' className='link'>
-                  Instagram
+                  <FaSquareInstagram />
                 </Link>
               </div>
               <div>
                 <Link to='/boring' className='link'>
-                  Facebook
+                  <FaSquareFacebook />
                 </Link>
               </div>
               <div>
                 <Link to='/boring' className='link'>
-                  YouTube
+                  <FaSquareYoutube />
                 </Link>
               </div>
               <div>
                 <Link to='/boring' className='link'>
-                  LinkedIn
+                  <FaSquareTumblr />
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  <FaSquarePinterest />
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  <FaSquareReddit />
                 </Link>
               </div>
             </Col>
           </Row>
           <Row className='pb-5'>
-            <Col xs={11}>
+            <Col>
               <Link to='/boring' className='link br-footer-item'>
                 Privacy Policy
               </Link>
@@ -227,7 +247,6 @@ function Boring() {
                 Site Map
               </Link>
             </Col>
-            <Col xs={1}>BNN</Col>
           </Row>
         </Container>
       </BrFooter>
