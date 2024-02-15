@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
-import Container from '../components/Container';
 import Text from '../components/Text';
 import Logo from '../components/Logo';
 import LogoBox from '../components/LogoBox';

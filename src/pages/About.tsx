@@ -1,4 +1,5 @@
-import Container from '../components/Container';
+import { Container } from 'react-bootstrap';
+
 import Text from '../components/Text';
 import NavBar from '../components/NavBar';
 

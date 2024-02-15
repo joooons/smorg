@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import Container from '../components/Container';
+import { Container } from 'react-bootstrap';
+
 import Text from '../components/Text';
 import ChickensImage from '../../src/assets/chickens.png';
 

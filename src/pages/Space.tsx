@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 
 import Card from '../components/Card';
 import NavBar from '../components/NavBar';
-import Container from '../components/Container';
+
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Text from '../components/Text';
