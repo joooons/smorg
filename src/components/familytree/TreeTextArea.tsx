@@ -1,4 +1,4 @@
-import './TextArea.css';
+import './TreeTextArea.css';
 
 interface Props {
   text: string;
@@ -6,10 +6,11 @@ interface Props {
   changeMethod: (event: Event) => void;
 }
 
-const TextArea = ({ text, keydownMethod, changeMethod }: Props) => {
+const TreeTextArea = ({ text, keydownMethod, changeMethod }: Props) => {
   return (
     <>
       <textarea
+        className='tr-textarea'
         style={{ fontSize: '12px' }}
         value={text}
         onKeyDown={keydownMethod}
@@ -21,4 +22,4 @@ const TextArea = ({ text, keydownMethod, changeMethod }: Props) => {
   );
 };
 
-export default TextArea;
+export default TreeTextArea;

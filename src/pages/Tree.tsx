@@ -2,12 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useXarrow, Xwrapper } from 'react-xarrows';
 
 // COMPONENTS
-import Text from '../components/Text';
-import TextArea from '../components/TextArea';
 import NavBar from '../components/NavBar';
+
+import Text from '../components/Text';
 import Centered from '../components/Centered';
 import Button from '../components/Button';
-import FullHeight from '../components/familytree/FullHeight';
+
+import TreeFullHeight from '../components/familytree/TreeFullHeight';
+import TreeTextArea from '../components/familytree/TreeTextArea';
 import TreeNodeComponent from '../components/familytree/TreeNodeComponent';
 import TreeLineComponent from '../components/familytree/TreeLineComponent';
 
@@ -178,11 +180,11 @@ const Tree = () => {
       </div>
       <div className='row mx-5'>
         <div className='col-sm-3'>
-          <TextArea
+          <TreeTextArea
             text={textareaText}
             keydownMethod={handleKeyDown}
             changeMethod={handleChange}
-          ></TextArea>
+          ></TreeTextArea>
           <Centered>
             <Button value={textareaText} action={fillTree}>
               GENERATE
@@ -191,13 +193,13 @@ const Tree = () => {
         </div>
         <div className='col-sm-9'>
           <Xwrapper>
-            <FullHeight>
+            <TreeFullHeight>
               <Centered>
                 <React.Fragment key={'node-' + point.id}>
                   <TreeNodeComponent node={point}></TreeNodeComponent>
                 </React.Fragment>
               </Centered>
-            </FullHeight>
+            </TreeFullHeight>
             <React.Fragment key={'line-' + point.id}>
               <TreeLineComponent node={point}></TreeLineComponent>
             </React.Fragment>
