@@ -1,4 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
+import { createClient } from 'contentful';
+
 import BrArticle from '../components/boring/BrArticle';
 import BrNavBar from '../components/boring/BrNavBar';
 import BrCategory from '../components/boring/BrCategory';
@@ -13,6 +15,23 @@ import rugbyImage from '../../src/assets/images/rugby.jpg';
 import toothdecayImage from '../../src/assets/images/toothdecay.jpg';
 
 function Boring() {
+  const contentfulAccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
+  const contentfulSpace = import.meta.env.VITE_CONTENTFUL_SPACE;
+  const contentfulEntry = import.meta.env.VITE_CONTENTFUL_ENTRY;
+
+  const client = createClient({
+    space: contentfulSpace,
+    environment: 'master',
+    accessToken: contentfulAccessToken,
+  });
+
+  client
+    .getEntry(contentfulEntry)
+    .then((entry) => {
+      console.log(entry.fields.id, entry.fields.title);
+    })
+    .catch(console.error);
+
   return (
     <>
       <BrNavBar></BrNavBar>
