@@ -50,17 +50,15 @@ const Home = () => {
         <Row>
           {content.map((page, index) => {
             return (
-              <>
-                <Col key={index} sm={6} md={4} xl={3} xxl={2} className='my-3'>
-                  <Centered>
-                    <Link to={page['link']} className='link'>
-                      <HomeLogoBox>
-                        <HomeLogo image={page['img']}>{page['txt']}</HomeLogo>
-                      </HomeLogoBox>
-                    </Link>
-                  </Centered>
-                </Col>
-              </>
+              <Col key={index} sm={6} md={4} xl={3} xxl={2} className='my-3'>
+                <Centered>
+                  <Link to={page['link']} className='link'>
+                    <HomeLogoBox>
+                      <HomeLogo image={page['img']}>{page['txt']}</HomeLogo>
+                    </HomeLogoBox>
+                  </Link>
+                </Centered>
+              </Col>
             );
           })}
         </Row>
