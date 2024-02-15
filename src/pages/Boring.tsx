@@ -192,39 +192,43 @@ function Boring() {
             <Col xs={{ span: 2, offset: 4 }}>
               <div className='br-footer-item-heading'>Follow</div>
               <div>
-                <Link to='/boring' className='br-link'>
-                  <FaSquareXTwitter />
-                </Link>
-              </div>
-              <div>
-                <Link to='/boring' className='br-link'>
-                  <FaSquareInstagram />
-                </Link>
-              </div>
-              <div>
-                <Link to='/boring' className='br-link'>
-                  <FaSquareFacebook />
-                </Link>
-              </div>
-              <div>
-                <Link to='/boring' className='br-link'>
-                  <FaSquareYoutube />
-                </Link>
-              </div>
-              <div>
-                <Link to='/boring' className='br-link'>
-                  <FaSquareTumblr />
-                </Link>
-              </div>
-              <div>
-                <Link to='/boring' className='br-link'>
-                  <FaSquarePinterest />
-                </Link>
-              </div>
-              <div>
-                <Link to='/boring' className='br-link'>
-                  <FaSquareReddit />
-                </Link>
+                <Row>
+                  <Col xs={3}>
+                    <Link to='/boring' className='br-link'>
+                      <FaSquareXTwitter />
+                    </Link>
+                  </Col>
+                  <Col xs={3}>
+                    <Link to='/boring' className='br-link'>
+                      <FaSquareInstagram />
+                    </Link>
+                  </Col>
+                  <Col xs={3}>
+                    <Link to='/boring' className='br-link'>
+                      <FaSquareFacebook />
+                    </Link>
+                  </Col>
+                  <Col xs={3}>
+                    <Link to='/boring' className='br-link'>
+                      <FaSquareYoutube />
+                    </Link>
+                  </Col>
+                  <Col xs={3}>
+                    <Link to='/boring' className='br-link'>
+                      <FaSquareTumblr />
+                    </Link>
+                  </Col>
+                  <Col xs={3}>
+                    <Link to='/boring' className='br-link'>
+                      <FaSquarePinterest />
+                    </Link>
+                  </Col>
+                  <Col xs={3}>
+                    <Link to='/boring' className='br-link'>
+                      <FaSquareReddit />
+                    </Link>
+                  </Col>
+                </Row>
               </div>
             </Col>
           </Row>
