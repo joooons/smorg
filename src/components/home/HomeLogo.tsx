@@ -1,4 +1,4 @@
-import './Logo.css';
+import './HomeLogo.css';
 
 interface Props {
   children?: string;
@@ -6,7 +6,7 @@ interface Props {
   size?: string;
 }
 
-const Logo = ({ children, image, size = '200' }: Props) => {
+const HomeLogo = ({ children, image, size = '200' }: Props) => {
   return (
     <>
       <div
@@ -29,4 +29,4 @@ const Logo = ({ children, image, size = '200' }: Props) => {
   );
 };
 
-export default Logo;
+export default HomeLogo;

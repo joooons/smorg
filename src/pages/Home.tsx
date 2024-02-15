@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import Text from '../components/Text';
-import Logo from '../components/Logo';
-import LogoBox from '../components/LogoBox';
+import HomeLogo from '../components/home/HomeLogo';
+import HomeLogoBox from '../components/home/HomeLogoBox';
 import Centered from '../components/Centered';
 import '../components/Link.css';
 
@@ -25,7 +25,7 @@ const Home = () => {
         <div className='row'>
           <div className='col-sm-12 mt-3'>
             <Centered>
-              <Logo size='110' image={smorgLogo}></Logo>
+              <HomeLogo size='110' image={smorgLogo}></HomeLogo>
             </Centered>
           </div>
           <div className='col-sm-12 mt-3'>
@@ -39,9 +39,9 @@ const Home = () => {
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/space' className='link'>
-                <LogoBox>
-                  <Logo image={spaceLogo}></Logo>
-                </LogoBox>
+                <HomeLogoBox>
+                  <HomeLogo image={spaceLogo}></HomeLogo>
+                </HomeLogoBox>
               </Link>
             </Centered>
           </div>
@@ -49,9 +49,9 @@ const Home = () => {
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/tree' className='link'>
-                <LogoBox>
-                  <Logo image={treeLogo}></Logo>
-                </LogoBox>
+                <HomeLogoBox>
+                  <HomeLogo image={treeLogo}></HomeLogo>
+                </HomeLogoBox>
               </Link>
             </Centered>
           </div>
@@ -59,9 +59,9 @@ const Home = () => {
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/about' className='link'>
-                <LogoBox>
-                  <Logo image={aboutLogo}></Logo>
-                </LogoBox>
+                <HomeLogoBox>
+                  <HomeLogo image={aboutLogo}></HomeLogo>
+                </HomeLogoBox>
               </Link>
             </Centered>
           </div>
@@ -69,9 +69,9 @@ const Home = () => {
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/boring' className='link'>
-                <LogoBox>
-                  <Logo image={boringLogo}></Logo>
-                </LogoBox>
+                <HomeLogoBox>
+                  <HomeLogo image={boringLogo}></HomeLogo>
+                </HomeLogoBox>
               </Link>
             </Centered>
           </div>
@@ -79,9 +79,9 @@ const Home = () => {
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/chickens' className='link'>
-                <LogoBox>
-                  <Logo image={blankLogo}>COMING SOON</Logo>
-                </LogoBox>
+                <HomeLogoBox>
+                  <HomeLogo image={blankLogo}>COMING SOON</HomeLogo>
+                </HomeLogoBox>
               </Link>
             </Centered>
           </div>
@@ -89,9 +89,9 @@ const Home = () => {
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/chickens' className='link'>
-                <LogoBox>
-                  <Logo image={blankLogo}>COMING SOON</Logo>
-                </LogoBox>
+                <HomeLogoBox>
+                  <HomeLogo image={blankLogo}>COMING SOON</HomeLogo>
+                </HomeLogoBox>
               </Link>
             </Centered>
           </div>
@@ -99,9 +99,9 @@ const Home = () => {
           <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
             <Centered>
               <Link to='/chickens' className='link'>
-                <LogoBox>
-                  <Logo image={blankLogo}>COMING SOON</Logo>
-                </LogoBox>
+                <HomeLogoBox>
+                  <HomeLogo image={blankLogo}>COMING SOON</HomeLogo>
+                </HomeLogoBox>
               </Link>
             </Centered>
           </div>
