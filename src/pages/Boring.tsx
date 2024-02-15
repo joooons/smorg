@@ -16,6 +16,11 @@ import pillowfightImage from '../../src/assets/images/pillowfight.jpg';
 import rugbyImage from '../../src/assets/images/rugby.jpg';
 import toothdecayImage from '../../src/assets/images/toothdecay.jpg';
 
+import dateImage from '../../src/assets/images/boring-date.jpg';
+import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
+import submarineImage from '../../src/assets/images/boring-submarine.jpg';
+import twitterImage from '../../src/assets/images/boring-twitter.jpg';
+
 import {
   FaSquareXTwitter,
   FaSquareInstagram,
@@ -67,7 +72,7 @@ function Boring() {
               Casual consumption of snack unbearable
             </BrArticle>
           </Col>
-          <Col sm='6' className='br-section'>
+          <Col sm='6' className='br-section px-3'>
             <BrArticle
               image={pillowfightImage}
               caption='open source illustration'
@@ -77,7 +82,7 @@ function Boring() {
               Killing Me Softly
             </BrArticle>
           </Col>
-          <Col sm='3' className='br-section'>
+          <Col sm='3' className='br-section px-3'>
             <BrArticle
               image={toothdecayImage}
               caption='open source illustration'
@@ -98,41 +103,41 @@ function Boring() {
         </Row>
         <Row>
           <Col sm='6'>
-            <BrCategory>Breaking News</BrCategory>
+            <BrCategory>Recommended</BrCategory>
             <BrArticle
-              image={placeholderImage}
+              image={dateImage}
               caption='open source illustration'
-              description='Research suggests correlation between tooth decay and horror genre'
+              description='Look in the mirror and rate yourself from 1 to 10. Then multiply by 0.7 to get the magic number.'
               writer='sarah sarahson'
             >
-              Netflix causes cavities
+              How to get the date you deserve
             </BrArticle>
             <BrArticle
-              image={placeholderImage}
+              image={submarineImage}
               caption='open source illustration'
-              description='Rugby player wins Most Median Player of the year for 3rd consecutive year'
+              description='New company promises to bring underwater travel to the 21st century with flight technology.'
               writer='sarah sarahson'
             >
-              DeMarcus does it again
+              Flying submarines inch closer to reality
             </BrArticle>
           </Col>
           <Col sm='6'>
-            <BrCategory>Featured News</BrCategory>
+            <BrCategory>Popular</BrCategory>
             <BrArticle
-              image={placeholderImage}
+              image={goingGoodImage}
               caption='open source illustration'
-              description='Research suggests correlation between tooth decay and horror genre'
+              description='The spiritual sequel to Breaking Bad gives us the uplifting saga of the rise of a demure chemistry teacher.'
               writer='sarah sarahson'
             >
-              Netflix causes cavities
+              The widespread appeal of Going Good
             </BrArticle>
             <BrArticle
-              image={placeholderImage}
+              image={twitterImage}
               caption='open source illustration'
-              description='Rugby player wins Most Median Player of the year for 3rd consecutive year'
+              description='X, formerly known as Twitter, will be rebranded as Y starting in 2026. Internet asks why.'
               writer='sarah sarahson'
             >
-              DeMarcus does it again
+              Musk announces next evolution of X, Y
             </BrArticle>
           </Col>
         </Row>
