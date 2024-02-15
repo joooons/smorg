@@ -2,9 +2,13 @@
     border-left: 1px solid lightgray;
 }
 
+.br-link {
+    text-decoration: none;
+    color: white;
+}
+
 .br-footer-item {
     padding-right: 10px;
-    
 }
 
 .br-footer-item:not(:first-of-type) {

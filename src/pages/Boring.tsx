@@ -8,7 +8,6 @@ import BrCategory from '../components/boring/BrCategory';
 import BrFooter from '../components/boring/BrFooter';
 
 import '../components/boring/Boring.css';
-import '../components/Link.css';
 
 import grammysImage from '../../src/assets/images/grammys.jpg';
 import gummybearsImage from '../../src/assets/images/gummybears.jpg';
@@ -144,12 +143,12 @@ function Boring() {
             <Col xs={2}>
               <div className='br-footer-item-heading'>About</div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   BNN
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   Careers
                 </Link>
               </div>
@@ -157,17 +156,17 @@ function Boring() {
             <Col xs={2}>
               <div className='br-footer-item-heading'>Contact</div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   Customer Center
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   Contact Us
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   Press
                 </Link>
               </div>
@@ -175,17 +174,17 @@ function Boring() {
             <Col xs={2}>
               <div className='br-footer-item-heading'>Subscription</div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   Manage Subscriptions
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   Podcast
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   Newsletter
                 </Link>
               </div>
@@ -193,37 +192,37 @@ function Boring() {
             <Col xs={{ span: 2, offset: 4 }}>
               <div className='br-footer-item-heading'>Follow</div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   <FaSquareXTwitter />
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   <FaSquareInstagram />
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   <FaSquareFacebook />
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   <FaSquareYoutube />
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   <FaSquareTumblr />
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   <FaSquarePinterest />
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='link'>
+                <Link to='/boring' className='br-link'>
                   <FaSquareReddit />
                 </Link>
               </div>
@@ -231,19 +230,19 @@ function Boring() {
           </Row>
           <Row className='pb-5'>
             <Col>
-              <Link to='/boring' className='link br-footer-item'>
+              <Link to='/boring' className='br-link br-footer-item'>
                 Privacy Policy
               </Link>
-              <Link to='/boring' className='link br-footer-item'>
+              <Link to='/boring' className='br-link br-footer-item'>
                 Do Not Sell Or Share My Personal Information
               </Link>
-              <Link to='/boring' className='link br-footer-item'>
+              <Link to='/boring' className='br-link br-footer-item'>
                 Terms & Conditions
               </Link>
-              <Link to='/boring' className='link br-footer-item'>
+              <Link to='/boring' className='br-link br-footer-item'>
                 Terms of Sale
               </Link>
-              <Link to='/boring' className='link br-footer-item'>
+              <Link to='/boring' className='br-link br-footer-item'>
                 Site Map
               </Link>
             </Col>
