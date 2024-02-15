@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 import Text from '../components/Text';
 import HomeLogo from '../components/home/HomeLogo';
@@ -22,21 +23,23 @@ const Home = () => {
   return (
     <>
       <Container>
-        <div className='row'>
-          <div className='col-sm-12 mt-3'>
+        <Row className='mt-1'>
+          <Col sm={12}>
             <Centered>
               <HomeLogo size='110' image={smorgLogo}></HomeLogo>
             </Centered>
-          </div>
-          <div className='col-sm-12 mt-3'>
+          </Col>
+          <Col sm={12}>
             <Centered>
               <Text size='100' font='winter' tag='h1'>
                 SMORG
               </Text>
             </Centered>
-          </div>
+          </Col>
+        </Row>
 
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+        <Row>
+          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
             <Centered>
               <Link to='/space' className='link'>
                 <HomeLogoBox>
@@ -44,9 +47,9 @@ const Home = () => {
                 </HomeLogoBox>
               </Link>
             </Centered>
-          </div>
+          </Col>
 
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
             <Centered>
               <Link to='/tree' className='link'>
                 <HomeLogoBox>
@@ -54,9 +57,9 @@ const Home = () => {
                 </HomeLogoBox>
               </Link>
             </Centered>
-          </div>
+          </Col>
 
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
             <Centered>
               <Link to='/about' className='link'>
                 <HomeLogoBox>
@@ -64,9 +67,9 @@ const Home = () => {
                 </HomeLogoBox>
               </Link>
             </Centered>
-          </div>
+          </Col>
 
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
             <Centered>
               <Link to='/boring' className='link'>
                 <HomeLogoBox>
@@ -74,9 +77,9 @@ const Home = () => {
                 </HomeLogoBox>
               </Link>
             </Centered>
-          </div>
+          </Col>
 
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
             <Centered>
               <Link to='/chickens' className='link'>
                 <HomeLogoBox>
@@ -84,9 +87,9 @@ const Home = () => {
                 </HomeLogoBox>
               </Link>
             </Centered>
-          </div>
+          </Col>
 
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
             <Centered>
               <Link to='/chickens' className='link'>
                 <HomeLogoBox>
@@ -94,9 +97,9 @@ const Home = () => {
                 </HomeLogoBox>
               </Link>
             </Centered>
-          </div>
+          </Col>
 
-          <div className='col-sm-6 col-md-4 col-xl-3 col-xxl-2 mt-3'>
+          <Col sm={6} md={4} xl={3} xxl={2} className='my-3'>
             <Centered>
               <Link to='/chickens' className='link'>
                 <HomeLogoBox>
@@ -104,8 +107,8 @@ const Home = () => {
                 </HomeLogoBox>
               </Link>
             </Centered>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
     </>
   );

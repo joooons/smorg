@@ -12,7 +12,6 @@ const HomeLogoBox = ({ children }: Props) => {
         <div className='hm-logobox-lid'>
           <div className='hm-logobox-cover'></div>
         </div>
-
         <div>{children}</div>
       </div>
     </>
