@@ -9,13 +9,12 @@ import BrFooter from '../components/boring/BrFooter';
 
 import '../components/boring/Boring.css';
 
-import grammysImage from '../../src/assets/images/grammys.jpg';
-import gummybearsImage from '../../src/assets/images/gummybears.jpg';
-import placeholderImage from '../../src/assets/images/placeholder.jpg';
-import pillowfightImage from '../../src/assets/images/pillowfight.jpg';
-import rugbyImage from '../../src/assets/images/rugby.jpg';
-import toothdecayImage from '../../src/assets/images/toothdecay.jpg';
-
+// import placeholderImage from '../../src/assets/images/placeholder.jpg';
+import grammysImage from '../../src/assets/images/boring-grammys.jpg';
+import gummybearsImage from '../../src/assets/images/boring-gummybears.jpg';
+import pillowfightImage from '../../src/assets/images/boring-pillowfight.jpg';
+import rugbyImage from '../../src/assets/images/boring-rugby.jpg';
+import toothdecayImage from '../../src/assets/images/boring-toothdecay.jpg';
 import dateImage from '../../src/assets/images/boring-date.jpg';
 import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
 import submarineImage from '../../src/assets/images/boring-submarine.jpg';
@@ -107,7 +106,7 @@ function Boring() {
             <BrArticle
               image={dateImage}
               caption='open source illustration'
-              description='Look in the mirror and rate yourself from 1 to 10. Then multiply by 0.7 to get the magic number.'
+              description='Rate yourself from 1 to 10 and then multiply by 0.6 to get the magic number'
               writer='sarah sarahson'
             >
               How to get the date you deserve
@@ -115,7 +114,7 @@ function Boring() {
             <BrArticle
               image={submarineImage}
               caption='open source illustration'
-              description='New company promises to bring underwater travel to the 21st century with flight technology.'
+              description='Tech company promises upgrade to underwater travel with flight technology'
               writer='sarah sarahson'
             >
               Flying submarines inch closer to reality
@@ -126,7 +125,7 @@ function Boring() {
             <BrArticle
               image={goingGoodImage}
               caption='open source illustration'
-              description='The spiritual sequel to Breaking Bad gives us the uplifting saga of the rise of a demure chemistry teacher.'
+              description='Spiritual sequel to Breaking Bad offers uplifting tale of a demure chemistry teacher'
               writer='sarah sarahson'
             >
               The widespread appeal of Going Good
@@ -134,13 +133,14 @@ function Boring() {
             <BrArticle
               image={twitterImage}
               caption='open source illustration'
-              description='X, formerly known as Twitter, will be rebranded as Y starting in 2026. Internet asks why.'
+              description='Internet collectively scratches head as X (formerly Twitter) to be rebranded as Y in 2026'
               writer='sarah sarahson'
             >
               Musk announces next evolution of X, Y
             </BrArticle>
           </Col>
         </Row>
+        <Row className='py-4'></Row>
       </Container>
       <BrFooter>
         <Container>
