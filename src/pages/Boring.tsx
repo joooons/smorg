@@ -139,8 +139,8 @@ function Boring() {
       </Container>
       <BrFooter>
         <Container>
-          <Row className='py-4'>
-            <Col xs={2}>
+          <div className='row pt-4 pb-5'>
+            <div className='col-sm-2'>
               <div className='br-footer-item-heading'>About</div>
               <div>
                 <Link to='/boring' className='br-link'>
@@ -152,8 +152,9 @@ function Boring() {
                   Careers
                 </Link>
               </div>
-            </Col>
-            <Col xs={2}>
+            </div>
+
+            <div className='col-sm-2'>
               <div className='br-footer-item-heading'>Contact</div>
               <div>
                 <Link to='/boring' className='br-link'>
@@ -170,8 +171,9 @@ function Boring() {
                   Press
                 </Link>
               </div>
-            </Col>
-            <Col xs={2}>
+            </div>
+
+            <div className='col-sm-7'>
               <div className='br-footer-item-heading'>Subscription</div>
               <div>
                 <Link to='/boring' className='br-link'>
@@ -188,52 +190,52 @@ function Boring() {
                   Newsletter
                 </Link>
               </div>
-            </Col>
-            <Col xs={{ span: 2, offset: 4 }}>
-              <div className='br-footer-item-heading'>Follow</div>
-              <div>
-                <Row>
-                  <Col xs={3}>
-                    <Link to='/boring' className='br-link'>
-                      <FaSquareXTwitter />
-                    </Link>
-                  </Col>
-                  <Col xs={3}>
-                    <Link to='/boring' className='br-link'>
-                      <FaSquareInstagram />
-                    </Link>
-                  </Col>
-                  <Col xs={3}>
-                    <Link to='/boring' className='br-link'>
-                      <FaSquareFacebook />
-                    </Link>
-                  </Col>
-                  <Col xs={3}>
-                    <Link to='/boring' className='br-link'>
-                      <FaSquareYoutube />
-                    </Link>
-                  </Col>
-                  <Col xs={3}>
-                    <Link to='/boring' className='br-link'>
-                      <FaSquareTumblr />
-                    </Link>
-                  </Col>
-                  <Col xs={3}>
-                    <Link to='/boring' className='br-link'>
-                      <FaSquarePinterest />
-                    </Link>
-                  </Col>
-                  <Col xs={3}>
-                    <Link to='/boring' className='br-link'>
-                      <FaSquareReddit />
-                    </Link>
-                  </Col>
-                </Row>
+            </div>
+
+            <div className='col-sm-1'>
+              <div className='row br-footer-item-heading'>Follow</div>
+              <div className='row'>
+                <div className='col-sm-3'>
+                  <Link to='/boring' className='br-link'>
+                    <FaSquareXTwitter />
+                  </Link>
+                </div>
+                <div className='col-sm-3'>
+                  <Link to='/boring' className='br-link'>
+                    <FaSquareInstagram />
+                  </Link>
+                </div>
+                <div className='col-sm-3'>
+                  <Link to='/boring' className='br-link'>
+                    <FaSquareFacebook />
+                  </Link>
+                </div>
+                <div className='col-sm-3'>
+                  <Link to='/boring' className='br-link'>
+                    <FaSquareYoutube />
+                  </Link>
+                </div>
+                <div className='col-sm-3'>
+                  <Link to='/boring' className='br-link'>
+                    <FaSquareTumblr />
+                  </Link>
+                </div>
+                <div className='col-sm-3'>
+                  <Link to='/boring' className='br-link'>
+                    <FaSquarePinterest />
+                  </Link>
+                </div>
+                <div className='col-sm-3'>
+                  <Link to='/boring' className='br-link'>
+                    <FaSquareReddit />
+                  </Link>
+                </div>
               </div>
-            </Col>
-          </Row>
-          <Row className='pb-5'>
-            <Col>
+            </div>
+          </div>
+
+          <div className='row br-footer-row pt-3 pb-5'>
+            <div>
               <Link to='/boring' className='br-link br-footer-item'>
                 Privacy Policy
               </Link>
@@ -249,8 +251,8 @@ function Boring() {
               <Link to='/boring' className='br-link br-footer-item'>
                 Site Map
               </Link>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Container>
       </BrFooter>
     </>

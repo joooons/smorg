@@ -7,6 +7,10 @@
     color: white;
 }
 
+.br-footer-row {
+    border-top: 1px solid white;
+}
+
 .br-footer-item {
     padding-right: 10px;
 }
