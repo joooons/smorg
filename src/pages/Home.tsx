@@ -8,16 +8,16 @@ import HomeLogoBox from '../components/home/HomeLogoBox';
 import Centered from '../components/Centered';
 import '../components/Link.css';
 
-import spaceLogo from '../../src/assets/space.png';
-import aboutLogo from '../../src/assets/about.png';
-import boringLogo from '../../src/assets/B.png';
-// import crashGoLogo from '../../src/assets/crashGo.png';
-// import loveLogo from '../../src/assets/love.png';
-// import mazeLogo from '../../src/assets/maze.png';
-// import monsterLogo from '../../src/assets/monster.png';
-import treeLogo from '../../src/assets/tree.png';
-import smorgLogo from '../../src/assets/smorg-b.png';
-import blankLogo from '../../src/assets/blank.png';
+import spaceLogo from '../../src/assets/images/space.png';
+import aboutLogo from '../../src/assets/images/about.png';
+import boringLogo from '../../src/assets/images/B.png';
+// import crashGoLogo from '../../src/assets/images/crashGo.png';
+// import loveLogo from '../../src/assets/images/love.png';
+// import mazeLogo from '../../src/assets/images/maze.png';
+// import monsterLogo from '../../src/assets/images/monster.png';
+import treeLogo from '../../src/assets/images/tree.png';
+import smorgLogo from '../../src/assets/images/smorg-b.png';
+import blankLogo from '../../src/assets/images/blank.png';
 
 const Home = () => {
   const content = [

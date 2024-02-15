@@ -5,12 +5,12 @@ import BrCategory from '../components/boring/BrCategory';
 
 import '../components/boring/Boring.css';
 
-import grammysImage from '../../src/assets/grammys.jpg';
-import gummybearsImage from '../../src/assets/gummybears.jpg';
-import placeholderImage from '../../src/assets/placeholder.jpg';
-import pillowfightImage from '../../src/assets/pillowfight.jpg';
-import rugbyImage from '../../src/assets/rugby.jpg';
-import toothdecayImage from '../../src/assets/toothdecay.jpg';
+import grammysImage from '../../src/assets/images/grammys.jpg';
+import gummybearsImage from '../../src/assets/images/gummybears.jpg';
+import placeholderImage from '../../src/assets/images/placeholder.jpg';
+import pillowfightImage from '../../src/assets/images/pillowfight.jpg';
+import rugbyImage from '../../src/assets/images/rugby.jpg';
+import toothdecayImage from '../../src/assets/images/toothdecay.jpg';
 
 function Boring() {
   return (

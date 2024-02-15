@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import Text from '../components/Text';
-import ChickensImage from '../../src/assets/chickens.png';
+import ChickensImage from '../../src/assets/images/chickens.png';
 
 const NoPage = () => {
   return (

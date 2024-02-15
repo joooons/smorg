@@ -1,5 +1,5 @@
 import './NavBar.css';
-import smorgLogo from '../../src/assets/smorg-b.png';
+import smorgLogo from '../../src/assets/images/smorg-b.png';
 
 const NavBar = () => {
   return (
