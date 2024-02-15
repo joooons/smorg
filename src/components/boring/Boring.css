@@ -1,3 +1,17 @@
 .br-section:not(:first-child) {
     border-left: 1px solid lightgray;
 }
+
+.br-footer-item {
+    padding-right: 10px;
+    
+}
+
+.br-footer-item:not(:first-of-type) {
+    padding-left: 10px;
+    border-left: 1px solid white;
+}
+
+.br-footer-item-heading {
+    color: gray;
+}

@@ -1,11 +1,14 @@
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { createClient } from 'contentful';
 
 import BrArticle from '../components/boring/BrArticle';
 import BrNavBar from '../components/boring/BrNavBar';
 import BrCategory from '../components/boring/BrCategory';
+import BrFooter from '../components/boring/BrFooter';
 
 import '../components/boring/Boring.css';
+import '../components/Link.css';
 
 import grammysImage from '../../src/assets/images/grammys.jpg';
 import gummybearsImage from '../../src/assets/images/gummybears.jpg';
@@ -125,6 +128,109 @@ function Boring() {
           </Col>
         </Row>
       </Container>
+      <BrFooter>
+        <Container>
+          <Row className='py-4'>
+            <Col xs={2}>
+              <div className='br-footer-item-heading'>About</div>
+              <div>
+                <Link to='/boring' className='link'>
+                  BNN
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Careers
+                </Link>
+              </div>
+            </Col>
+            <Col xs={2}>
+              <div className='br-footer-item-heading'>Contact</div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Customer Center
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Contact Us
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Press
+                </Link>
+              </div>
+            </Col>
+            <Col xs={2}>
+              <div className='br-footer-item-heading'>Subscription</div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Manage Subscriptions
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Podcast
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Newsletter
+                </Link>
+              </div>
+            </Col>
+            <Col xs={{ span: 2, offset: 4 }}>
+              <div className='br-footer-item-heading'>Follow</div>
+              <div>
+                <Link to='/boring' className='link'>
+                  X
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Instagram
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  Facebook
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  YouTube
+                </Link>
+              </div>
+              <div>
+                <Link to='/boring' className='link'>
+                  LinkedIn
+                </Link>
+              </div>
+            </Col>
+          </Row>
+          <Row className='pb-5'>
+            <Col xs={11}>
+              <Link to='/boring' className='link br-footer-item'>
+                Privacy Policy
+              </Link>
+              <Link to='/boring' className='link br-footer-item'>
+                Do Not Sell Or Share My Personal Information
+              </Link>
+              <Link to='/boring' className='link br-footer-item'>
+                Terms & Conditions
+              </Link>
+              <Link to='/boring' className='link br-footer-item'>
+                Terms of Sale
+              </Link>
+              <Link to='/boring' className='link br-footer-item'>
+                Site Map
+              </Link>
+            </Col>
+            <Col xs={1}>BNN</Col>
+          </Row>
+        </Container>
+      </BrFooter>
     </>
   );
 }
