@@ -1,3 +1,36 @@
 .br-navbar {
-    background-color: antiquewhite;
+    background-color: white;
 }
+
+.br-nav-brand {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+}
+
+.br-nav-link {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+
+    &::after {
+        content: "";
+        position: absolute;
+    }
+
+    &::after {
+        left: 0px;
+        bottom: 0px;
+        width: 0%;
+        border-bottom: 2px solid black;
+        transition: width 0s;
+    }
+
+    &:hover::after {
+        width: 100%;
+        transition: width 0.2s;
+    }
+}
+

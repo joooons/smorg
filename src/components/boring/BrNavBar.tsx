@@ -7,16 +7,30 @@ const BrNavBar = () => {
       <Navbar className='br-navbar'>
         <Container>
           <Nav navbarScroll>
-            <Navbar.Brand href='#home' className='mx-2'>
+            <a href='#' className='br-nav-brand'>
               <b>BNN</b>
-            </Navbar.Brand>
-            <Nav.Link href='#'>Home</Nav.Link>
-            <Nav.Link href='#'>News</Nav.Link>
-            <Nav.Link href='#'>Business</Nav.Link>
-            <Nav.Link href='#'>Entertainment</Nav.Link>
-            <Nav.Link href='#'>Sport</Nav.Link>
-            <Nav.Link href='#'>Travel</Nav.Link>
-            <Nav.Link href='/home'>Smorg</Nav.Link>
+            </a>
+            <a href='#' className='br-nav-link'>
+              Home
+            </a>
+            <a href='#' className='br-nav-link'>
+              News
+            </a>
+            <a href='#' className='br-nav-link'>
+              Business
+            </a>
+            <a href='#' className='br-nav-link'>
+              Entertainment
+            </a>
+            <a href='#' className='br-nav-link'>
+              Sports
+            </a>
+            <a href='#' className='br-nav-link'>
+              Travel
+            </a>
+            <a href='/home' className='br-nav-link'>
+              Smorg
+            </a>
           </Nav>
           <Navbar.Collapse className='justify-content-end mx-2'>
             <Nav.Link href='#'>SignIn</Nav.Link>
