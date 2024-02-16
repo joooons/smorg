@@ -76,6 +76,7 @@ function Boring() {
             arr.push(article);
           }
         });
+        console.log('content loaded from contentful');
         setFeatured(arr);
       })
       .catch(console.error);
