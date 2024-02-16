@@ -1,24 +1,7 @@
+import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { createClient } from 'contentful';
-
-import BrArticle from '../components/boring/BrArticle';
-import BrNavBar from '../components/boring/BrNavBar';
-import BrCategory from '../components/boring/BrCategory';
-import BrFooter from '../components/boring/BrFooter';
-
-import '../components/boring/Boring.css';
-
-// import placeholderImage from '../../src/assets/images/placeholder.jpg';
-import grammysImage from '../../src/assets/images/boring-grammys.jpg';
-import gummybearsImage from '../../src/assets/images/boring-gummybears.jpg';
-import pillowfightImage from '../../src/assets/images/boring-pillowfight.jpg';
-import rugbyImage from '../../src/assets/images/boring-rugby.jpg';
-import toothdecayImage from '../../src/assets/images/boring-toothdecay.jpg';
-import dateImage from '../../src/assets/images/boring-date.jpg';
-import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
-import submarineImage from '../../src/assets/images/boring-submarine.jpg';
-import twitterImage from '../../src/assets/images/boring-twitter.jpg';
 
 import {
   FaSquareXTwitter,
@@ -30,23 +13,73 @@ import {
   FaSquareTumblr,
 } from 'react-icons/fa6';
 
+import BrArticle from '../components/boring/BrArticle';
+import BrNavBar from '../components/boring/BrNavBar';
+import BrCategory from '../components/boring/BrCategory';
+import BrFooter from '../components/boring/BrFooter';
+
+import '../components/boring/Boring.css';
+
+import placeholderImage from '../../src/assets/images/placeholder.jpg';
+// import grammysImage from '../../src/assets/images/boring-grammys.jpg';
+// import gummybearsImage from '../../src/assets/images/boring-gummybears.jpg';
+import pillowfightImage from '../../src/assets/images/boring-pillowfight.jpg';
+import rugbyImage from '../../src/assets/images/boring-rugby.jpg';
+import toothdecayImage from '../../src/assets/images/boring-toothdecay.jpg';
+import dateImage from '../../src/assets/images/boring-date.jpg';
+import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
+import submarineImage from '../../src/assets/images/boring-submarine.jpg';
+import twitterImage from '../../src/assets/images/boring-twitter.jpg';
+
+interface Article {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+const contentfulAccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
+const contentfulSpace = import.meta.env.VITE_CONTENTFUL_SPACE;
+// const contentfulEntry = import.meta.env.VITE_CONTENTFUL_ENTRY;
+
+const client = createClient({
+  space: contentfulSpace,
+  environment: 'master',
+  accessToken: contentfulAccessToken,
+});
+
 function Boring() {
-  const contentfulAccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
-  const contentfulSpace = import.meta.env.VITE_CONTENTFUL_SPACE;
-  const contentfulEntry = import.meta.env.VITE_CONTENTFUL_ENTRY;
+  const [featured, setFeatured] = useState<Article[]>();
 
-  const client = createClient({
-    space: contentfulSpace,
-    environment: 'master',
-    accessToken: contentfulAccessToken,
-  });
-
-  client
-    .getEntry(contentfulEntry)
-    .then((entry) => {
-      console.log(entry.fields.id, entry.fields.title);
-    })
-    .catch(console.error);
+  useEffect(() => {
+    client
+      .getEntries()
+      .then((entry) => {
+        let arr: Article[] = [];
+        entry.items.forEach((item) => {
+          if (item.fields.type === 'featured') {
+            let imageURL: string = placeholderImage;
+            if (item.fields.image) {
+              let imageObject = item.fields.image as {
+                fields: { file: { url: string } };
+              };
+              if (imageObject.fields) {
+                imageURL = imageObject.fields.file.url as string;
+              }
+            }
+            const article: Article = {
+              id: item.fields.id as string,
+              title: item.fields.title as string,
+              description: item.fields.description as string,
+              image: imageURL,
+            };
+            arr.push(article);
+          }
+        });
+        setFeatured(arr);
+      })
+      .catch(console.error);
+  }, []);
 
   return (
     <>
@@ -54,22 +87,19 @@ function Boring() {
       <Container>
         <Row>
           <Col sm='3' className='br-section'>
-            <BrArticle
-              image={grammysImage}
-              caption='open source illustration'
-              description='Swift makes history for winning all awards at the Grannys'
-              writer='sarah sarahson'
-            >
-              Taylor Swift bankrupts every other artist
-            </BrArticle>
-            <BrArticle
-              image={gummybearsImage}
-              caption='open source illustration'
-              description='Gummy bears attempt escape when no one is looking, researchers say'
-              writer='sarah sarahson'
-            >
-              Casual consumption of snack unbearable
-            </BrArticle>
+            {featured?.map((article) => {
+              return (
+                <BrArticle
+                  key={article.id + '-featured'}
+                  image={article.image}
+                  caption='open source illustration'
+                  description={article.description}
+                  writer='sarah sarahson'
+                >
+                  {article.title}
+                </BrArticle>
+              );
+            })}
           </Col>
           <Col sm='6' className='br-section px-3'>
             <BrArticle
