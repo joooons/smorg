@@ -1,8 +1,10 @@
+// npm packages
 import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { createClient } from 'contentful';
 
+// icons
 import {
   FaSquareXTwitter,
   FaSquareInstagram,
@@ -13,13 +15,14 @@ import {
   FaSquareTumblr,
 } from 'react-icons/fa6';
 
+// boring components
 import BrArticle from '../components/boring/BrArticle';
 import BrNavBar from '../components/boring/BrNavBar';
 import BrCategory from '../components/boring/BrCategory';
 import BrFooter from '../components/boring/BrFooter';
-
 import '../components/boring/Boring.css';
 
+// src/assets/images
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
 // import grammysImage from '../../src/assets/images/boring-grammys.jpg';
 // import gummybearsImage from '../../src/assets/images/boring-gummybears.jpg';
