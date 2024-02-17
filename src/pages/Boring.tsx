@@ -95,7 +95,7 @@ function Boring() {
       <BrNavBar></BrNavBar>
       <Container>
         <Row>
-          <Col sm='3' className='br-section'>
+          <Col sm={12} md={3} className='br-section'>
             {articles?.map((article) => {
               if (article.type === 'featured-left') {
                 return (
@@ -112,7 +112,7 @@ function Boring() {
               }
             })}
           </Col>
-          <Col sm='6' className='br-section px-3'>
+          <Col sm={12} md={6} className='br-section px-3'>
             {articles?.map((article) => {
               if (article.type === 'cover') {
                 return (
@@ -129,7 +129,7 @@ function Boring() {
               }
             })}
           </Col>
-          <Col sm='3' className='br-section px-3'>
+          <Col sm={12} md={3} className='br-section px-3'>
             {articles?.map((article) => {
               if (article.type === 'featured-right') {
                 return (
@@ -148,7 +148,7 @@ function Boring() {
           </Col>
         </Row>
         <Row>
-          <Col sm='6'>
+          <Col xs={12} md={6}>
             <BrCategory>Recommended</BrCategory>
             {articles?.map((article) => {
               if (article.type === 'recommended') {
@@ -167,7 +167,7 @@ function Boring() {
             })}
           </Col>
 
-          <Col sm='6'>
+          <Col xs={12} md={6}>
             <BrCategory>Popular</BrCategory>
             {articles?.map((article) => {
               if (article.type === 'popular') {
