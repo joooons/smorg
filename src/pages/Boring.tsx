@@ -27,8 +27,8 @@ import placeholderImage from '../../src/assets/images/placeholder.jpg';
 // import grammysImage from '../../src/assets/images/boring-grammys.jpg';
 // import gummybearsImage from '../../src/assets/images/boring-gummybears.jpg';
 import pillowfightImage from '../../src/assets/images/boring-pillowfight.jpg';
-import rugbyImage from '../../src/assets/images/boring-rugby.jpg';
-import toothdecayImage from '../../src/assets/images/boring-toothdecay.jpg';
+// import rugbyImage from '../../src/assets/images/boring-rugby.jpg';
+// import toothdecayImage from '../../src/assets/images/boring-toothdecay.jpg';
 import dateImage from '../../src/assets/images/boring-date.jpg';
 import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
 import submarineImage from '../../src/assets/images/boring-submarine.jpg';
@@ -36,9 +36,12 @@ import twitterImage from '../../src/assets/images/boring-twitter.jpg';
 
 interface Article {
   id: string;
+  type: string;
   title: string;
   description: string;
   image: string;
+  caption: string;
+  writer: string;
 }
 
 const contentfulAccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
@@ -52,35 +55,37 @@ const client = createClient({
 });
 
 function Boring() {
-  const [featured, setFeatured] = useState<Article[]>();
+  const [articles, setArticles] = useState<Article[]>();
 
   useEffect(() => {
+    console.log('----- useEffect triggered -----');
     client
       .getEntries()
       .then((entry) => {
         let arr: Article[] = [];
         entry.items.forEach((item) => {
-          if (item.fields.type === 'featured') {
-            let imageURL: string = placeholderImage;
-            if (item.fields.image) {
-              let imageObject = item.fields.image as {
-                fields: { file: { url: string } };
-              };
-              if (imageObject.fields) {
-                imageURL = imageObject.fields.file.url as string;
-              }
-            }
-            const article: Article = {
-              id: item.fields.id as string,
-              title: item.fields.title as string,
-              description: item.fields.description as string,
-              image: imageURL,
+          let imageURL: string = placeholderImage;
+          if (item.fields.image) {
+            let imageObject = item.fields.image as {
+              fields: { file: { url: string } };
             };
-            arr.push(article);
+            if (imageObject.fields) {
+              imageURL = imageObject.fields.file.url as string;
+            }
           }
+          const article: Article = {
+            id: item.fields.id as string,
+            type: item.fields.type as string,
+            title: item.fields.title as string,
+            description: item.fields.description as string,
+            image: imageURL,
+            caption: item.fields.caption as string,
+            writer: item.fields.writer as string,
+          };
+          arr.push(article);
         });
         console.log('content loaded from contentful');
-        setFeatured(arr);
+        setArticles(arr);
       })
       .catch(console.error);
   }, []);
@@ -91,18 +96,20 @@ function Boring() {
       <Container>
         <Row>
           <Col sm='3' className='br-section'>
-            {featured?.map((article) => {
-              return (
-                <BrArticle
-                  key={article.id + '-featured'}
-                  image={article.image}
-                  caption='open source illustration'
-                  description={article.description}
-                  writer='sarah sarahson'
-                >
-                  {article.title}
-                </BrArticle>
-              );
+            {articles?.map((article) => {
+              if (article.type === 'featured-left') {
+                return (
+                  <BrArticle
+                    key={article.id + '-featured-left'}
+                    image={article.image}
+                    caption={article.caption}
+                    description={article.description}
+                    writer={article.writer}
+                  >
+                    {article.title}
+                  </BrArticle>
+                );
+              }
             })}
           </Col>
           <Col sm='6' className='br-section px-3'>
@@ -116,22 +123,21 @@ function Boring() {
             </BrArticle>
           </Col>
           <Col sm='3' className='br-section px-3'>
-            <BrArticle
-              image={toothdecayImage}
-              caption='open source illustration'
-              description='Research suggests correlation between tooth decay and horror genre'
-              writer='sarah sarahson'
-            >
-              Netflix causes cavities
-            </BrArticle>
-            <BrArticle
-              image={rugbyImage}
-              caption='open source illustration'
-              description='Rugby player wins Most Median Player of the year for 3rd consecutive year'
-              writer='sarah sarahson'
-            >
-              DeMarcus does it again
-            </BrArticle>
+            {articles?.map((article) => {
+              if (article.type === 'featured-right') {
+                return (
+                  <BrArticle
+                    key={article.id + '-featured-right'}
+                    image={article.image}
+                    caption={article.caption}
+                    description={article.description}
+                    writer={article.writer}
+                  >
+                    {article.title}
+                  </BrArticle>
+                );
+              }
+            })}
           </Col>
         </Row>
         <Row>
