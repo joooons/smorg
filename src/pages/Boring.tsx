@@ -190,7 +190,7 @@ function Boring() {
       </Container>
       <BrFooter>
         <Container>
-          <div className='row pt-4 pb-5'>
+          <div className='row pt-4 '>
             <div className='col-md-6 col-lg-2 mb-4'>
               <div className='br-footer-item-heading'>About</div>
               <div>
@@ -285,23 +285,27 @@ function Boring() {
             </div>
           </div>
 
-          <div className='row br-footer-row pt-3 pb-5'>
-            <div>
-              <Link to='/boring' className='br-link br-footer-item'>
-                Privacy Policy
-              </Link>
-              <Link to='/boring' className='br-link br-footer-item'>
-                Do Not Sell Or Share My Personal Information
-              </Link>
-              <Link to='/boring' className='br-link br-footer-item'>
-                Terms & Conditions
-              </Link>
-              <Link to='/boring' className='br-link br-footer-item'>
-                Terms of Sale
-              </Link>
-              <Link to='/boring' className='br-link br-footer-item'>
-                Site Map
-              </Link>
+          <div className='row pt-3 pb-5 '>
+            <div className='row'>
+              <div className='col-12'>
+                <div className='br-footer-row pt-4'>
+                  <Link to='/boring' className='br-link br-footer-item'>
+                    Privacy Policy
+                  </Link>
+                  <Link to='/boring' className='br-link br-footer-item'>
+                    Do Not Sell Or Share My Personal Information
+                  </Link>
+                  <Link to='/boring' className='br-link br-footer-item'>
+                    Terms & Conditions
+                  </Link>
+                  <Link to='/boring' className='br-link br-footer-item'>
+                    Terms of Sale
+                  </Link>
+                  <Link to='/boring' className='br-link br-footer-item'>
+                    Site Map
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </Container>

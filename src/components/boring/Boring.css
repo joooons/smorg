@@ -8,7 +8,7 @@
 }
 
 .br-footer-row {
-    border-top: 1px solid white;
+    border-top: 0.5px solid gray;
 }
 
 .br-footer-item {
@@ -17,7 +17,7 @@
 
 .br-footer-item:not(:first-of-type) {
     padding-left: 10px;
-    border-left: 1px solid white;
+    border-left: 0.5px solid gray;
 }
 
 .br-footer-item-heading {
