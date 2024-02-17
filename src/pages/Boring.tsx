@@ -26,13 +26,13 @@ import '../components/boring/Boring.css';
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
 // import grammysImage from '../../src/assets/images/boring-grammys.jpg';
 // import gummybearsImage from '../../src/assets/images/boring-gummybears.jpg';
-import pillowfightImage from '../../src/assets/images/boring-pillowfight.jpg';
+// import pillowfightImage from '../../src/assets/images/boring-pillowfight.jpg';
 // import rugbyImage from '../../src/assets/images/boring-rugby.jpg';
 // import toothdecayImage from '../../src/assets/images/boring-toothdecay.jpg';
-import dateImage from '../../src/assets/images/boring-date.jpg';
-import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
-import submarineImage from '../../src/assets/images/boring-submarine.jpg';
-import twitterImage from '../../src/assets/images/boring-twitter.jpg';
+// import dateImage from '../../src/assets/images/boring-date.jpg';
+// import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
+// import submarineImage from '../../src/assets/images/boring-submarine.jpg';
+// import twitterImage from '../../src/assets/images/boring-twitter.jpg';
 
 interface Article {
   id: string;
@@ -113,14 +113,21 @@ function Boring() {
             })}
           </Col>
           <Col sm='6' className='br-section px-3'>
-            <BrArticle
-              image={pillowfightImage}
-              caption='open source illustration'
-              description='Two found dead at underground pillow fight scene'
-              writer='sarah sarahson'
-            >
-              Killing Me Softly
-            </BrArticle>
+            {articles?.map((article) => {
+              if (article.type === 'cover') {
+                return (
+                  <BrArticle
+                    key={article.id + '-cover'}
+                    image={article.image}
+                    caption={article.caption}
+                    description={article.description}
+                    writer={article.writer}
+                  >
+                    {article.title}
+                  </BrArticle>
+                );
+              }
+            })}
           </Col>
           <Col sm='3' className='br-section px-3'>
             {articles?.map((article) => {
@@ -143,41 +150,40 @@ function Boring() {
         <Row>
           <Col sm='6'>
             <BrCategory>Recommended</BrCategory>
-            <BrArticle
-              image={dateImage}
-              caption='open source illustration'
-              description='Rate yourself from 1 to 10 and then multiply by 0.6 to get the magic number'
-              writer='sarah sarahson'
-            >
-              How to get the date you deserve
-            </BrArticle>
-            <BrArticle
-              image={submarineImage}
-              caption='open source illustration'
-              description='Tech company promises upgrade to underwater travel with flight technology'
-              writer='sarah sarahson'
-            >
-              Flying submarines inch closer to reality
-            </BrArticle>
+            {articles?.map((article) => {
+              if (article.type === 'recommended') {
+                return (
+                  <BrArticle
+                    key={article.id + '-recommended'}
+                    image={article.image}
+                    caption={article.caption}
+                    description={article.description}
+                    writer={article.writer}
+                  >
+                    {article.title}
+                  </BrArticle>
+                );
+              }
+            })}
           </Col>
+
           <Col sm='6'>
             <BrCategory>Popular</BrCategory>
-            <BrArticle
-              image={goingGoodImage}
-              caption='open source illustration'
-              description='Spiritual sequel to Breaking Bad offers uplifting tale of a demure chemistry teacher'
-              writer='sarah sarahson'
-            >
-              The widespread appeal of Going Good
-            </BrArticle>
-            <BrArticle
-              image={twitterImage}
-              caption='open source illustration'
-              description='Internet collectively scratches head as X (formerly Twitter) to be rebranded as Y in 2026'
-              writer='sarah sarahson'
-            >
-              Musk announces next evolution of X, Y
-            </BrArticle>
+            {articles?.map((article) => {
+              if (article.type === 'popular') {
+                return (
+                  <BrArticle
+                    key={article.id + '-popular'}
+                    image={article.image}
+                    caption={article.caption}
+                    description={article.description}
+                    writer={article.writer}
+                  >
+                    {article.title}
+                  </BrArticle>
+                );
+              }
+            })}
           </Col>
         </Row>
         <Row className='py-4'></Row>
