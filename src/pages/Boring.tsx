@@ -191,7 +191,7 @@ function Boring() {
       <BrFooter>
         <Container>
           <div className='row pt-4 pb-5'>
-            <div className='col-sm-2'>
+            <div className='col-md-6 col-lg-2 mb-4'>
               <div className='br-footer-item-heading'>About</div>
               <div>
                 <Link to='/boring' className='br-link'>
@@ -205,7 +205,7 @@ function Boring() {
               </div>
             </div>
 
-            <div className='col-sm-2'>
+            <div className='col-md-6 col-lg-2 mb-4'>
               <div className='br-footer-item-heading'>Contact</div>
               <div>
                 <Link to='/boring' className='br-link'>
@@ -224,7 +224,7 @@ function Boring() {
               </div>
             </div>
 
-            <div className='col-sm-7'>
+            <div className='col-md-6 col-lg-7 mb-4'>
               <div className='br-footer-item-heading'>Subscription</div>
               <div>
                 <Link to='/boring' className='br-link'>
@@ -243,8 +243,8 @@ function Boring() {
               </div>
             </div>
 
-            <div className='col-sm-1'>
-              <div className='row br-footer-item-heading'>Follow</div>
+            <div className='col-sm-2 col-md-2 col-lg-1 mb-4'>
+              <div className='br-footer-item-heading'>Follow</div>
               <div className='row'>
                 <div className='col-sm-3'>
                   <Link to='/boring' className='br-link'>
