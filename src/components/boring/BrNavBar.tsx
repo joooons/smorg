@@ -5,7 +5,7 @@ const BrNavBar = () => {
   return (
     <>
       <Navbar className='br-navbar'>
-        <Container>
+        <Container fluid='md'>
           <Nav navbarScroll>
             <a href='#' className='br-nav-brand'>
               <b>BNN</b>

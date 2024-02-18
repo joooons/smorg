@@ -93,7 +93,7 @@ function Boring() {
   return (
     <>
       <BrNavBar></BrNavBar>
-      <Container>
+      <Container fluid='md'>
         <Row>
           <Col sm={12} md={3} className='br-section'>
             {articles?.map((article) => {
@@ -189,7 +189,7 @@ function Boring() {
         <Row className='py-4'></Row>
       </Container>
       <BrFooter>
-        <Container>
+        <Container fluid='md'>
           <div className='row pt-4 '>
             <div className='col-md-6 col-lg-2 mb-4'>
               <div className='br-footer-item-heading'>About</div>
