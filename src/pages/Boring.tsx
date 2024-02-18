@@ -258,37 +258,37 @@ function Boring() {
             <div className='col-sm-2 col-md-2 col-lg-1 mb-4'>
               <div className='br-footer-item-heading'>Follow</div>
               <div className='row'>
-                <div className='col-sm-3'>
+                <div className='col-1'>
                   <Link to='/boring' className='br-link'>
                     <FaSquareXTwitter />
                   </Link>
                 </div>
-                <div className='col-sm-3'>
+                <div className='col-1'>
                   <Link to='/boring' className='br-link'>
                     <FaSquareInstagram />
                   </Link>
                 </div>
-                <div className='col-sm-3'>
+                <div className='col-1'>
                   <Link to='/boring' className='br-link'>
                     <FaSquareFacebook />
                   </Link>
                 </div>
-                <div className='col-sm-3'>
+                <div className='col-1'>
                   <Link to='/boring' className='br-link'>
                     <FaSquareYoutube />
                   </Link>
                 </div>
-                <div className='col-sm-3'>
+                <div className='col-1'>
                   <Link to='/boring' className='br-link'>
                     <FaSquareTumblr />
                   </Link>
                 </div>
-                <div className='col-sm-3'>
+                <div className='col-1'>
                   <Link to='/boring' className='br-link'>
                     <FaSquarePinterest />
                   </Link>
                 </div>
-                <div className='col-sm-3'>
+                <div className='col-1'>
                   <Link to='/boring' className='br-link'>
                     <FaSquareReddit />
                   </Link>
