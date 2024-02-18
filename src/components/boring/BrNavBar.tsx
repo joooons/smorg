@@ -4,36 +4,38 @@ import './BrNavBar.css';
 const BrNavBar = () => {
   return (
     <>
-      <Navbar className='br-navbar'>
-        <Container fluid='md'>
-          <Nav navbarScroll>
-            <a href='#' className='br-nav-brand'>
-              <b>BNN</b>
-            </a>
-            <a href='#' className='br-nav-link'>
-              Home
-            </a>
-            <a href='#' className='br-nav-link'>
-              News
-            </a>
-            <a href='#' className='br-nav-link'>
-              Business
-            </a>
-            <a href='#' className='br-nav-link'>
-              Entertainment
-            </a>
-            <a href='#' className='br-nav-link'>
-              Sports
-            </a>
-            <a href='#' className='br-nav-link'>
-              Travel
-            </a>
-            <a href='/home' className='br-nav-link'>
-              Smorg
-            </a>
-          </Nav>
-          <Navbar.Collapse className='justify-content-end mx-2'>
-            <Nav.Link href='#'>SignIn</Nav.Link>
+      <Navbar expand='md' className='br-navbar'>
+        <Container fluid='md' className='px-3'>
+          <Navbar.Brand href='#'>BNN</Navbar.Brand>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Nav className='me-auto'>
+              <Nav.Link href='#' className='br-nav-link'>
+                Home
+              </Nav.Link>
+              <Nav.Link href='#' className='br-nav-link'>
+                News
+              </Nav.Link>
+              <Nav.Link href='#' className='br-nav-link'>
+                Business
+              </Nav.Link>
+              <Nav.Link href='#' className='br-nav-link'>
+                Finance
+              </Nav.Link>
+              <Nav.Link href='#' className='br-nav-link'>
+                Travel
+              </Nav.Link>
+              <Nav.Link href='#' className='br-nav-link'>
+                Sports
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Navbar.Collapse className='justify-content-end'>
+                <Nav.Link href='#' className='br-nav-link'>
+                  Sign In
+                </Nav.Link>
+              </Navbar.Collapse>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
