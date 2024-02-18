@@ -93,10 +93,10 @@ function Boring() {
   return (
     <>
       <BrNavBar></BrNavBar>
-      <Container fluid='md'>
+      <Container fluid='lg'>
         <Row>
           <Col
-            sm={{ span: 12, order: 2 }}
+            xs={{ span: 12, order: 2 }}
             md={{ span: 3, order: 1 }}
             className='br-section'
           >
@@ -117,7 +117,7 @@ function Boring() {
             })}
           </Col>
           <Col
-            sm={{ span: 12, order: 1 }}
+            xs={{ span: 12, order: 1 }}
             md={{ span: 6, order: 2 }}
             className='br-section px-3'
           >
@@ -138,7 +138,7 @@ function Boring() {
             })}
           </Col>
           <Col
-            sm={{ span: 12, order: 3 }}
+            xs={{ span: 12, order: 3 }}
             md={{ span: 3, order: 3 }}
             className='br-section px-3'
           >
@@ -201,7 +201,7 @@ function Boring() {
         <Row className='py-4'></Row>
       </Container>
       <BrFooter>
-        <Container fluid='md'>
+        <Container fluid='lg'>
           <div className='row pt-4 '>
             <div className='col-md-6 col-lg-2 mb-4'>
               <div className='br-footer-item-heading'>About</div>

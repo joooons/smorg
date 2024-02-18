@@ -5,7 +5,7 @@ const BrNavBar = () => {
   return (
     <>
       <Navbar expand='md' className='br-navbar'>
-        <Container fluid='md' className='px-3'>
+        <Container fluid='lg' className='px-3'>
           <Navbar.Brand href='#'>BNN</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>

@@ -6,7 +6,7 @@
 
 @media (min-width: 768px) {
     .br-section:not(:first-child) {
-        border-left: 0.5px solid gray;
+        border-left: 1px solid lightgray;
     }
 }
 
@@ -17,7 +17,7 @@
 }
 
 .br-footer-row {
-    border-top: 0.5px solid gray;
+    border-top: 1px solid lightgray;
 }
 
 .br-footer-item {
@@ -26,7 +26,7 @@
 
 .br-footer-item:not(:first-of-type) {
     padding-left: 1rem;
-    border-left: 0.5px solid gray;
+    border-left: 1px solid lightgray;
 }
 
 .br-footer-item-heading {
