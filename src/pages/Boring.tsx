@@ -300,7 +300,7 @@ function Boring() {
           <div className='row pt-3 pb-5 '>
             <div className='row'>
               <div className='col-12'>
-                <div className='br-footer-row pt-4'>
+                <div className='br-footer-row pt-3'>
                   <Link to='/boring' className='br-link br-footer-item'>
                     Privacy Policy
                   </Link>

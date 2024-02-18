@@ -22,6 +22,7 @@
 
 .br-footer-item {
     padding-right: 1rem;
+    font-size: small;
 }
 
 .br-footer-item:not(:first-of-type) {
