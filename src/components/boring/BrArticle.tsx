@@ -20,7 +20,7 @@ const BrArticle = ({
 }: Props) => {
   return (
     <>
-      <div className='br-article mb-3 pt-3'>
+      <div className='br-article mb-4'>
         <Image src={image} fluid></Image>
         <div className='br-caption'>{caption}</div>
         <div className='br-title'>{children}</div>

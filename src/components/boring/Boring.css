@@ -1,6 +1,15 @@
-.br-section:not(:first-child) {
-    border-left: 1px solid lightgray;
+@media (min-width: 576px) {
+    .br-section:not(:first-child) {
+        border-left: 0px;
+    }
 }
+
+@media (min-width: 768px) {
+    .br-section:not(:first-child) {
+        border-left: 0.5px solid gray;
+    }
+}
+
 
 .br-link {
     text-decoration: none;
@@ -12,11 +21,11 @@
 }
 
 .br-footer-item {
-    padding-right: 10px;
+    padding-right: 1rem;
 }
 
 .br-footer-item:not(:first-of-type) {
-    padding-left: 10px;
+    padding-left: 1rem;
     border-left: 0.5px solid gray;
 }
 

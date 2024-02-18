@@ -1,11 +1,23 @@
-.br-article {
-    /* background-color: rgb(253, 247, 240); */
-    background-color: white
+
+@media (min-width: 576px) {
+    .br-article {
+        padding-top: 1rem;
+        border-top: 0.5px solid gray;
+    }
 }
 
-.br-article:not(:first-child) {
-    border-top: 1px solid lightgray;
+@media (min-width: 768px) {
+    .br-article:first-child {
+        padding-top: 0rem;
+        border-top: 0px;
+    }
+
+    .br-article:not(:first-child) {
+        padding-top: 1rem;
+        border-top: 0.5px solid gray;
+    }
 }
+
 
 .br-caption {
     font-size: x-small;
