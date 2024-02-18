@@ -95,7 +95,11 @@ function Boring() {
       <BrNavBar></BrNavBar>
       <Container fluid='md'>
         <Row>
-          <Col sm={12} md={3} className='br-section'>
+          <Col
+            sm={{ span: 12, order: 2 }}
+            md={{ span: 3, order: 1 }}
+            className='br-section'
+          >
             {articles?.map((article) => {
               if (article.type === 'featured-left') {
                 return (
@@ -112,7 +116,11 @@ function Boring() {
               }
             })}
           </Col>
-          <Col sm={12} md={6} className='br-section px-3'>
+          <Col
+            sm={{ span: 12, order: 1 }}
+            md={{ span: 6, order: 2 }}
+            className='br-section px-3'
+          >
             {articles?.map((article) => {
               if (article.type === 'cover') {
                 return (
@@ -129,7 +137,11 @@ function Boring() {
               }
             })}
           </Col>
-          <Col sm={12} md={3} className='br-section px-3'>
+          <Col
+            sm={{ span: 12, order: 3 }}
+            md={{ span: 3, order: 3 }}
+            className='br-section px-3'
+          >
             {articles?.map((article) => {
               if (article.type === 'featured-right') {
                 return (
