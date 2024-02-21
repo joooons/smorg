@@ -86,7 +86,7 @@ function NotNews() {
           <Col
             xs={{ span: 12, order: 1 }}
             md={{ span: 6, order: 2 }}
-            className='br-section px-3'
+            className='px-3'
           >
             {articles?.map((article) => {
               if (article.path === arg) {
@@ -108,7 +108,7 @@ function NotNews() {
           <Col
             xs={{ span: 12, order: 3 }}
             md={{ span: 3, order: 3 }}
-            className='br-section px-3'
+            className='px-3'
           ></Col>
         </Row>
 
