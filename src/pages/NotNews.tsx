@@ -15,7 +15,6 @@ import '../components/notnews/NotNews.css';
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
 
 interface Card {
-  id: string;
   type: string;
   path: string;
   title: string;
@@ -53,7 +52,6 @@ function NotNews() {
             }
           }
           const card: Card = {
-            id: item.fields.id as string,
             type: item.fields.type as string,
             path: item.fields.path as string,
             title: item.fields.title as string,
@@ -89,12 +87,7 @@ function NotNews() {
                       date.toDateString().substring(4, 11).replace(/\s/g, '-') +
                       card.path
                     }
-                    path={card.path}
-                    title={card.title}
-                    image={card.image}
-                    caption={card.caption}
-                    description={card.description}
-                    writer={card.writer}
+                    card={card}
                   ></BrCard>
                 );
               }
