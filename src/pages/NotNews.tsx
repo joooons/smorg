@@ -1,7 +1,6 @@
 // npm packages
 import { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
 import { createClient } from 'contentful';
 
 // notnews components
