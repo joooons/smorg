@@ -24,7 +24,7 @@ const Home = () => {
     { link: '/space', img: spaceLogo },
     { link: '/tree', img: treeLogo },
     { link: '/about', img: aboutLogo },
-    { link: '/boring', img: boringLogo },
+    { link: '/notnews', img: boringLogo },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },

@@ -16,11 +16,11 @@ import {
 } from 'react-icons/fa6';
 
 // boring components
-import BrArticle from '../components/boring/BrArticle';
-import BrNavBar from '../components/boring/BrNavBar';
-import BrCategory from '../components/boring/BrCategory';
-import BrFooter from '../components/boring/BrFooter';
-import '../components/boring/Boring.css';
+import BrArticle from '../components/notnews/BrArticle';
+import BrNavBar from '../components/notnews/BrNavBar';
+import BrCategory from '../components/notnews/BrCategory';
+import BrFooter from '../components/notnews/BrFooter';
+import '../components/notnews/NotNews.css';
 
 // src/assets/images
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
