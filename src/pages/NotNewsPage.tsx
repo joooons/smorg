@@ -94,6 +94,7 @@ function NotNews() {
                   <BrArticle
                     key={article.id + '-cover'}
                     image={article.image}
+                    path={article.path}
                     caption={article.caption}
                     description={article.description}
                     writer={article.writer}
