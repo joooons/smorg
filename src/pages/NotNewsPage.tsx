@@ -5,9 +5,8 @@ import { useParams } from 'react-router-dom';
 import { createClient } from 'contentful';
 
 // notnews components
-import BrArticle from '../components/notnews/BrCard';
+import BrArticle from '../components/notnews/BrArticle';
 import BrNavBar from '../components/notnews/BrNavBar';
-// import BrCategory from '../components/notnews/BrCategory';
 import BrFooter from '../components/notnews/BrFooter';
 import '../components/notnews/NotNews.css';
 
@@ -15,7 +14,6 @@ import '../components/notnews/NotNews.css';
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
 
 interface Article {
-  id: string;
   type: string;
   path: string;
   title: string;
@@ -56,7 +54,6 @@ function NotNews() {
             }
           }
           const article: Article = {
-            id: item.fields.id as string,
             type: item.fields.type as string,
             path: item.fields.path as string,
             title: item.fields.title as string,
@@ -90,17 +87,15 @@ function NotNews() {
           >
             {articles?.map((article) => {
               if (article.path === arg) {
+                const date: Date = new Date();
                 return (
                   <BrArticle
-                    key={article.id + '-cover'}
-                    image={article.image}
-                    path={article.path}
-                    caption={article.caption}
-                    description={article.description}
-                    writer={article.writer}
-                  >
-                    {article.title}
-                  </BrArticle>
+                    key={
+                      date.toDateString().substring(4, 11).replace(/\s/g, '-') +
+                      article.path
+                    }
+                    article={article}
+                  ></BrArticle>
                 );
               }
             })}
