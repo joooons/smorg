@@ -1,11 +1,11 @@
 // npm packages
 import { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 // import { Link } from 'react-router-dom';
 import { createClient } from 'contentful';
 
 // notnews components
-import BrArticle from '../components/notnews/BrArticle';
+import BrCard from '../components/notnews/BrCard';
 import BrNavBar from '../components/notnews/BrNavBar';
 import BrCategory from '../components/notnews/BrCategory';
 import BrFooter from '../components/notnews/BrFooter';
@@ -14,7 +14,7 @@ import '../components/notnews/NotNews.css';
 // src/assets/images
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
 
-interface Article {
+interface Card {
   id: string;
   type: string;
   path: string;
@@ -35,13 +35,13 @@ const client = createClient({
 });
 
 function NotNews() {
-  const [articles, setArticles] = useState<Article[]>();
+  const [cards, setCards] = useState<Card[]>();
 
   useEffect(() => {
     client
       .getEntries()
       .then((entry) => {
-        let arr: Article[] = [];
+        let arr: Card[] = [];
         entry.items.forEach((item) => {
           let imageURL: string = placeholderImage;
           if (item.fields.image) {
@@ -52,7 +52,7 @@ function NotNews() {
               imageURL = imageObject.fields.file.url as string;
             }
           }
-          const article: Article = {
+          const card: Card = {
             id: item.fields.id as string,
             type: item.fields.type as string,
             path: item.fields.path as string,
@@ -62,10 +62,10 @@ function NotNews() {
             caption: item.fields.caption as string,
             writer: item.fields.writer as string,
           };
-          arr.push(article);
+          arr.push(card);
         });
         console.log('content loaded from contentful');
-        setArticles(arr);
+        setCards(arr);
       })
       .catch(console.error);
   }, []);
@@ -80,19 +80,22 @@ function NotNews() {
             md={{ span: 3, order: 1 }}
             className='br-section'
           >
-            {articles?.map((article) => {
-              if (article.type === 'featured-left') {
+            {cards?.map((card) => {
+              if (card.type === 'featured-left') {
+                const date: Date = new Date();
                 return (
-                  <BrArticle
-                    key={article.id + '-featured-left'}
-                    image={article.image}
-                    path={article.path}
-                    caption={article.caption}
-                    description={article.description}
-                    writer={article.writer}
-                  >
-                    {article.title}
-                  </BrArticle>
+                  <BrCard
+                    key={
+                      date.toDateString().substring(4, 11).replace(/\s/g, '-') +
+                      card.path
+                    }
+                    path={card.path}
+                    title={card.title}
+                    image={card.image}
+                    caption={card.caption}
+                    description={card.description}
+                    writer={card.writer}
+                  ></BrCard>
                 );
               }
             })}
@@ -102,85 +105,85 @@ function NotNews() {
             md={{ span: 6, order: 2 }}
             className='br-section px-3'
           >
-            {articles?.map((article) => {
-              if (article.type === 'cover') {
+            {/* {cards?.map((card) => {
+              if (card.type === 'cover') {
                 return (
-                  <BrArticle
-                    key={article.id + '-cover'}
-                    image={article.image}
-                    path={article.path}
-                    caption={article.caption}
-                    description={article.description}
-                    writer={article.writer}
+                  <BrCard
+                    key={card.id + '-cover'}
+                    image={card.image}
+                    path={card.path}
+                    caption={card.caption}
+                    description={card.description}
+                    writer={card.writer}
                   >
-                    {article.title}
-                  </BrArticle>
+                    {card.title}
+                  </BrCard>
                 );
               }
-            })}
+            })} */}
           </Col>
           <Col
             xs={{ span: 12, order: 3 }}
             md={{ span: 3, order: 3 }}
             className='br-section px-3'
           >
-            {articles?.map((article) => {
-              if (article.type === 'featured-right') {
+            {/* {cards?.map((card) => {
+              if (card.type === 'featured-right') {
                 return (
-                  <BrArticle
-                    key={article.id + '-featured-right'}
-                    image={article.image}
-                    path={article.path}
-                    caption={article.caption}
-                    description={article.description}
-                    writer={article.writer}
+                  <BrCard
+                    key={card.id + '-featured-right'}
+                    image={card.image}
+                    path={card.path}
+                    caption={card.caption}
+                    description={card.description}
+                    writer={card.writer}
                   >
-                    {article.title}
-                  </BrArticle>
+                    {card.title}
+                  </BrCard>
                 );
               }
-            })}
+            })} */}
           </Col>
         </Row>
         <Row>
           <Col xs={12} md={6}>
             <BrCategory>Recommended</BrCategory>
-            {articles?.map((article) => {
-              if (article.type === 'recommended') {
+            {/* {cards?.map((card) => {
+              if (card.type === 'recommended') {
                 return (
-                  <BrArticle
-                    key={article.id + '-recommended'}
-                    image={article.image}
-                    path={article.path}
-                    caption={article.caption}
-                    description={article.description}
-                    writer={article.writer}
+                  <BrCard
+                    key={card.id + '-recommended'}
+                    image={card.image}
+                    path={card.path}
+                    caption={card.caption}
+                    description={card.description}
+                    writer={card.writer}
                   >
-                    {article.title}
-                  </BrArticle>
+                    {card.title}
+                  </BrCard>
                 );
               }
-            })}
+            })} */}
           </Col>
 
           <Col xs={12} md={6}>
             <BrCategory>Popular</BrCategory>
-            {articles?.map((article) => {
-              if (article.type === 'popular') {
+            {/* {cards?.map((card) => {
+              if (card.type === 'popular') {
                 return (
-                  <BrArticle
-                    key={article.id + '-popular'}
-                    image={article.image}
-                    path={article.path}
-                    caption={article.caption}
-                    description={article.description}
-                    writer={article.writer}
+                  <BrCard
+                    key={card.id + '-popular'}
+                    image={card.image}
+                    path={card.path}
+                    caption={card.caption}
+                    description={card.description}
+                    writer={card.writer}
                   >
-                    {article.title}
-                  </BrArticle>
+                    {card.title}
+                  </BrCard>
                 );
               }
-            })}
+            })} */}
           </Col>
         </Row>
         <Row className='py-4'></Row>

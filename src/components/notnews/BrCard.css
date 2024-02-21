@@ -1,18 +1,18 @@
 
 @media (min-width: 576px) {
-    .br-article {
+    .br-card {
         padding-top: 1rem;
         border-top: 1px solid lightgray;
     }
 }
 
 @media (min-width: 768px) {
-    .br-article:first-child {
+    .br-card:first-child {
         padding-top: 0rem;
         border-top: 0px;
     }
 
-    .br-article:not(:first-child) {
+    .br-card:not(:first-child) {
         padding-top: 1rem;
         border-top: 1px solid lightgray;
     }

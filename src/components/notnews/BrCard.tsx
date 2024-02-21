@@ -1,11 +1,10 @@
-import { ReactNode } from 'react';
 import Image from 'react-bootstrap/Image';
 
-import './BrArticle.css';
+import './BrCard.css';
 import { Link } from 'react-router-dom';
 
 interface Props {
-  children: ReactNode;
+  title: string;
   image?: string;
   path: string;
   caption?: string;
@@ -13,21 +12,21 @@ interface Props {
   writer?: string;
 }
 
-const BrArticle = ({
+const BrCard = ({
+  title,
   image,
   caption,
   path,
-  children,
   description,
   writer,
 }: Props) => {
   return (
     <>
-      <div className='br-article mb-4'>
+      <div className='br-card mb-4'>
         <Image src={image} fluid></Image>
         <div className='br-caption'>{caption}</div>
         <Link to={`/notnewspage/${path}`} className='br-page-link'>
-          <div className='br-title'>{children}</div>
+          <div className='br-title'>{title}</div>
         </Link>
 
         <div className='br-description'>{description}</div>
@@ -37,4 +36,4 @@ const BrArticle = ({
   );
 };
 
-export default BrArticle;
+export default BrCard;

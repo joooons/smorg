@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { createClient } from 'contentful';
 
 // notnews components
-import BrArticle from '../components/notnews/BrArticle';
+import BrArticle from '../components/notnews/BrCard';
 import BrNavBar from '../components/notnews/BrNavBar';
 // import BrCategory from '../components/notnews/BrCategory';
 import BrFooter from '../components/notnews/BrFooter';
