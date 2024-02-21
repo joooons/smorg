@@ -15,7 +15,7 @@ import {
   FaSquareTumblr,
 } from 'react-icons/fa6';
 
-// boring components
+// notnews components
 import BrArticle from '../components/notnews/BrArticle';
 import BrNavBar from '../components/notnews/BrNavBar';
 import BrCategory from '../components/notnews/BrCategory';
@@ -24,15 +24,6 @@ import '../components/notnews/NotNews.css';
 
 // src/assets/images
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
-// import grammysImage from '../../src/assets/images/boring-grammys.jpg';
-// import gummybearsImage from '../../src/assets/images/boring-gummybears.jpg';
-// import pillowfightImage from '../../src/assets/images/boring-pillowfight.jpg';
-// import rugbyImage from '../../src/assets/images/boring-rugby.jpg';
-// import toothdecayImage from '../../src/assets/images/boring-toothdecay.jpg';
-// import dateImage from '../../src/assets/images/boring-date.jpg';
-// import goingGoodImage from '../../src/assets/images/boring-going-good.jpg';
-// import submarineImage from '../../src/assets/images/boring-submarine.jpg';
-// import twitterImage from '../../src/assets/images/boring-twitter.jpg';
 
 interface Article {
   id: string;
@@ -46,7 +37,6 @@ interface Article {
 
 const contentfulAccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
 const contentfulSpace = import.meta.env.VITE_CONTENTFUL_SPACE;
-// const contentfulEntry = import.meta.env.VITE_CONTENTFUL_ENTRY;
 
 const client = createClient({
   space: contentfulSpace,
@@ -54,11 +44,10 @@ const client = createClient({
   accessToken: contentfulAccessToken,
 });
 
-function Boring() {
+function NotNews() {
   const [articles, setArticles] = useState<Article[]>();
 
   useEffect(() => {
-    console.log('----- useEffect triggered -----');
     client
       .getEntries()
       .then((entry) => {
@@ -206,12 +195,12 @@ function Boring() {
             <div className='col-md-6 col-lg-2 mb-4'>
               <div className='br-footer-item-heading'>About</div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   BNN
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   Careers
                 </Link>
               </div>
@@ -220,17 +209,17 @@ function Boring() {
             <div className='col-md-6 col-lg-2 mb-4'>
               <div className='br-footer-item-heading'>Contact</div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   Customer Center
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   Contact Us
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   Press
                 </Link>
               </div>
@@ -239,17 +228,17 @@ function Boring() {
             <div className='col-md-6 col-lg-7 mb-4'>
               <div className='br-footer-item-heading'>Subscription</div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   Manage Subscriptions
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   Podcast
                 </Link>
               </div>
               <div>
-                <Link to='/boring' className='br-link'>
+                <Link to='/notnews' className='br-link'>
                   Newsletter
                 </Link>
               </div>
@@ -259,37 +248,37 @@ function Boring() {
               <div className='br-footer-item-heading'>Follow</div>
               <div className='row'>
                 <div className='col-1'>
-                  <Link to='/boring' className='br-link'>
+                  <Link to='/notnews' className='br-link'>
                     <FaSquareXTwitter />
                   </Link>
                 </div>
                 <div className='col-1'>
-                  <Link to='/boring' className='br-link'>
+                  <Link to='/notnews' className='br-link'>
                     <FaSquareInstagram />
                   </Link>
                 </div>
                 <div className='col-1'>
-                  <Link to='/boring' className='br-link'>
+                  <Link to='/notnews' className='br-link'>
                     <FaSquareFacebook />
                   </Link>
                 </div>
                 <div className='col-1'>
-                  <Link to='/boring' className='br-link'>
+                  <Link to='/notnews' className='br-link'>
                     <FaSquareYoutube />
                   </Link>
                 </div>
                 <div className='col-1'>
-                  <Link to='/boring' className='br-link'>
+                  <Link to='/notnews' className='br-link'>
                     <FaSquareTumblr />
                   </Link>
                 </div>
                 <div className='col-1'>
-                  <Link to='/boring' className='br-link'>
+                  <Link to='/notnews' className='br-link'>
                     <FaSquarePinterest />
                   </Link>
                 </div>
                 <div className='col-1'>
-                  <Link to='/boring' className='br-link'>
+                  <Link to='/notnews' className='br-link'>
                     <FaSquareReddit />
                   </Link>
                 </div>
@@ -301,19 +290,19 @@ function Boring() {
             <div className='row'>
               <div className='col-12'>
                 <div className='br-footer-row pt-3'>
-                  <Link to='/boring' className='br-link br-footer-item'>
+                  <Link to='/notnews' className='br-link br-footer-item'>
                     Privacy Policy
                   </Link>
-                  <Link to='/boring' className='br-link br-footer-item'>
+                  <Link to='/notnews' className='br-link br-footer-item'>
                     Do Not Sell Or Share My Personal Information
                   </Link>
-                  <Link to='/boring' className='br-link br-footer-item'>
+                  <Link to='/notnews' className='br-link br-footer-item'>
                     Terms & Conditions
                   </Link>
-                  <Link to='/boring' className='br-link br-footer-item'>
+                  <Link to='/notnews' className='br-link br-footer-item'>
                     Terms of Sale
                   </Link>
-                  <Link to='/boring' className='br-link br-footer-item'>
+                  <Link to='/notnews' className='br-link br-footer-item'>
                     Site Map
                   </Link>
                 </div>
@@ -326,4 +315,4 @@ function Boring() {
   );
 }
 
-export default Boring;
+export default NotNews;
