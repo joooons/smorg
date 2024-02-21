@@ -18,6 +18,10 @@
     }
 }
 
+.br-page-link {
+    text-decoration: none;
+    color: black;
+}
 
 .br-caption {
     font-size: x-small;
