@@ -95,85 +95,41 @@ function NotNews() {
             md={{ span: 6, order: 2 }}
             className='br-section px-3'
           >
-            {/* {cards?.map((card) => {
+            {cards?.map((card) => {
               if (card.type === 'cover') {
-                return (
-                  <BrCard
-                    key={card.id + '-cover'}
-                    image={card.image}
-                    path={card.path}
-                    caption={card.caption}
-                    description={card.description}
-                    writer={card.writer}
-                  >
-                    {card.title}
-                  </BrCard>
-                );
+                return <BrCard key={dateKey + card.path} card={card}></BrCard>;
               }
-            })} */}
+            })}
           </Col>
           <Col
             xs={{ span: 12, order: 3 }}
             md={{ span: 3, order: 3 }}
             className='br-section px-3'
           >
-            {/* {cards?.map((card) => {
+            {cards?.map((card) => {
               if (card.type === 'featured-right') {
-                return (
-                  <BrCard
-                    key={card.id + '-featured-right'}
-                    image={card.image}
-                    path={card.path}
-                    caption={card.caption}
-                    description={card.description}
-                    writer={card.writer}
-                  >
-                    {card.title}
-                  </BrCard>
-                );
+                return <BrCard key={dateKey + card.path} card={card}></BrCard>;
               }
-            })} */}
+            })}
           </Col>
         </Row>
         <Row>
           <Col xs={12} md={6}>
             <BrCategory>Recommended</BrCategory>
-            {/* {cards?.map((card) => {
+            {cards?.map((card) => {
               if (card.type === 'recommended') {
-                return (
-                  <BrCard
-                    key={card.id + '-recommended'}
-                    image={card.image}
-                    path={card.path}
-                    caption={card.caption}
-                    description={card.description}
-                    writer={card.writer}
-                  >
-                    {card.title}
-                  </BrCard>
-                );
+                return <BrCard key={dateKey + card.path} card={card}></BrCard>;
               }
-            })} */}
+            })}
           </Col>
 
           <Col xs={12} md={6}>
             <BrCategory>Popular</BrCategory>
-            {/* {cards?.map((card) => {
+            {cards?.map((card) => {
               if (card.type === 'popular') {
-                return (
-                  <BrCard
-                    key={card.id + '-popular'}
-                    image={card.image}
-                    path={card.path}
-                    caption={card.caption}
-                    description={card.description}
-                    writer={card.writer}
-                  >
-                    {card.title}
-                  </BrCard>
-                );
+                return <BrCard key={dateKey + card.path} card={card}></BrCard>;
               }
-            })} */}
+            })}
           </Col>
         </Row>
         <Row className='py-4'></Row>
