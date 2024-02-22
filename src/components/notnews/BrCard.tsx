@@ -1,7 +1,7 @@
 import Image from 'react-bootstrap/Image';
+import { Link } from 'react-router-dom';
 
 import './BrCard.css';
-import { Link } from 'react-router-dom';
 
 interface Card {
   id: string;
@@ -15,7 +15,7 @@ interface Card {
 }
 
 interface Props {
-  card?: Card;
+  card: Card;
 }
 
 const BrCard = ({ card }: Props) => {
@@ -31,7 +31,6 @@ const BrCard = ({ card }: Props) => {
           >
             <div className='br-title'>{card.title}</div>
           </Link>
-
           <div className='br-description'>{card.description}</div>
           <div className='br-writer'>{card.writer}</div>
         </div>
