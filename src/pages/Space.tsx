@@ -8,10 +8,18 @@ import '../../src/components/space/Space.css';
 function Space() {
   return (
     <>
-      <NavBar></NavBar>
-      <SpSquare>
-        <SpRound></SpRound>
-      </SpSquare>
+      <div
+        style={{
+          width: '100vw',
+          height: '100vh',
+          backgroundColor: 'black',
+        }}
+      >
+        <NavBar></NavBar>
+        <SpSquare>
+          <SpRound></SpRound>
+        </SpSquare>
+      </div>
     </>
   );
 }
