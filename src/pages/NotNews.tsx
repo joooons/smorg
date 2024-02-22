@@ -14,6 +14,7 @@ import '../components/notnews/NotNews.css';
 import placeholderImage from '../../src/assets/images/placeholder.jpg';
 
 interface Card {
+  id: string;
   type: string;
   path: string;
   title: string;
@@ -51,6 +52,7 @@ function NotNews() {
             }
           }
           const card: Card = {
+            id: item.sys.id as string,
             type: item.fields.type as string,
             path: item.fields.path as string,
             title: item.fields.title as string,

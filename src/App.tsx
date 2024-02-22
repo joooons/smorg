@@ -15,7 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/notnews' element={<NotNews />} />
-          <Route path='/notnewspage/:arg' element={<NotNewsPage />} />
+          <Route path='/notnewspage/:entryid/:path' element={<NotNewsPage />} />
           <Route path='/about' element={<About />} />
           <Route path='/space' element={<Space />} />
           <Route path='/tree' element={<Tree />} />

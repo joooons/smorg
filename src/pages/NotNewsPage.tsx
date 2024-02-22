@@ -34,47 +34,49 @@ const client = createClient({
 });
 
 function NotNews() {
-  const { arg } = useParams();
+  const { entryid, path } = useParams();
 
   const [articles, setArticles] = useState<Article[]>();
 
+  // console.log(entryid);
+
   useEffect(() => {
     client
-      .getEntries()
-      .then((entry) => {
+      .getEntry(entryid as string)
+      .then((item) => {
         let arr: Article[] = [];
-        entry.items.forEach((item) => {
-          let imageURL: string = placeholderImage;
-          if (item.fields.image) {
-            let imageObject = item.fields.image as {
-              fields: { file: { url: string } };
-            };
-            if (imageObject.fields) {
-              imageURL = imageObject.fields.file.url as string;
-            }
-          }
-
-          let paragraphs: string[] = [];
-          if (item.fields.content) {
-            let content = item.fields.content as any;
-            content.content.forEach((obj: any) => {
-              let text = obj.content[0].value;
-              paragraphs.push(text);
-            });
-          }
-
-          const article: Article = {
-            type: item.fields.type as string,
-            path: item.fields.path as string,
-            title: item.fields.title as string,
-            description: item.fields.description as string,
-            image: imageURL,
-            caption: item.fields.caption as string,
-            writer: item.fields.writer as string,
-            content: paragraphs as string[],
+        // entry.items.forEach((item) => {
+        let imageURL: string = placeholderImage;
+        if (item.fields.image) {
+          let imageObject = item.fields.image as {
+            fields: { file: { url: string } };
           };
-          arr.push(article);
-        });
+          if (imageObject.fields) {
+            imageURL = imageObject.fields.file.url as string;
+          }
+        }
+
+        let paragraphs: string[] = [];
+        if (item.fields.content) {
+          let content = item.fields.content as any;
+          content.content.forEach((obj: any) => {
+            let text = obj.content[0].value;
+            paragraphs.push(text);
+          });
+        }
+
+        const article: Article = {
+          type: item.fields.type as string,
+          path: item.fields.path as string,
+          title: item.fields.title as string,
+          description: item.fields.description as string,
+          image: imageURL,
+          caption: item.fields.caption as string,
+          writer: item.fields.writer as string,
+          content: paragraphs as string[],
+        };
+        arr.push(article);
+        // });
         console.log('content loaded from contentful');
         setArticles(arr);
       })
@@ -88,7 +90,7 @@ function NotNews() {
         <Row>
           <Col xs={{ span: 12 }} md={{ offset: 2, span: 8 }} className='px-3'>
             {articles?.map((article) => {
-              if (article.path === arg) {
+              if (article.path === path) {
                 const date: Date = new Date();
                 return (
                   <BrArticle

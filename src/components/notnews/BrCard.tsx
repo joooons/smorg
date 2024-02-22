@@ -4,6 +4,7 @@ import './BrCard.css';
 import { Link } from 'react-router-dom';
 
 interface Card {
+  id: string;
   type: string;
   path: string;
   title: string;
@@ -24,7 +25,10 @@ const BrCard = ({ card }: Props) => {
         <div className='br-card mb-4'>
           <Image src={card.image} fluid></Image>
           <div className='br-caption'>{card.caption}</div>
-          <Link to={`/notnewspage/${card.path}`} className='br-page-link'>
+          <Link
+            to={`/notnewspage/${card.id}/${card.path}`}
+            className='br-page-link'
+          >
             <div className='br-title'>{card.title}</div>
           </Link>
 
