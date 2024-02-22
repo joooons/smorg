@@ -1,0 +1,15 @@
+
+.sp-centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(237, 237, 253, 0.1);
+}
+
+.sp-square {
+    position: relative;
+    margin: 5vh;
+    background-color: lightsteelblue;
+    height: 75vh;
+    width: 75vh;
+}
