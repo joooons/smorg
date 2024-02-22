@@ -11,6 +11,7 @@ interface Article {
   image: string;
   caption: string;
   writer: string;
+  content?: any;
 }
 
 interface Props {
@@ -30,9 +31,11 @@ const BrArticle = ({ article }: Props) => {
           >
             <div className='br-article-title'>{article.title}</div>
           </Link>
-
-          <div className='br-article-description'>{article.description}</div>
           <div className='br-article-writer'>{article.writer}</div>
+          <br></br>
+          {article.content.map((paragraph: string) => {
+            return <p>{paragraph}</p>;
+          })}
         </div>
       )}
     </>

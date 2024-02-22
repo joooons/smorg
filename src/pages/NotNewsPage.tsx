@@ -21,6 +21,7 @@ interface Article {
   image: string;
   caption: string;
   writer: string;
+  content: any;
 }
 
 const contentfulAccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
@@ -35,7 +36,6 @@ const client = createClient({
 function NotNews() {
   const { arg } = useParams();
 
-  console.log('arg is ', arg);
   const [articles, setArticles] = useState<Article[]>();
 
   useEffect(() => {
@@ -53,6 +53,16 @@ function NotNews() {
               imageURL = imageObject.fields.file.url as string;
             }
           }
+
+          let paragraphs: string[] = [];
+          if (item.fields.content) {
+            let content = item.fields.content as any;
+            content.content.forEach((obj: any) => {
+              let text = obj.content[0].value;
+              paragraphs.push(text);
+            });
+          }
+
           const article: Article = {
             type: item.fields.type as string,
             path: item.fields.path as string,
@@ -61,6 +71,7 @@ function NotNews() {
             image: imageURL,
             caption: item.fields.caption as string,
             writer: item.fields.writer as string,
+            content: paragraphs as string[],
           };
           arr.push(article);
         });
@@ -75,11 +86,7 @@ function NotNews() {
       <BrNavBar></BrNavBar>
       <Container fluid='lg'>
         <Row>
-          <Col
-            xs={{ span: 12, order: 1 }}
-            md={{ offset: 3, span: 6, order: 2 }}
-            className='px-3'
-          >
+          <Col xs={{ span: 12 }} md={{ offset: 2, span: 8 }} className='px-3'>
             {articles?.map((article) => {
               if (article.path === arg) {
                 const date: Date = new Date();
