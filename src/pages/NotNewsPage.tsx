@@ -38,7 +38,10 @@ function NotNews() {
 
   const [article, setArticle] = useState<Article>();
 
-  const date: Date = new Date();
+  const dateKey: string = new Date()
+    .toDateString()
+    .substring(4, 11)
+    .replace(/\s/g, '-');
 
   useEffect(() => {
     client
@@ -87,13 +90,7 @@ function NotNews() {
         <Row>
           <Col xs={{ span: 12 }} md={{ offset: 2, span: 8 }} className='px-3'>
             {article && (
-              <BrArticle
-                key={
-                  date.toDateString().substring(4, 11).replace(/\s/g, '-') +
-                  path
-                }
-                article={article}
-              ></BrArticle>
+              <BrArticle key={dateKey + path} article={article}></BrArticle>
             )}
           </Col>
         </Row>

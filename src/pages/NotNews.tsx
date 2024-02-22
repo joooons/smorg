@@ -36,6 +36,11 @@ const client = createClient({
 function NotNews() {
   const [cards, setCards] = useState<Card[]>();
 
+  const dateKey: string = new Date()
+    .toDateString()
+    .substring(4, 11)
+    .replace(/\s/g, '-');
+
   useEffect(() => {
     client
       .getEntries()
@@ -81,16 +86,7 @@ function NotNews() {
           >
             {cards?.map((card) => {
               if (card.type === 'featured-left') {
-                const date: Date = new Date();
-                return (
-                  <BrCard
-                    key={
-                      date.toDateString().substring(4, 11).replace(/\s/g, '-') +
-                      card.path
-                    }
-                    card={card}
-                  ></BrCard>
-                );
+                return <BrCard key={dateKey + card.path} card={card}></BrCard>;
               }
             })}
           </Col>
