@@ -25,5 +25,6 @@ dist-ssr
 .env
 
 # Others
+unused
 NOTE.md
 run.bat

@@ -25,8 +25,8 @@ const BrNavBar = () => {
               <Nav.Link href='#' className='br-nav-link'>
                 Travel
               </Nav.Link>
-              <Nav.Link href='#' className='br-nav-link'>
-                Sports
+              <Nav.Link href='/home' className='br-nav-link'>
+                Smorg
               </Nav.Link>
             </Nav>
             <Nav>
