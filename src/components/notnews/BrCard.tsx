@@ -23,7 +23,12 @@ const BrCard = ({ card }: Props) => {
     <>
       {card && (
         <div className='br-card mb-4'>
-          <Image src={card.image} fluid></Image>
+          <Link
+            to={`/notnewspage/${card.id}/${card.path}`}
+            className='br-page-link'
+          >
+            <Image src={card.image} fluid></Image>
+          </Link>
           <div className='br-caption'>{card.caption}</div>
           <Link
             to={`/notnewspage/${card.id}/${card.path}`}
