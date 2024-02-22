@@ -63,7 +63,7 @@ function NotNews() {
           };
           arr.push(card);
         });
-        console.log('content loaded from contentful');
+        console.log('all articles loaded from contentful');
         setCards(arr);
       })
       .catch(console.error);

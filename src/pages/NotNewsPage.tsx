@@ -36,16 +36,14 @@ const client = createClient({
 function NotNews() {
   const { entryid, path } = useParams();
 
-  const [articles, setArticles] = useState<Article[]>();
+  const [article, setArticle] = useState<Article>();
 
-  // console.log(entryid);
+  const date: Date = new Date();
 
   useEffect(() => {
     client
       .getEntry(entryid as string)
       .then((item) => {
-        let arr: Article[] = [];
-        // entry.items.forEach((item) => {
         let imageURL: string = placeholderImage;
         if (item.fields.image) {
           let imageObject = item.fields.image as {
@@ -75,10 +73,9 @@ function NotNews() {
           writer: item.fields.writer as string,
           content: paragraphs as string[],
         };
-        arr.push(article);
-        // });
-        console.log('content loaded from contentful');
-        setArticles(arr);
+
+        console.log('single article loaded from contentful');
+        setArticle(article);
       })
       .catch(console.error);
   }, []);
@@ -89,20 +86,15 @@ function NotNews() {
       <Container fluid='lg'>
         <Row>
           <Col xs={{ span: 12 }} md={{ offset: 2, span: 8 }} className='px-3'>
-            {articles?.map((article) => {
-              if (article.path === path) {
-                const date: Date = new Date();
-                return (
-                  <BrArticle
-                    key={
-                      date.toDateString().substring(4, 11).replace(/\s/g, '-') +
-                      article.path
-                    }
-                    article={article}
-                  ></BrArticle>
-                );
-              }
-            })}
+            {article && (
+              <BrArticle
+                key={
+                  date.toDateString().substring(4, 11).replace(/\s/g, '-') +
+                  path
+                }
+                article={article}
+              ></BrArticle>
+            )}
           </Col>
         </Row>
 
