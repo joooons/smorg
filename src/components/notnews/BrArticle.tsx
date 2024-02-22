@@ -33,8 +33,8 @@ const BrArticle = ({ article }: Props) => {
           </Link>
           <div className='br-article-writer'>{article.writer}</div>
           <br></br>
-          {article.content.map((paragraph: string) => {
-            return <p>{paragraph}</p>;
+          {article.content.map((paragraph: string, index: number) => {
+            return <p key={article.path + '-' + index}>{paragraph}</p>;
           })}
         </div>
       )}
