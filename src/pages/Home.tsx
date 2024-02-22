@@ -10,7 +10,8 @@ import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/images/space.png';
 import aboutLogo from '../../src/assets/images/about.png';
-import boringLogo from '../../src/assets/images/B.png';
+import notnewsLogo from '../../src/assets/images/notnews.png';
+// import boringLogo from '../../src/assets/images/B.png';
 // import crashGoLogo from '../../src/assets/images/crashGo.png';
 // import loveLogo from '../../src/assets/images/love.png';
 // import mazeLogo from '../../src/assets/images/maze.png';
@@ -24,7 +25,7 @@ const Home = () => {
     { link: '/space', img: spaceLogo },
     { link: '/tree', img: treeLogo },
     { link: '/about', img: aboutLogo },
-    { link: '/notnews', img: boringLogo },
+    { link: '/notnews', img: notnewsLogo },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },

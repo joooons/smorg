@@ -22,7 +22,7 @@ const BrFooter = () => {
               <div className='br-footer-item-heading'>About</div>
               <div>
                 <Link to='/notnews' className='br-link'>
-                  BNN
+                  Not News Network
                 </Link>
               </div>
               <div>

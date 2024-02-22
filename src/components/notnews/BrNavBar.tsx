@@ -1,4 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
+
+import notnewsLogo from '../../assets/images/notnewslogo.png';
+
 import './BrNavBar.css';
 
 const BrNavBar = () => {
@@ -6,7 +9,9 @@ const BrNavBar = () => {
     <>
       <Navbar expand='md' className='br-navbar'>
         <Container fluid='lg' className='px-3'>
-          <Navbar.Brand href='/notnews'>BNN</Navbar.Brand>
+          <Navbar.Brand href='/notnews'>
+            <img src={notnewsLogo} alt='' height='30' />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto'>
