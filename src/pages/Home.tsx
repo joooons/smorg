@@ -9,7 +9,7 @@ import Centered from '../components/Centered';
 import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/images/space.png';
-import aboutLogo from '../../src/assets/images/about.png';
+// import aboutLogo from '../../src/assets/images/about.png';
 import notnewsLogo from '../../src/assets/images/notnews.png';
 // import boringLogo from '../../src/assets/images/B.png';
 // import crashGoLogo from '../../src/assets/images/crashGo.png';
@@ -19,15 +19,19 @@ import notnewsLogo from '../../src/assets/images/notnews.png';
 import treeLogo from '../../src/assets/images/tree.png';
 import smorgLogo from '../../src/assets/images/smorg-b.png';
 import blankLogo from '../../src/assets/images/blank.png';
+import tetrisLogo from '../../src/assets/images/tetris.png';
+import scatterLogo from '../../src/assets/images/scatter.png';
 
 const Home = () => {
   const content = [
-    { link: '/space', img: spaceLogo },
-    { link: '/tree', img: treeLogo },
-    { link: '/about', img: aboutLogo },
     { link: '/notnews', img: notnewsLogo },
-    { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
-    { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
+    { link: '/tree', img: treeLogo },
+    { link: '/space', img: spaceLogo },
+    {
+      link: 'https://joooons.github.io/tetris',
+      img: tetrisLogo,
+    },
+    { link: 'https://theloaflings.web.app', img: scatterLogo },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
   ];
   return (
