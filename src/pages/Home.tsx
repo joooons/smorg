@@ -16,6 +16,8 @@ import blankLogo from '../../src/assets/images/blank.png';
 import tetrisLogo from '../../src/assets/images/tetris.png';
 import scatterLogo from '../../src/assets/images/scatter.png';
 import imitationgoLogo from '../../src/assets/images/imitationgo2.png';
+import vocabhelperLogo from '../../src/assets/images/vocabhelper.png';
+import proverbsLogo from '../../src/assets/images/proverbs.png';
 
 const Home = () => {
   const content = [
@@ -28,6 +30,8 @@ const Home = () => {
     },
     { link: 'https://theloaflings.web.app', img: scatterLogo },
     { link: 'https://imitation-go.onrender.com/', img: imitationgoLogo },
+    { link: 'https://ttot703hebvocab.netlify.app/', img: vocabhelperLogo },
+    { link: 'https://proverbs.onrender.com/', img: proverbsLogo },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
   ];
   return (
