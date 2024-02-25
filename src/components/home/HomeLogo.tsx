@@ -4,13 +4,14 @@ interface Props {
   children?: string;
   image: string;
   size?: string;
+  external?: boolean;
 }
 
-const HomeLogo = ({ children, image, size = '200' }: Props) => {
+const HomeLogo = ({ children, image, size = '200', external }: Props) => {
   return (
     <>
       <div
-        className='logo py-5'
+        className='logo'
         style={{
           height: `${size}px`,
           width: `${size}px`,
@@ -24,6 +25,11 @@ const HomeLogo = ({ children, image, size = '200' }: Props) => {
         }}
       >
         {children}
+        {external && (
+          <div className='home-badge-wrapper'>
+            <div className='home-badge'>EXTERNAL</div>
+          </div>
+        )}
       </div>
     </>
   );

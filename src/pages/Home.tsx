@@ -27,12 +27,25 @@ const Home = () => {
     {
       link: 'https://joooons.github.io/tetris',
       img: tetrisLogo,
+      external: true,
     },
-    { link: 'https://theloaflings.web.app', img: scatterLogo },
-    { link: 'https://imitation-go.onrender.com/', img: imitationgoLogo },
-    { link: 'https://ttot703hebvocab.netlify.app/', img: vocabhelperLogo },
-    { link: 'https://proverbs.onrender.com/', img: proverbsLogo },
-    { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
+    { link: 'https://theloaflings.web.app', img: scatterLogo, external: true },
+    {
+      link: 'https://imitation-go.onrender.com/',
+      img: imitationgoLogo,
+      external: true,
+    },
+    {
+      link: 'https://ttot703hebvocab.netlify.app/',
+      img: vocabhelperLogo,
+      external: true,
+    },
+    {
+      link: 'https://proverbs.onrender.com/',
+      img: proverbsLogo,
+      external: true,
+    },
+    { link: '/chickens', img: blankLogo },
   ];
   return (
     <>
@@ -59,7 +72,10 @@ const Home = () => {
                 <Centered>
                   <Link to={page['link']} className='link'>
                     <HomeLogoBox>
-                      <HomeLogo image={page['img']}>{page['txt']}</HomeLogo>
+                      <HomeLogo
+                        image={page['img']}
+                        external={page['external']}
+                      ></HomeLogo>
                     </HomeLogoBox>
                   </Link>
                 </Centered>
