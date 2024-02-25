@@ -9,18 +9,13 @@ import Centered from '../components/Centered';
 import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/images/space.png';
-// import aboutLogo from '../../src/assets/images/about.png';
 import notnewsLogo from '../../src/assets/images/notnews.png';
-// import boringLogo from '../../src/assets/images/B.png';
-// import crashGoLogo from '../../src/assets/images/crashGo.png';
-// import loveLogo from '../../src/assets/images/love.png';
-// import mazeLogo from '../../src/assets/images/maze.png';
-// import monsterLogo from '../../src/assets/images/monster.png';
 import treeLogo from '../../src/assets/images/tree.png';
 import smorgLogo from '../../src/assets/images/smorg-b.png';
 import blankLogo from '../../src/assets/images/blank.png';
 import tetrisLogo from '../../src/assets/images/tetris.png';
 import scatterLogo from '../../src/assets/images/scatter.png';
+import imitationgoLogo from '../../src/assets/images/imitationgo2.png';
 
 const Home = () => {
   const content = [
@@ -32,6 +27,7 @@ const Home = () => {
       img: tetrisLogo,
     },
     { link: 'https://theloaflings.web.app', img: scatterLogo },
+    { link: 'https://imitation-go.onrender.com/', img: imitationgoLogo },
     { link: '/chickens', img: blankLogo, txt: 'COMING SOON' },
   ];
   return (
