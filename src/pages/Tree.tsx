@@ -53,6 +53,7 @@ const Tree = () => {
       event.currentTarget.value = newText;
       event.currentTarget.selectionStart = start + 1;
       event.currentTarget.selectionEnd = start + 1;
+      fillTree(newText);
       setTextareaText(newText);
     }
     if (event.key === 'Enter') {
@@ -82,7 +83,11 @@ const Tree = () => {
 
   const handleChange = (event: Event) => {
     const target = event.target as HTMLInputElement;
+
+    console.log(target);
+
     setTextareaText(target.value);
+    fillTree(target.value);
   };
 
   function childTreeNode(words: string[], root: TreeNode): TreeNode {
