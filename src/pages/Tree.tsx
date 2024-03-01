@@ -180,7 +180,7 @@ const Tree = () => {
       <div className='row'>
         <Centered>
           <div className='row'>
-            <div className='col-sm-12 py-3'>
+            <div className='col-sm-12 p-3'>
               <Text color='navy' tag='div'>
                 The text inside the <b>textarea</b> gets converted to a family
                 tree chart. Use <b>tab</b> to indicate parent-child
