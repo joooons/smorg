@@ -20,6 +20,8 @@ const TreeNodeComponent = ({
   color1 = colors[0],
   color2 = colors[1],
 }: Props) => {
+  // const connectingChar = ' ♥ ';
+  const connectingChar = ' − ';
   return (
     <div
       style={{
@@ -49,7 +51,7 @@ const TreeNodeComponent = ({
           }}
         >
           {node.name}
-          {node.spouse && ' ♥ ' + node.spouse}
+          {node.spouse && connectingChar + node.spouse}
         </div>
       </div>
 
