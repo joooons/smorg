@@ -148,11 +148,9 @@ const Tree = () => {
 
   async function fillTree(value: string) {
     count.current = 1; // reset the count
-    console.log('--------------- start ----------------');
-    // console.log(value);
+    console.log('--------------- filling the tree ----------------');
     const words = arrayOfNames(value);
     let word = words.shift();
-    // console.log(word, words);
 
     if (word) {
       let names = word.split(/[\,][\s]*/);
@@ -164,8 +162,6 @@ const Tree = () => {
         node = new TreeNode(count.current, word.substring(1));
       }
 
-      // const root = new TreeNode(count.current, word.substring(1));
-
       let tier = Number(word[0]) + 1;
       node.children = [];
       while (words.length > 0 && Number(words[0][0]) === tier) {
@@ -175,7 +171,6 @@ const Tree = () => {
       setPoint(node);
       updateXarrow();
       setPoint(node);
-      // console.log(point);
     }
   }
 
