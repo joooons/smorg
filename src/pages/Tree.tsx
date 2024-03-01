@@ -179,9 +179,15 @@ const Tree = () => {
       <NavBar></NavBar>
       <div className='row'>
         <Centered>
-          <Text color='navy' size='50' font='winter' tag='h1'>
-            TREE
-          </Text>
+          <div className='row'>
+            <div className='col-sm-12 py-3'>
+              <Text color='navy' tag='div'>
+                The text inside the textarea gets converted to a family tree
+                chart. Use tab to indicate parent-child relationship. Use comma
+                to indicate marriage relationship.
+              </Text>
+            </div>
+          </div>
         </Centered>
       </div>
       <div className='row mx-5'>

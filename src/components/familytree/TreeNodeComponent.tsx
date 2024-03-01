@@ -47,7 +47,7 @@ const TreeNodeComponent = ({
             backgroundColor: `${color1}`,
             padding: '2px 6px 2px 6px',
             borderRadius: '5px',
-            fontSize: '12px',
+            fontSize: '14px',
           }}
         >
           {node.name}
