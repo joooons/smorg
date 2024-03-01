@@ -79,13 +79,18 @@ const Tree = () => {
       event.currentTarget.selectionEnd = start + count;
       setTextareaText(newText);
     }
+    if (event.code === 'Space') {
+      console.log('space pressed');
+      const start = event.currentTarget.selectionStart;
+      const prevChar = textareaText[start - 1];
+      if (prevChar === ' ') {
+        event.preventDefault();
+      }
+    }
   };
 
   const handleChange = (event: Event) => {
     const target = event.target as HTMLInputElement;
-
-    console.log(target);
-
     setTextareaText(target.value);
     fillTree(target.value);
   };
@@ -120,10 +125,11 @@ const Tree = () => {
 
   function arrayOfNames(value: string): string[] {
     const text = value
-      .replace(/[\<\>\#\@\$\"\;\:\!\%\^\*\?\.]/g, '')
+      // .replace(/[\<\>\#\@\$\"\;\:\!\%\^\*\?\.]/g, '')
+      .replace(/[\<\>\#]/g, '')
       .replace(/ +/g, ' ')
-      .replace(/[\s\t]*\n/g, '\n')
-      .replace(/[\s\t]*$/g, '');
+      .replace(/ [\s\t]*\n/g, ' \n')
+      .replace(/ [\s\t]*$/g, ' ');
     setTextareaText(text);
 
     const words = ('0' + text)
@@ -166,9 +172,9 @@ const Tree = () => {
         node.children.push(childTreeNode(words, node));
       }
 
-      await setPoint(node);
-      await updateXarrow();
-      await setPoint(node);
+      setPoint(node);
+      updateXarrow();
+      setPoint(node);
       // console.log(point);
     }
   }
