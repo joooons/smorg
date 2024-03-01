@@ -182,9 +182,10 @@ const Tree = () => {
           <div className='row'>
             <div className='col-sm-12 py-3'>
               <Text color='navy' tag='div'>
-                The text inside the textarea gets converted to a family tree
-                chart. Use tab to indicate parent-child relationship. Use comma
-                to indicate marriage relationship.
+                The text inside the <b>textarea</b> gets converted to a family
+                tree chart. Use <b>tab</b> to indicate parent-child
+                relationship. Use <b>comma</b> to indicate marriage
+                relationship.
               </Text>
             </div>
           </div>
