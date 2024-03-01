@@ -23,7 +23,6 @@ const Home = () => {
   const content = [
     { link: '/notnews', img: notnewsLogo },
     { link: '/tree', img: treeLogo },
-    { link: '/space', img: spaceLogo },
     {
       link: 'https://joooons.github.io/tetris',
       img: tetrisLogo,
@@ -45,6 +44,7 @@ const Home = () => {
       img: proverbsLogo,
       external: true,
     },
+    { link: '/space', img: spaceLogo },
     { link: '/chickens', img: blankLogo },
   ];
   return (
