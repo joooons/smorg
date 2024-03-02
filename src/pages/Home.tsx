@@ -26,23 +26,19 @@ const Home = () => {
     {
       link: 'https://joooons.github.io/tetris',
       img: tetrisLogo,
-      external: true,
     },
-    { link: 'https://theloaflings.web.app', img: scatterLogo, external: true },
+    { link: 'https://theloaflings.web.app', img: scatterLogo },
     {
       link: 'https://imitation-go.onrender.com/',
       img: imitationgoLogo,
-      external: true,
     },
     {
-      link: 'https://ttot703hebvocab.netlify.app/',
+      link: 'https://hebrewpracticequiz.netlify.app/',
       img: vocabhelperLogo,
-      external: true,
     },
     {
       link: 'https://proverbs.onrender.com/',
       img: proverbsLogo,
-      external: true,
     },
     { link: '/space', img: spaceLogo },
     { link: '/chickens', img: blankLogo },
