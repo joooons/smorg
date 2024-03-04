@@ -16,7 +16,7 @@ import smorgLogo from '../../src/assets/images/smorg-b.png';
 import blankLogo from '../../src/assets/images/blank.png';
 import tetrisLogo from '../../src/assets/images/tetris.png';
 import scatterLogo from '../../src/assets/images/scatter.png';
-import imitationgoLogo from '../../src/assets/images/imitationgo2.png';
+import imitationgoLogo from '../../src/assets/images/imitationgo.png';
 import vocabhelperLogo from '../../src/assets/images/vocabhelper.png';
 import proverbsLogo from '../../src/assets/images/proverbs.png';
 
