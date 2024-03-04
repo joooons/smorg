@@ -11,6 +11,7 @@ import '../components/Link.css';
 import spaceLogo from '../../src/assets/images/space.png';
 import notnewsLogo from '../../src/assets/images/notnews.png';
 import treeLogo from '../../src/assets/images/tree.png';
+import portfolioLogo from '../../src/assets/images/portfolio.png';
 import smorgLogo from '../../src/assets/images/smorg-b.png';
 import blankLogo from '../../src/assets/images/blank.png';
 import tetrisLogo from '../../src/assets/images/tetris.png';
@@ -23,6 +24,7 @@ const Home = () => {
   const content = [
     { link: '/notnews', img: notnewsLogo },
     { link: '/tree', img: treeLogo },
+    { link: '/portfolio', img: portfolioLogo },
     {
       link: 'https://joooons.github.io/tetris',
       img: tetrisLogo,

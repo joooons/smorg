@@ -6,6 +6,7 @@ import About from './pages/About';
 import Space from './pages/Space';
 import Tree from './pages/Tree';
 import NoPage from './pages/NoPage';
+import Port from './pages/Port';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/notnews' element={<NotNews />} />
           <Route path='/notnewspage/:entryid/:path' element={<NotNewsPage />} />
           <Route path='/about' element={<About />} />
+          <Route path='/portfolio' element={<Port />} />
           <Route path='/space' element={<Space />} />
           <Route path='/tree' element={<Tree />} />
           <Route path='*' element={<NoPage />} />
