@@ -43,7 +43,7 @@ const Home = () => {
       img: proverbsLogo,
     },
     { link: '/space', img: spaceLogo },
-    { link: '/chickens', img: blankLogo },
+    { link: '/chickens', img: blankLogo, external: false },
   ];
   return (
     <>
