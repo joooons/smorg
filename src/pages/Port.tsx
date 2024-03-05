@@ -4,10 +4,7 @@ import PFCard from '../components/portfolio/PFCard';
 
 import '../components/portfolio/Port.css';
 
-const content = [
-  { title: 'mario', content: 'yes' },
-  { title: 'metroid', content: 'nah' },
-];
+const content = [{ title: 'Status', content: 'not ready yet' }];
 const Port = () => {
   return (
     <>

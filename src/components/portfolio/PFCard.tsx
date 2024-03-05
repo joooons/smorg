@@ -10,6 +10,7 @@ const PFCard = ({ title, content }: Props) => {
     <>
       <div className='pf-card'>
         {title}
+        <br></br>
         {content}
       </div>
     </>
