@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 
 import Text from '../components/Text';
 import HomeLogo from '../components/home/HomeLogo';
 import HomeLogoBox from '../components/home/HomeLogoBox';
+import HomeLink from '../components/home/HomeLink';
 import Centered from '../components/Centered';
 import '../components/Link.css';
 
@@ -36,6 +37,7 @@ const Home = () => {
     {
       link: 'https://hebrewpracticequiz.netlify.app/',
       img: vocabhelperLogo,
+      external: true,
     },
     {
       link: 'https://proverbs.onrender.com/',
@@ -62,14 +64,14 @@ const Home = () => {
             return (
               <Col key={index} sm={6} md={4} xl={3} xxl={2} className='my-3'>
                 <Centered>
-                  <Link to={page['link']} className='link'>
+                  <HomeLink link={page.link} external={page.external}>
                     <HomeLogoBox>
                       <HomeLogo
-                        image={page['img']}
-                        external={page['external']}
+                        image={page.img}
+                        external={page.external}
                       ></HomeLogo>
                     </HomeLogoBox>
-                  </Link>
+                  </HomeLink>
                 </Centered>
               </Col>
             );
