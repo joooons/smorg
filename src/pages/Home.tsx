@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap';
 import Text from '../components/Text';
 import HomeLogo from '../components/home/HomeLogo';
 import HomeLogoBox from '../components/home/HomeLogoBox';
-import HomeLink from '../components/home/HomeLink';
+import HomeModalControl from '../components/home/HomeModalControl';
 import HomeModal from '../components/home/HomeModal';
 import Centered from '../components/Centered';
 import '../components/Link.css';
@@ -136,7 +136,7 @@ const Home = () => {
             return (
               <Col key={index} sm={6} md={4} xl={3} xxl={2} className='my-3'>
                 <Centered>
-                  <HomeLink
+                  <HomeModalControl
                     fn1={modifyModalData}
                     fn2={openModal}
                     modalData={{
@@ -148,7 +148,7 @@ const Home = () => {
                     <HomeLogoBox>
                       <HomeLogo image={page.img}></HomeLogo>
                     </HomeLogoBox>
-                  </HomeLink>
+                  </HomeModalControl>
                 </Centered>
               </Col>
             );

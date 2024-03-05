@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { ReactNode } from 'react';
 
 interface modalObject {
   title: string;
@@ -15,7 +15,7 @@ interface Props {
   modalData: modalObject;
 }
 
-const HomeLink = ({
+const HomeModalControl = ({
   children,
   // link,
   // external = false,
@@ -37,7 +37,6 @@ const HomeLink = ({
       )} */}
       <div
         onClick={() => {
-          console.log('it work');
           fn1(modalData);
           fn2();
         }}
@@ -48,4 +47,4 @@ const HomeLink = ({
   );
 };
 
-export default HomeLink;
+export default HomeModalControl;
