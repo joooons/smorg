@@ -1,12 +1,18 @@
 // import { Link } from 'react-router-dom';
 
+interface modalObject {
+  title: string;
+  desc: string;
+  link: string;
+}
+
 interface Props {
   children: ReactNode;
   // link?: string;
   // external?: boolean;
-  fn1: (text: string) => void;
+  fn1: (text: modalObject) => void;
   fn2: () => void;
-  modalText: string;
+  modalData: modalObject;
 }
 
 const HomeLink = ({
@@ -15,7 +21,7 @@ const HomeLink = ({
   // external = false,
   fn1,
   fn2,
-  modalText,
+  modalData,
 }: Props) => {
   return (
     <>
@@ -32,7 +38,7 @@ const HomeLink = ({
       <div
         onClick={() => {
           console.log('it work');
-          fn1(modalText);
+          fn1(modalData);
           fn2();
         }}
       >

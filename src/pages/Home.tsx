@@ -23,49 +23,101 @@ import vocabhelperLogo from '../../src/assets/images/vocabhelper.png';
 import proverbsLogo from '../../src/assets/images/proverbs.png';
 import rakeLogo from '../../src/assets/images/rake.png';
 
+interface modalObject {
+  title: string;
+  desc: string;
+  link: string;
+}
+
 const Home = () => {
   const content = [
-    { link: '/notnews', img: notnewsLogo },
-    { link: '/tree', img: treeLogo },
-    { link: '/portfolio', img: portfolioLogo },
     {
+      title: 'Not News Network',
+      desc: 'This is just a mockup news site that I just made up',
+      link: '/notnews',
+      img: notnewsLogo,
+    },
+    {
+      title: 'Family Tree',
+      desc: 'No description',
+      link: '/tree',
+      img: treeLogo,
+    },
+    {
+      title: 'Portfolio',
+      desc: 'No description',
+      link: '/portfolio',
+      img: portfolioLogo,
+    },
+    {
+      title: 'Tetris (external)',
+      desc: 'No description',
       link: 'https://joooons.github.io/tetris',
       img: tetrisLogo,
       external: true,
     },
-    { link: 'https://theloaflings.web.app', img: scatterLogo, external: true },
     {
+      title: 'Scatter! (external)',
+      desc: 'No description',
+      link: 'https://theloaflings.web.app',
+      img: scatterLogo,
+      external: true,
+    },
+    {
+      title: 'Imitation Go (external)',
+      desc: 'No description',
       link: 'https://imitation-go.onrender.com/',
       img: imitationgoLogo,
       external: true,
     },
     {
+      title: 'Vocab Helper (external)',
+      desc: 'No description',
       link: 'https://hebrewpracticequiz.netlify.app/',
       img: vocabhelperLogo,
       external: true,
     },
     {
+      title: 'Random Proverb (external)',
+      desc: 'No description',
       link: 'https://proverbs.onrender.com/',
       img: proverbsLogo,
       external: true,
     },
-    { link: '/space', img: spaceLogo },
-    { link: 'https://github.com/joooons/rake', img: rakeLogo, external: true },
-    { link: '/chickens', img: blankLogo, external: false },
+    {
+      title: 'Space',
+      desc: 'No description',
+      link: '/space',
+      img: spaceLogo,
+    },
+    {
+      title: 'Rake (external, GitHub)',
+      desc: 'No description',
+      link: 'https://github.com/joooons/rake',
+      img: rakeLogo,
+      external: true,
+    },
+    {
+      title: 'Blank',
+      desc: 'No description',
+      link: '/chickens',
+      img: blankLogo,
+      external: false,
+    },
   ];
 
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
-  const [modalData, setModalData] = useState('testing');
-  const closeModal = () => {
-    setShowModal(false);
-  };
-  const openModal = () => {
-    setShowModal(true);
-  };
+  const [modalData, setModalData] = useState({
+    title: 'SAMPLE',
+    desc: 'This is just a sample modal',
+    link: '#',
+  });
+  const closeModal = () => setShowModal(false);
+  const openModal = () => setShowModal(true);
 
-  const modifyModalData = (text: string) => {
-    setModalData(text);
+  const modifyModalData = (data: modalObject) => {
+    setModalData(data);
   };
   return (
     <>
@@ -87,7 +139,11 @@ const Home = () => {
                   <HomeLink
                     fn1={modifyModalData}
                     fn2={openModal}
-                    modalText={page.img}
+                    modalData={{
+                      title: page.title,
+                      desc: page.desc,
+                      link: page.link,
+                    }}
                   >
                     <HomeLogoBox>
                       <HomeLogo image={page.img}></HomeLogo>
@@ -98,7 +154,7 @@ const Home = () => {
             );
           })}
         </Row>
-        {showModal && <HomeModal action={closeModal}>{modalData}</HomeModal>}
+        {showModal && <HomeModal fn={closeModal} data={modalData}></HomeModal>}
       </Container>
     </>
   );
