@@ -12,7 +12,6 @@ import spaceLogo from '../../src/assets/images/space.png';
 import notnewsLogo from '../../src/assets/images/notnews.png';
 import treeLogo from '../../src/assets/images/tree.png';
 import portfolioLogo from '../../src/assets/images/portfolio.png';
-import smorgLogo from '../../src/assets/images/smorg-b.png';
 import blankLogo from '../../src/assets/images/blank.png';
 import tetrisLogo from '../../src/assets/images/tetris.png';
 import scatterLogo from '../../src/assets/images/scatter.png';
@@ -51,12 +50,7 @@ const Home = () => {
         <Row className='mt-1'>
           <Col sm={12}>
             <Centered>
-              <HomeLogo size='110' image={smorgLogo}></HomeLogo>
-            </Centered>
-          </Col>
-          <Col sm={12}>
-            <Centered>
-              <Text size='100' font='winter' tag='h1'>
+              <Text size='100' font='oswald' tag='h1'>
                 SMORG
               </Text>
             </Centered>

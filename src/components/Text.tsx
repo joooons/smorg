@@ -5,7 +5,7 @@ interface Props {
   children: ReactNode;
   size?: string;
   color?: string;
-  font?: 'lovely' | 'winter';
+  font?: 'lovely' | 'winter' | 'oswald';
   tag?: 'div' | 'h1' | 'p';
 }
 

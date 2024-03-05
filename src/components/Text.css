@@ -8,10 +8,19 @@
     src: local('MyFont'), url(../assets/fonts/CrackerWinter.otf) format('opentype');
 }
 
+@font-face {
+    font-family: 'Oswald';
+    src: local('MyFont'), url(../assets/fonts/Oswald-Bold.ttf) format('truetype');
+}
+
 .text.lovely {
     font-family: Lovely;
 }
 
 .text.winter {
     font-family: Winter;
+}
+
+.text.oswald {
+    font-family: Oswald;
 }
