@@ -27,11 +27,13 @@ const Home = () => {
     {
       link: 'https://joooons.github.io/tetris',
       img: tetrisLogo,
+      external: true,
     },
-    { link: 'https://theloaflings.web.app', img: scatterLogo },
+    { link: 'https://theloaflings.web.app', img: scatterLogo, external: true },
     {
       link: 'https://imitation-go.onrender.com/',
       img: imitationgoLogo,
+      external: true,
     },
     {
       link: 'https://hebrewpracticequiz.netlify.app/',
@@ -41,6 +43,7 @@ const Home = () => {
     {
       link: 'https://proverbs.onrender.com/',
       img: proverbsLogo,
+      external: true,
     },
     { link: '/space', img: spaceLogo },
     { link: '/chickens', img: blankLogo, external: false },
