@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Container } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 
@@ -5,6 +7,7 @@ import Text from '../components/Text';
 import HomeLogo from '../components/home/HomeLogo';
 import HomeLogoBox from '../components/home/HomeLogoBox';
 import HomeLink from '../components/home/HomeLink';
+import HomeModal from '../components/home/HomeModal';
 import Centered from '../components/Centered';
 import '../components/Link.css';
 
@@ -50,6 +53,11 @@ const Home = () => {
     { link: 'https://github.com/joooons/rake', img: rakeLogo, external: true },
     { link: '/chickens', img: blankLogo, external: false },
   ];
+
+  const [showModal, setShowModal] = useState(true);
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     <>
       <Container>
@@ -62,7 +70,6 @@ const Home = () => {
             </Centered>
           </Col>
         </Row>
-
         <Row>
           {content.map((page, index) => {
             return (
@@ -78,6 +85,7 @@ const Home = () => {
             );
           })}
         </Row>
+        {showModal && <HomeModal action={closeModal}>modal</HomeModal>}
       </Container>
     </>
   );
