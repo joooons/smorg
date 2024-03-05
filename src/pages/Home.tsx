@@ -55,8 +55,17 @@ const Home = () => {
   ];
 
   const [showModal, setShowModal] = useState(true);
+
+  const [modalData, setModalData] = useState('testing');
   const closeModal = () => {
     setShowModal(false);
+  };
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const modifyModalData = (text: string) => {
+    setModalData(text);
   };
   return (
     <>
@@ -75,7 +84,11 @@ const Home = () => {
             return (
               <Col key={index} sm={6} md={4} xl={3} xxl={2} className='my-3'>
                 <Centered>
-                  <HomeLink link={page.link} external={page.external}>
+                  <HomeLink
+                    fn1={modifyModalData}
+                    fn2={openModal}
+                    modalText={page.img}
+                  >
                     <HomeLogoBox>
                       <HomeLogo image={page.img}></HomeLogo>
                     </HomeLogoBox>
@@ -85,7 +98,7 @@ const Home = () => {
             );
           })}
         </Row>
-        {showModal && <HomeModal action={closeModal}>modal</HomeModal>}
+        {showModal && <HomeModal action={closeModal}>{modalData}</HomeModal>}
       </Container>
     </>
   );

@@ -9,12 +9,7 @@ interface Props {
 const HomeModal = ({ children, action }: Props) => {
   return (
     <div className='home-popup' onClick={action}>
-      <div
-        className='home-popup-content'
-        onClick={() => {
-          alert('hi');
-        }}
-      >
+      <div className='home-popup-content'>
         <h2>{children}</h2>
       </div>
     </div>
