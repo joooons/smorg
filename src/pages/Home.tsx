@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 
@@ -66,10 +65,7 @@ const Home = () => {
                 <Centered>
                   <HomeLink link={page.link} external={page.external}>
                     <HomeLogoBox>
-                      <HomeLogo
-                        image={page.img}
-                        external={page.external}
-                      ></HomeLogo>
+                      <HomeLogo image={page.img}></HomeLogo>
                     </HomeLogoBox>
                   </HomeLink>
                 </Centered>

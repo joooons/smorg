@@ -4,10 +4,9 @@ interface Props {
   children?: string;
   image: string;
   size?: string;
-  external?: boolean;
 }
 
-const HomeLogo = ({ children, image, size = '200', external }: Props) => {
+const HomeLogo = ({ children, image, size = '200' }: Props) => {
   return (
     <>
       <div
@@ -25,11 +24,6 @@ const HomeLogo = ({ children, image, size = '200', external }: Props) => {
         }}
       >
         {children}
-        {external && (
-          <div className='home-badge-wrapper'>
-            <div className='home-badge'>EXTERNAL</div>
-          </div>
-        )}
       </div>
     </>
   );
