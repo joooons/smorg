@@ -18,6 +18,7 @@ import scatterLogo from '../../src/assets/images/scatter.png';
 import imitationgoLogo from '../../src/assets/images/imitationgo.png';
 import vocabhelperLogo from '../../src/assets/images/vocabhelper.png';
 import proverbsLogo from '../../src/assets/images/proverbs.png';
+import rakeLogo from '../../src/assets/images/rake.png';
 
 const Home = () => {
   const content = [
@@ -46,6 +47,7 @@ const Home = () => {
       external: true,
     },
     { link: '/space', img: spaceLogo },
+    { link: 'https://github.com/joooons/rake', img: rakeLogo, external: true },
     { link: '/chickens', img: blankLogo, external: false },
   ];
   return (
