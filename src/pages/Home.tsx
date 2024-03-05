@@ -27,6 +27,7 @@ interface modalObject {
   title: string;
   desc: string;
   link: string;
+  external: boolean;
 }
 
 const Home = () => {
@@ -36,18 +37,21 @@ const Home = () => {
       desc: 'This is just a mockup news site that I just made up',
       link: '/notnews',
       img: notnewsLogo,
+      external: false,
     },
     {
       title: 'Family Tree',
       desc: 'No description',
       link: '/tree',
       img: treeLogo,
+      external: false,
     },
     {
       title: 'Portfolio',
       desc: 'No description',
       link: '/portfolio',
       img: portfolioLogo,
+      external: false,
     },
     {
       title: 'Tetris (external)',
@@ -89,6 +93,7 @@ const Home = () => {
       desc: 'No description',
       link: '/space',
       img: spaceLogo,
+      external: false,
     },
     {
       title: 'Rake (external, GitHub)',
@@ -112,6 +117,7 @@ const Home = () => {
     title: 'SAMPLE',
     desc: 'This is just a sample modal',
     link: '#',
+    external: false,
   });
   const closeModal = () => setShowModal(false);
   const openModal = () => setShowModal(true);
@@ -143,6 +149,7 @@ const Home = () => {
                       title: page.title,
                       desc: page.desc,
                       link: page.link,
+                      external: page.external,
                     }}
                   >
                     <HomeLogoBox>
