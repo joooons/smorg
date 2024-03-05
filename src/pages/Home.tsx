@@ -69,7 +69,7 @@ const Home = () => {
     },
     {
       title: 'Imitation Go',
-      desc: 'Experimental version of Go. Made with node, jQuery, and socket.io. Opens an external link.',
+      desc: 'Experimental version of Go. Made with node, jQuery, and socket.io. Opens an external link. It may take a few minutes for the page to load.',
       link: 'https://imitation-go.onrender.com/',
       img: imitationgoLogo,
       external: true,
@@ -83,7 +83,7 @@ const Home = () => {
     },
     {
       title: 'Random Proverb',
-      desc: 'Displays randomly selected proverb every 5 minutes. Made with node and ESV API. Opens an external link.',
+      desc: 'Displays randomly selected proverb every 5 minutes. Made with node and ESV API. Opens an external link. It may take a few minutes for the page to load.',
       link: 'https://proverbs.onrender.com/',
       img: proverbsLogo,
       external: true,
