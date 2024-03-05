@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import Button from '../Button';
+
 import './HomeLink.css';
 
 interface Props {
@@ -12,7 +14,7 @@ const HomeLink = ({ link, external = true }: Props) => {
     <>
       {!external && (
         <Link to={link} className='link'>
-          <div className='home-link'>GO!</div>
+          <Button>TRY IT</Button>
         </Link>
       )}
       {external && (
@@ -22,7 +24,7 @@ const HomeLink = ({ link, external = true }: Props) => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          GO!
+          <Button>OPEN NEW TAB</Button>
         </a>
       )}
     </>
