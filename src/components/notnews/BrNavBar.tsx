@@ -15,23 +15,20 @@ const BrNavBar = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto'>
-              <Nav.Link href='/notnews' className='br-nav-link'>
+              <Nav.Link href='/' className='br-nav-link'>
                 Home
               </Nav.Link>
               <Nav.Link href='/notnews' className='br-nav-link'>
                 News
               </Nav.Link>
-              <Nav.Link href='#' className='br-nav-link'>
-                Business
+              <Nav.Link href='/tree' className='br-nav-link'>
+                Tree
               </Nav.Link>
-              <Nav.Link href='#' className='br-nav-link'>
-                Finance
+              <Nav.Link href='/space' className='br-nav-link'>
+                Space
               </Nav.Link>
-              <Nav.Link href='#' className='br-nav-link'>
-                Travel
-              </Nav.Link>
-              <Nav.Link href='/home' className='br-nav-link'>
-                Smorg
+              <Nav.Link href='/about' className='br-nav-link'>
+                About
               </Nav.Link>
             </Nav>
             <Nav>
