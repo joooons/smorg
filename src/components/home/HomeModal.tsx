@@ -4,7 +4,7 @@ import './HomeModal.css';
 
 interface modalObject {
   title?: string;
-  desc?: string;
+  desc?: string[];
   link: string;
   external: boolean;
 }
@@ -19,7 +19,11 @@ const HomeModal = ({ data, fn }: Props) => {
     <div className='home-popup' onClick={fn}>
       <div className='home-popup-content'>
         <h2>{data.title}</h2>
-        <p>{data.desc}</p>
+        {data.desc &&
+          data.desc?.map((line) => {
+            return <div>{line}</div>;
+          })}
+        <br></br>
         <HomeLink link={data.link} external={data.external}></HomeLink>
       </div>
     </div>

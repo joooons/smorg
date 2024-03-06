@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 interface modalObject {
   title: string;
-  desc: string;
+  desc: string[];
   link: string;
   external: boolean;
 }

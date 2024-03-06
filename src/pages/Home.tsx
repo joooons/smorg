@@ -28,7 +28,7 @@ import rakeLogo from '../../src/assets/images/rake.png';
 
 interface modalObject {
   title: string;
-  desc: string;
+  desc: string[];
   link: string;
   external: boolean;
 }
@@ -37,77 +37,110 @@ const Home = () => {
   const content = [
     {
       title: 'Not News Network',
-      desc: 'Mockup news site with data from Contentful.',
+      desc: [
+        'Mockup news site with content fetched from Contentful.',
+        'Click on article title to read full article written by chatGPT.',
+      ],
       link: '/notnews',
       img: notnewsLogo,
       external: false,
     },
     {
       title: 'Family Tree',
-      desc: 'Converts text from a <textarea> to a tree data structure.',
+      desc: [
+        'Uses textcontent from textarea to populate a tree data structure.',
+        'Try typing something into the textarea to the left.',
+        'Commas indicate marriage relationship, and indentation indicates parent-child relationship.',
+      ],
       link: '/tree',
       img: treeLogo,
       external: false,
     },
     {
       title: 'Rake',
-      desc: 'Chrome extension for extracting text from open tab in browser. Currently unpublished. Opens external link to the GitHub page.',
+      desc: [
+        'Chrome extension for extracting text from browser using custom query selectors.',
+        'Currently unpublished, but you can git clone and load unpacked to try.',
+        'Opens external link to the GitHub page.',
+      ],
       link: 'https://github.com/joooons/rake',
       img: rakeLogo,
       external: true,
     },
     {
       title: 'Imitation Go',
-      desc: 'Experimental version of Go. Made with node, jQuery, and socket.io. Opens an external link. It may take a few minutes for the page to load.',
+      desc: [
+        'Experimental version of Go.',
+        'Made with node, jQuery, and socket.io.',
+        'Opens an external link.',
+        'It may take a few minutes for the page to load.',
+      ],
       link: 'https://imitation-go.onrender.com/',
       img: imitationgoLogo,
       external: true,
     },
     {
       title: 'Vocab Helper',
-      desc: 'Vocab learning tool that I made while learning Hebrew. Made with jQuery and Bootstrap. Opens an external link.',
+      desc: [
+        'Vocab learning tool that I made while learning Hebrew.',
+        'Made with jQuery and Bootstrap.',
+        'Opens an external link.',
+      ],
       link: 'https://hebrewpracticequiz.netlify.app/',
       img: vocabhelperLogo,
       external: true,
     },
     {
       title: 'Scatter!',
-      desc: 'Scattergories! Friends can play together remotely. Made with jQuery and Firebase. Opens an external link.',
+      desc: [
+        'Scattergories! Friends can play together remotely.',
+        'Made with jQuery and Firebase.',
+        'Opens an external link.',
+      ],
       link: 'https://theloaflings.web.app',
       img: scatterLogo,
       external: true,
     },
     {
       title: 'Random Proverb',
-      desc: 'Displays randomly selected proverb every 5 minutes. Made with node and ESV API. Opens an external link. It may take a few minutes for the page to load.',
+      desc: [
+        'Displays randomly selected proverb every 5 minutes.',
+        'Made with node and ESV API.',
+        'Opens an external link.',
+        'It may take a few minutes for the page to load.',
+      ],
       link: 'https://proverbs.onrender.com/',
       img: proverbsLogo,
       external: true,
     },
     {
       title: 'Tetris',
-      desc: 'My first personal project. Made with vanilla JavaScript. Opens an external link.',
+      desc: [
+        'My first personal project.',
+        'Made with vanilla JavaScript.',
+        'Opens an external link.',
+      ],
       link: 'https://joooons.github.io/tetris',
       img: tetrisLogo,
       external: true,
     },
     {
       title: 'Portfolio',
-      desc: 'Work in progress.',
+      desc: ['Work in progress.'],
       link: '/portfolio',
       img: portfolioLogo,
       external: false,
     },
     {
       title: 'Space',
-      desc: 'Placeholder for a future idea.',
+      desc: ['Placeholder for a future idea.'],
       link: '/space',
       img: spaceLogo,
       external: false,
     },
     {
       title: 'Blank',
-      desc: 'Placeholder for future idea.',
+      desc: ['Placeholder for future idea.'],
       link: '/chickens',
       img: blankLogo,
       external: false,
@@ -118,7 +151,7 @@ const Home = () => {
 
   const [modalData, setModalData] = useState({
     title: 'SAMPLE',
-    desc: 'This is just a sample modal',
+    desc: ['This is just a sample modal'],
     link: '#',
     external: false,
   });
