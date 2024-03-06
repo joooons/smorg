@@ -100,13 +100,13 @@ const Home = () => {
     },
     {
       title: 'Space',
-      desc: 'Placeholder for a future idea. WIP.',
+      desc: 'Placeholder for a future idea.',
       link: '/space',
       img: spaceLogo,
       external: false,
     },
     {
-      title: 'The Void',
+      title: 'Blank',
       desc: 'Placeholder for future idea.',
       link: '/chickens',
       img: blankLogo,

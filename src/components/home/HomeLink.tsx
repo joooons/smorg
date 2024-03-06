@@ -14,7 +14,7 @@ const HomeLink = ({ link, external = true }: Props) => {
     <>
       {!external && (
         <Link to={link} className='link'>
-          <Button>TRY IT</Button>
+          <Button>OPEN PAGE</Button>
         </Link>
       )}
       {external && (
@@ -24,7 +24,7 @@ const HomeLink = ({ link, external = true }: Props) => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <Button>OPEN NEW TAB</Button>
+          <Button>OPEN IN NEW TAB</Button>
         </a>
       )}
     </>

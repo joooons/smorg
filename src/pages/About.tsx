@@ -8,9 +8,10 @@ const About = () => {
     <>
       <NavBar></NavBar>
       <Container>
-        <Text color='navy' size='50' font='winter' tag='h1'>
-          This page is ABOUT to be filled out, but not quite yet.
+        <Text color='navy' size='50' font='oswald' tag='h1'>
+          ABOUT PAGE
         </Text>
+        <div>not yet</div>
       </Container>
     </>
   );
