@@ -1,12 +1,12 @@
 .hm-logobox {
-    box-shadow: 5px 5px 10px gray;
+    box-shadow: 5px 5px 10px #2226;
     border-radius: 20px;
     overflow: hidden;
     transition: 0.2s;
 }
 
 .hm-logobox:hover {
-    box-shadow: 6px 6px 13px rgb(82, 82, 82);
+    box-shadow: 6px 6px 13px #0009;
 }
 
 .hm-logobox-lid {
@@ -17,8 +17,8 @@
     position: absolute;
     height: 220px;
     width: 220px;
-    background-color: white;
-    opacity: 50%;
+    background-color: #000;
+    opacity: 20%;
     transition: 0.2s;
 }
 

@@ -8,7 +8,10 @@ import HomeLogo from '../components/home/HomeLogo';
 import HomeLogoBox from '../components/home/HomeLogoBox';
 import HomeModalControl from '../components/home/HomeModalControl';
 import HomeModal from '../components/home/HomeModal';
+import HomeBkgd from '../components/home/HomeBkgd';
+
 import Centered from '../components/Centered';
+
 import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/images/space.png';
@@ -127,6 +130,7 @@ const Home = () => {
   };
   return (
     <>
+      <HomeBkgd></HomeBkgd>
       <Container>
         <Row className='mt-1'>
           <Col sm={12}>
