@@ -15,6 +15,7 @@ import Centered from '../components/Centered';
 import '../components/Link.css';
 
 import spaceLogo from '../../src/assets/images/space.png';
+import calcLogo from '../../src/assets/images/calc.png';
 import notnewsLogo from '../../src/assets/images/notnews.png';
 import treeLogo from '../../src/assets/images/tree.png';
 import portfolioLogo from '../../src/assets/images/portfolio.png';
@@ -139,6 +140,13 @@ const Home = () => {
       external: false,
     },
     {
+      title: 'Calc',
+      desc: ['Placeholder for future idea.'],
+      link: '/calc',
+      img: calcLogo,
+      external: false,
+    },
+    {
       title: 'Blank',
       desc: ['Placeholder for future idea.'],
       link: '/chickens',
@@ -155,12 +163,13 @@ const Home = () => {
     link: '#',
     external: false,
   });
+
   const closeModal = () => setShowModal(false);
+
   const openModal = () => setShowModal(true);
 
-  const modifyModalData = (data: modalObject) => {
-    setModalData(data);
-  };
+  const modifyModalData = (data: modalObject) => setModalData(data);
+
   return (
     <>
       <HomeBkgd></HomeBkgd>

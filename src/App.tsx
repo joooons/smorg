@@ -4,6 +4,7 @@ import NotNews from './pages/NotNews';
 import NotNewsPage from './pages/NotNewsPage';
 import About from './pages/About';
 import Space from './pages/Space';
+import Calc from './pages/Calc';
 import Tree from './pages/Tree';
 import NoPage from './pages/NoPage';
 import Port from './pages/Port';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/portfolio' element={<Port />} />
           <Route path='/space' element={<Space />} />
+          <Route path='/calc' element={<Calc />} />
           <Route path='/tree' element={<Tree />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
