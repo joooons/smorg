@@ -1,5 +1,4 @@
-import { Container } from 'react-bootstrap';
-import { Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 
 import NavBar from '../components/NavBar';
 import CalcPlus from '../components/calc/CalcPlus';
