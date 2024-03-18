@@ -14,16 +14,7 @@ import CalcCard from '../components/calc/CalcCard';
 // pages
 // dropdown memory in local storage
 
-const numeros = [
-  'ONE',
-  'DOS',
-  'TRES',
-  'CUATRO',
-  'CINCO',
-  'SEIS',
-  'SIETE',
-  'OCHO',
-];
+const numeros = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
 const Calc = () => {
   return (

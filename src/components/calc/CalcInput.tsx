@@ -23,7 +23,7 @@ const CalcInput = ({ children, sign }: Props) => {
           style={{
             width: '30px',
             height: '30px',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',

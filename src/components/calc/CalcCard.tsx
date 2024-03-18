@@ -10,7 +10,7 @@ const CalcCard = ({ children }: Props) => {
   return (
     <>
       <div className='cc-card main'>
-        <h3>{children}</h3>
+        <div className='my-1'>#{children}</div>
         <div>
           <CalcInput>#</CalcInput>
           <CalcInput sign='+'>#</CalcInput>
