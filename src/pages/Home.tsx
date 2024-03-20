@@ -186,7 +186,16 @@ const Home = () => {
         <Row>
           {content.map((page, index) => {
             return (
-              <Col key={index} sm={6} md={4} xl={3} xxl={2} className='my-3'>
+              <Col
+                key={index}
+                xs={6}
+                sm={6}
+                md={4}
+                lg={3}
+                xl={2}
+                xxl={2}
+                className='my-3'
+              >
                 <Centered>
                   <HomeModalControl
                     fn1={modifyModalData}

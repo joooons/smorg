@@ -6,7 +6,7 @@ interface Props {
   size?: string;
 }
 
-const HomeLogo = ({ children, image, size = '200' }: Props) => {
+const HomeLogo = ({ children, image, size = '170' }: Props) => {
   return (
     <>
       <div
